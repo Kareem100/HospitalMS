@@ -57,8 +57,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <data name="pictureClose.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAhQAAAISCAYAAACUI1b4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAA/7JJREFUeF7svQmYVVW63808iPOI2A11ah6Y56IKqpiqCoqhBkBxwBEVRVBxVrS7
@@ -1695,7 +1695,7 @@
         8FBulZWLW0cAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureConfirmPasswordIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureConfirmPasswordIcon.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/7gAOQWRvYmUAZAAAAAAB/+ESAkV4aWYAAE1NACoAAAAIAAwBAAAD
         AAAAAQIoAAABAQADAAAAAQJAAAABAgADAAAAAwAAAJ4BBgADAAAAAQACAAABEgADAAAAAQABAAABFQAD
@@ -2175,7 +2175,7 @@
         RUJHWlQB4ZkCAHINRkSiMkh2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV/9k=
 </value>
   </data>
-  <data name="pictureConfirmPasswordBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureConfirmPasswordBackground.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMoAAAA6CAYAAADx98axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA2RJREFUeF7t3c1uTHEcxvGudCXBFVSCDVcg0VsQZW8lQmJbDakr0ZSEit6Al3WD
@@ -2196,7 +2196,7 @@
         YII=
 </value>
   </data>
-  <data name="picturePhoneIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picturePhoneIcon.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/7gAOQWRvYmUAZAAAAAAB/+ESXEV4aWYAAE1NACoAAAAIAAwBAAAD
         AAAAAQIoAAABAQADAAAAAQJAAAABAgADAAAAAwAAAJ4BBgADAAAAAQACAAABEgADAAAAAQABAAABFQAD
@@ -2638,7 +2638,7 @@
         g3CcuVCTuRv3y+OKMeQazMnmrZNi7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FX/9k=
 </value>
   </data>
-  <data name="picturePhoneBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picturePhoneBackground.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMoAAAA6CAYAAADx98axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA2RJREFUeF7t3c1uTHEcxvGudCXBFVSCDVcg0VsQZW8lQmJbDakr0ZSEit6Al3WD
@@ -2659,7 +2659,7 @@
         YII=
 </value>
   </data>
-  <data name="pictureEmploymentIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureEmploymentIcon.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/7gAOQWRvYmUAZAAAAAAB/+EUOkV4aWYAAE1NACoAAAAIAAwBAAAD
         AAAAAQIoAAABAQADAAAAAQJAAAABAgADAAAAAwAAAJ4BBgADAAAAAQACAAABEgADAAAAAQABAAABFQAD
@@ -3122,7 +3122,7 @@
         RkSiMkh2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV/9k=
 </value>
   </data>
-  <data name="pictureEmploymentBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureEmploymentBackground.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMoAAAA6CAYAAADx98axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA2RJREFUeF7t3c1uTHEcxvGudCXBFVSCDVcg0VsQZW8lQmJbDakr0ZSEit6Al3WD
@@ -3143,7 +3143,7 @@
         YII=
 </value>
   </data>
-  <data name="pictureBirthdateIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBirthdateIcon.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/7gAOQWRvYmUAZAAAAAAB/+ESjkV4aWYAAE1NACoAAAAIAAwBAAAD
         AAAAAQIoAAABAQADAAAAAQJAAAABAgADAAAAAwAAAJ4BBgADAAAAAQACAAABEgADAAAAAQABAAABFQAD
@@ -3575,7 +3575,7 @@
         2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV/9k=
 </value>
   </data>
-  <data name="pictureBirthdateBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBirthdateBackground.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMoAAAA6CAYAAADx98axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA2RJREFUeF7t3c1uTHEcxvGudCXBFVSCDVcg0VsQZW8lQmJbDakr0ZSEit6Al3WD
@@ -3596,7 +3596,7 @@
         YII=
 </value>
   </data>
-  <data name="pictureLastnameIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureLastnameIcon.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/7gAOQWRvYmUAZAAAAAAB/+EOvEV4aWYAAE1NACoAAAAIAAwBAAAD
         AAAAAQIoAAABAQADAAAAAQJAAAABAgADAAAAAwAAAJ4BBgADAAAAAQACAAABEgADAAAAAQABAAABFQAD
@@ -3973,7 +3973,7 @@
         7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FX/2Q==
 </value>
   </data>
-  <data name="pictureLastnameBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureLastnameBackground.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMoAAAA6CAYAAADx98axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA2RJREFUeF7t3c1uTHEcxvGudCXBFVSCDVcg0VsQZW8lQmJbDakr0ZSEit6Al3WD
@@ -3994,10 +3994,10 @@
         YII=
 </value>
   </data>
-  <data name="btnLogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnLogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAWAAAABkCAYAAAC4h+ruAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAfEZJREFUeF7tvQecHmW99h9KSE+A0AOhd1QQKSIIKogKHo9dUY/6HhULoq8esR/U
+        vAAADrwBlbxySQAAfEZJREFUeF7tvQecHmW99h9KSE+A0AOhd1QQKSIIKogKHo9dUY/6HhULoq8esR/U
         o0ePvuqxnHP0/FE6CYQEAqS37b33lrLZbJLtvTz1+l/Xb2aenefZ2c1mAxp0n8/n2pm5Z+aeu37v311m
         dhaAGc1oRjOa0V9BgY5/aZVW9xxTVtN9TEVt97FVdZ3H1tQdPLa2ruWYoGtnNKMZzehvRYGOfwlV1nQe
         V1HTMa+8pn1ReU3b4oqaA4sr6w4sqq7bt6i2bvfi2tqGxXU11YvqqivmUccF+TGjGc1oRq9mBTq+kmpo
@@ -4530,7 +4530,7 @@
         6JVXoOOMZjSjGc3olVeg44xmNKMZzeiVFmb9/wgAWx7+O/uBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="picturePasswordIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picturePasswordIcon.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAbYAAAG4CAIAAACmYVVXAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAACH
         DwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAAKL2lDQ1BJQ0MgUHJvZmlsZQAASMedlndU
@@ -5316,7 +5316,7 @@
         /UGhZOcP2kxt4V1m5VthHVAL2kQfUGM6OhY5XJF/GQBsptH+exKl3gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="picturePasswordBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picturePasswordBackground.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMoAAAA6CAYAAADx98axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA2RJREFUeF7t3c1uTHEcxvGudCXBFVSCDVcg0VsQZW8lQmJbDakr0ZSEit6Al3WD
@@ -5337,7 +5337,7 @@
         YII=
 </value>
   </data>
-  <data name="pictureFirstnameIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureFirstnameIcon.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/7gAOQWRvYmUAZAAAAAAB/+EO4kV4aWYAAE1NACoAAAAIAAwBAAAD
         AAAAAQIoAAABAQADAAAAAQJAAAABAgADAAAAAwAAAJ4BBgADAAAAAQACAAABEgADAAAAAQABAAABFQAD
@@ -5718,7 +5718,7 @@
         irsVdirsVdirsVdirsVdirsVdirsVf/Z
 </value>
   </data>
-  <data name="pictureFirstnameBackground.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureFirstnameBackground.Image" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMoAAAA6CAYAAADx98axAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAA2RJREFUeF7t3c1uTHEcxvGudCXBFVSCDVcg0VsQZW8lQmJbDakr0ZSEit6Al3WD
@@ -5739,7 +5739,7 @@
         YII=
 </value>
   </data>
-  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/4QCqRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
         AAcAAAB0AAAALAAAAABDAFIARQBBAFQATwBSADoAIABnAGQALQBqAHAAZQBnACAAdgAxAC4AMAAgACgA
@@ -6382,7 +6382,7 @@
         SgAx9KYH/9k=
 </value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAMDAAAAEAIACoJQAAFgAAACgAAAAwAAAAYAAAAAEAIAAAAAAAgCUAACMuAAAjLgAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

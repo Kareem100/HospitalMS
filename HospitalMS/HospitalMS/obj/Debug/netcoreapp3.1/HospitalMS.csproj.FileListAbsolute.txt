@@ -15,3 +15,43 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\D
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.pdb
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.genruntimeconfig.cache
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.exe
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.LoginForm.resources
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.RegisterForm.resources
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.ReportForm.resources
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.Properties.Resources.resources
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AssemblyInfo.cs
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.dll
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.pdb
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.deps.json
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.runtimeconfig.json
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.runtimeconfig.dev.json
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.dll
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.pdb
+C:\Users\LENOVO\Downloads\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.genruntimeconfig.cache
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AppointmentForm1.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.LoginForm.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.RegisterForm.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.ReportForm1.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.Properties.Resources.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csproj.GenerateResource.cache
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AssemblyInfoInputs.cache
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AssemblyInfo.cs
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csproj.CoreCompileInputs.cache
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.exe
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.deps.json
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.runtimeconfig.json
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.runtimeconfig.dev.json
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.dll
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.pdb
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.dll
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.pdb
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.genruntimeconfig.cache
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AppointmentForm2.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.ClinicForm.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.ReportForm2.resources
+E:\database\HospitalMS-main\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csprojAssemblyReference.cache

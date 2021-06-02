@@ -8,24 +8,26 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\20114\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\20114\\Documents\\Visual Studio 2019\\Projects\\HospitalMS\\HospitalMS\\HospitalMS.csproj",
+      "projectUniqueName": "E:\\database\\HospitalMS-main\\HospitalMS\\HospitalMS\\HospitalMS.csproj",
       "projectName": "HospitalMS",
-      "projectPath": "C:\\Users\\20114\\Documents\\Visual Studio 2019\\Projects\\HospitalMS\\HospitalMS\\HospitalMS.csproj",
-      "packagesPath": "C:\\Users\\20114\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\20114\\Documents\\Visual Studio 2019\\Projects\\HospitalMS\\HospitalMS\\obj\\",
+      "projectPath": "E:\\database\\HospitalMS-main\\HospitalMS\\HospitalMS\\HospitalMS.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "E:\\database\\HospitalMS-main\\HospitalMS\\HospitalMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\20114\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -61,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

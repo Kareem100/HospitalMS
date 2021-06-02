@@ -30,7 +30,6 @@ namespace HospitalMS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.pictureClose = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.lblHere = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@ namespace HospitalMS
             this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.lblManagementSystem = new System.Windows.Forms.Label();
             this.txtToBeFocus = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePasswordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePasswordBackground)).BeginInit();
@@ -56,19 +54,6 @@ namespace HospitalMS
             ((System.ComponentModel.ISupportInitialize)(this.pictureNameBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureClose
-            // 
-            this.pictureClose.BackColor = System.Drawing.Color.Transparent;
-            this.pictureClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureClose.Image = ((System.Drawing.Image)(resources.GetObject("pictureClose.Image")));
-            this.pictureClose.Location = new System.Drawing.Point(6, 6);
-            this.pictureClose.Name = "pictureClose";
-            this.pictureClose.Size = new System.Drawing.Size(50, 45);
-            this.pictureClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureClose.TabIndex = 0;
-            this.pictureClose.TabStop = false;
-            this.pictureClose.Click += new System.EventHandler(this.pictureClose_Click);
             // 
             // panelContainer
             // 
@@ -106,7 +91,7 @@ namespace HospitalMS
             this.lblHere.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblHere.Location = new System.Drawing.Point(206, 430);
             this.lblHere.Name = "lblHere";
-            this.lblHere.Size = new System.Drawing.Size(39, 19);
+            this.lblHere.Size = new System.Drawing.Size(49, 24);
             this.lblHere.TabIndex = 14;
             this.lblHere.Text = "Here";
             // 
@@ -120,7 +105,7 @@ namespace HospitalMS
             this.lblRegister.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblRegister.Location = new System.Drawing.Point(150, 430);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(60, 19);
+            this.lblRegister.Size = new System.Drawing.Size(79, 24);
             this.lblRegister.TabIndex = 13;
             this.lblRegister.Text = "Register";
             this.lblRegister.Click += new System.EventHandler(this.lblRegister_Click);
@@ -133,7 +118,7 @@ namespace HospitalMS
             this.lblNewStaff.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblNewStaff.Location = new System.Drawing.Point(68, 430);
             this.lblNewStaff.Name = "lblNewStaff";
-            this.lblNewStaff.Size = new System.Drawing.Size(86, 19);
+            this.lblNewStaff.Size = new System.Drawing.Size(111, 24);
             this.lblNewStaff.TabIndex = 12;
             this.lblNewStaff.Text = "New Staff ?";
             // 
@@ -168,7 +153,7 @@ namespace HospitalMS
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(198, 25);
+            this.txtPassword.Size = new System.Drawing.Size(248, 25);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
@@ -243,7 +228,7 @@ namespace HospitalMS
             this.lblGetStarted.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblGetStarted.Location = new System.Drawing.Point(75, 175);
             this.lblGetStarted.Name = "lblGetStarted";
-            this.lblGetStarted.Size = new System.Drawing.Size(180, 18);
+            this.lblGetStarted.Size = new System.Drawing.Size(229, 21);
             this.lblGetStarted.TabIndex = 4;
             this.lblGetStarted.Text = "Get Started From Login Below !";
             // 
@@ -255,7 +240,7 @@ namespace HospitalMS
             this.lblH.ForeColor = System.Drawing.Color.White;
             this.lblH.Location = new System.Drawing.Point(85, 19);
             this.lblH.Name = "lblH";
-            this.lblH.Size = new System.Drawing.Size(41, 36);
+            this.lblH.Size = new System.Drawing.Size(52, 46);
             this.lblH.TabIndex = 0;
             this.lblH.Text = "H";
             // 
@@ -267,7 +252,7 @@ namespace HospitalMS
             this.lblOspital.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblOspital.Location = new System.Drawing.Point(119, 25);
             this.lblOspital.Name = "lblOspital";
-            this.lblOspital.Size = new System.Drawing.Size(96, 27);
+            this.lblOspital.Size = new System.Drawing.Size(120, 35);
             this.lblOspital.TabIndex = 1;
             this.lblOspital.Text = "ospital";
             // 
@@ -290,7 +275,7 @@ namespace HospitalMS
             this.lblManagementSystem.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblManagementSystem.Location = new System.Drawing.Point(123, 48);
             this.lblManagementSystem.Name = "lblManagementSystem";
-            this.lblManagementSystem.Size = new System.Drawing.Size(118, 16);
+            this.lblManagementSystem.Size = new System.Drawing.Size(149, 19);
             this.lblManagementSystem.TabIndex = 2;
             this.lblManagementSystem.Text = "Management System";
             // 
@@ -299,18 +284,17 @@ namespace HospitalMS
             this.txtToBeFocus.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtToBeFocus.Location = new System.Drawing.Point(139, 112);
             this.txtToBeFocus.Name = "txtToBeFocus";
-            this.txtToBeFocus.Size = new System.Drawing.Size(27, 19);
+            this.txtToBeFocus.Size = new System.Drawing.Size(43, 23);
             this.txtToBeFocus.TabIndex = 0;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.panelContainer);
-            this.Controls.Add(this.pictureClose);
             this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -318,7 +302,6 @@ namespace HospitalMS
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePasswordIcon)).EndInit();
@@ -331,8 +314,6 @@ namespace HospitalMS
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureClose;
         private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Label lblH;
         private System.Windows.Forms.Label lblOspital;

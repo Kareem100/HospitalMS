@@ -155,7 +155,7 @@ namespace HospitalMS
             this.txtConfirmPassword.Multiline = true;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(131, 25);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(164, 25);
             this.txtConfirmPassword.TabIndex = 9;
             this.txtConfirmPassword.Text = "Confirm Password";
             this.txtConfirmPassword.UseSystemPasswordChar = true;
@@ -243,7 +243,7 @@ namespace HospitalMS
             this.radioFemale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioFemale.Location = new System.Drawing.Point(22, 65);
             this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(70, 23);
+            this.radioFemale.Size = new System.Drawing.Size(88, 28);
             this.radioFemale.TabIndex = 1;
             this.radioFemale.TabStop = true;
             this.radioFemale.Text = "Female";
@@ -257,7 +257,7 @@ namespace HospitalMS
             this.radioMale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioMale.Location = new System.Drawing.Point(22, 32);
             this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(56, 23);
+            this.radioMale.Size = new System.Drawing.Size(70, 28);
             this.radioMale.TabIndex = 0;
             this.radioMale.TabStop = true;
             this.radioMale.Text = "Male";
@@ -286,7 +286,7 @@ namespace HospitalMS
             this.radioReceptionist.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioReceptionist.Location = new System.Drawing.Point(22, 78);
             this.radioReceptionist.Name = "radioReceptionist";
-            this.radioReceptionist.Size = new System.Drawing.Size(103, 23);
+            this.radioReceptionist.Size = new System.Drawing.Size(132, 28);
             this.radioReceptionist.TabIndex = 2;
             this.radioReceptionist.TabStop = true;
             this.radioReceptionist.Text = "Receptionist";
@@ -300,7 +300,7 @@ namespace HospitalMS
             this.radioNurse.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioNurse.Location = new System.Drawing.Point(22, 51);
             this.radioNurse.Name = "radioNurse";
-            this.radioNurse.Size = new System.Drawing.Size(64, 23);
+            this.radioNurse.Size = new System.Drawing.Size(80, 28);
             this.radioNurse.TabIndex = 1;
             this.radioNurse.TabStop = true;
             this.radioNurse.Text = "Nurse";
@@ -314,7 +314,7 @@ namespace HospitalMS
             this.radioDoctor.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioDoctor.Location = new System.Drawing.Point(22, 24);
             this.radioDoctor.Name = "radioDoctor";
-            this.radioDoctor.Size = new System.Drawing.Size(69, 23);
+            this.radioDoctor.Size = new System.Drawing.Size(86, 28);
             this.radioDoctor.TabIndex = 0;
             this.radioDoctor.TabStop = true;
             this.radioDoctor.Text = "Doctor";
@@ -355,7 +355,7 @@ namespace HospitalMS
             this.lblEmploymentYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.lblEmploymentYear.Location = new System.Drawing.Point(260, 148);
             this.lblEmploymentYear.Name = "lblEmploymentYear";
-            this.lblEmploymentYear.Size = new System.Drawing.Size(116, 19);
+            this.lblEmploymentYear.Size = new System.Drawing.Size(189, 30);
             this.lblEmploymentYear.TabIndex = 23;
             this.lblEmploymentYear.Text = "Employment Year";
             // 
@@ -376,7 +376,7 @@ namespace HospitalMS
             this.pictureEmploymentBackground.Image = ((System.Drawing.Image)(resources.GetObject("pictureEmploymentBackground.Image")));
             this.pictureEmploymentBackground.Location = new System.Drawing.Point(222, 135);
             this.pictureEmploymentBackground.Name = "pictureEmploymentBackground";
-            this.pictureEmploymentBackground.Size = new System.Drawing.Size(176, 45);
+            this.pictureEmploymentBackground.Size = new System.Drawing.Size(198, 45);
             this.pictureEmploymentBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureEmploymentBackground.TabIndex = 21;
             this.pictureEmploymentBackground.TabStop = false;
@@ -387,7 +387,7 @@ namespace HospitalMS
             this.lblBirthdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.lblBirthdate.Location = new System.Drawing.Point(66, 148);
             this.lblBirthdate.Name = "lblBirthdate";
-            this.lblBirthdate.Size = new System.Drawing.Size(69, 19);
+            this.lblBirthdate.Size = new System.Drawing.Size(111, 30);
             this.lblBirthdate.TabIndex = 20;
             this.lblBirthdate.Text = "Birthdate";
             // 
@@ -472,7 +472,7 @@ namespace HospitalMS
             this.lblLogin.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblLogin.Location = new System.Drawing.Point(241, 512);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(41, 19);
+            this.lblLogin.Size = new System.Drawing.Size(51, 24);
             this.lblLogin.TabIndex = 11;
             this.lblLogin.Text = "Login";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
@@ -518,7 +518,7 @@ namespace HospitalMS
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(131, 25);
+            this.txtPassword.Size = new System.Drawing.Size(164, 25);
             this.txtPassword.TabIndex = 8;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
@@ -624,12 +624,12 @@ namespace HospitalMS
             // 
             this.txtToBeFocused.Location = new System.Drawing.Point(376, 146);
             this.txtToBeFocused.Name = "txtToBeFocused";
-            this.txtToBeFocused.Size = new System.Drawing.Size(10, 26);
+            this.txtToBeFocused.Size = new System.Drawing.Size(16, 38);
             this.txtToBeFocused.TabIndex = 0;
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
