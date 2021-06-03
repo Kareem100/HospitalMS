@@ -1,10 +1,11 @@
 CREATE DATABASE HospitalManagementSystemDatabase;
 
 Create Table Clinic (
-    ClinicName varchar(100) primary key,
+    ClinicID int unique not null primary key,
+    ClinicName varchar(100),
     FloorNumber int,
-    WorkingHoursStart float,
-    WorkingHoursEnd float 
+    WorkingStartTime float,
+    WorkingEndTime float 
 );
 
 Create Table Doctor (
@@ -66,3 +67,25 @@ Create Table Appointment (
     PatientID int, 
     ReceptionistID int
 ); 
+
+
+-- Put static data into Clinic table.
+insert into Clinic values(8801, 'Mental Health', 1, '10:05', '18:00');
+insert into Clinic values(8802, 'Dentistry', 2, '10:00', '15:00');
+insert into Clinic values(8803, 'Nutrition', 3, '08:00', '12:00');
+insert into Clinic values(8804, 'Dermatology', 4, '08:05', '10:00');
+insert into Clinic values(8805, 'Oncology', 5, '21:05', '23:00');
+
+-- Put static data into Room table.
+insert into Room values(201, 2, 3, 2);
+insert into Room values(205, 2, 3, 1);
+insert into Room values(210, 3, 4, 2);
+insert into Room values(218, 4, 2, 2);
+insert into Room values(223, 3, 1, 0);
+
+-- Put static data into Medicine table.
+insert into Medicine values(78019, 'Xanax', 30.5, 3);
+insert into Medicine values(78054, 'Amoxicillin', 100, 5);
+insert into Medicine values(78065, 'Penicillin', 200.80, 1);
+insert into Medicine values(78074, 'Methotrexate', 154.60, 3);
+insert into Medicine values(78089, 'Doxil', 130.5, 4);
