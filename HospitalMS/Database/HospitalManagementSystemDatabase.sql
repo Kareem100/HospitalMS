@@ -8,33 +8,32 @@ Drop Table if exists Report_And_Medicine;
 
 
 Create Table Clinic (
-    ClinicID int not null primary key,
-    ClinicName varchar(100),
+    ClinicName varchar(20) not null primary key,
     FloorNumber int,
-    WorkingStartTime float,
-    WorkingEndTime float 
+    WorkingStartTime varchar(20),
+    WorkingEndTime varchar(20)
 );
 
 Create Table Medical_Stuff (
-    NationalID int not null primary key,
-    FirstName varchar(100),
-    LastName varchar(100), 
-    Password varchar(100), 
-    Gender varchar(100),
-    Age float,
-    ShiftStart float,
-    ShiftEnd float,
-    Specialization varchar(100),
+    NationalID varchar(20) not null primary key,
+    FirstName varchar(20),
+    LastName varchar(20), 
+    Password varchar(20), 
+    Gender varchar(20),
+    Age int,
+    ShiftStart varchar(20),
+    ShiftEnd varchar(20),
+    Specialization varchar(20),
     YearOfEmployment int,
-    ClinicName varchar(100)
+    ClinicName varchar(20)
 );
 
 Create Table Patient (
-    NationalID int not null primary key,
-    FirstName varchar(50),
-    LastName varchar(50),
+    NationalID varchar(20) not null primary key,
+    FirstName varchar(20),
+    LastName varchar(20),
     RoomNumber int, 
-    DoctorID int
+    DoctorID varchar(20)
 );
 
 Create Table Room (
@@ -44,13 +43,13 @@ Create Table Room (
     NumberOfTakenBeds int
 );
 
-Create Table CaseReport (
+Create Table Case_Report (
     ReportID int not null primary key,
     DurationStart date,
     DurationEnd date, 
-    ConditionalIllness varchar(100),
-    PatientID int, 
-    DoctorID int
+    ConditionalIllness varchar(20),
+    PatientID varchar(20), 
+    DoctorID varchar(20) 
 );
 
 Create Table Bill ( 
@@ -63,7 +62,7 @@ Create Table Bill (
 
 Create Table Medicine (
     CodeNumber int not null primary key,
-    MedicineName varchar (100),
+    MedicineName varchar(20),
     Price float,
     Quantity int
 );
@@ -71,14 +70,14 @@ Create Table Medicine (
 Create Table Appointment (
     AppointmentID int not null primary key, 
     Description varchar(500), 
-    PatientID int, 
-    ReceptionistID int
+    PatientID varchar(20), 
+    ReceptionistID varchar(20)
 ); 
 
 -- Intermediary table
 Create Table Stuff_Contacts (
-    ContactNumber int,
-    EmployeeID int,
+    ContactNumber varchar(20),
+    EmployeeID varchar(20),
     primary key(ContactNumber, EmployeeID)
 );
 
@@ -91,11 +90,11 @@ Create Table Report_And_Medicine (
 
 
 -- Put static data into Clinic table.
-Insert into Clinic values(8801, 'Mental Health', 1, '10:05', '18:00');
-Insert into Clinic values(8802, 'Dentistry', 2, '10:00', '15:00');
-Insert into Clinic values(8803, 'Nutrition', 3, '08:00', '12:00');
-Insert into Clinic values(8804, 'Dermatology', 4, '08:05', '10:00');
-Insert into Clinic values(8805, 'Oncology', 5, '21:05', '23:00');
+Insert into Clinic values('Mental Health', 1, '10:05', '18:00');
+Insert into Clinic values('Dentistry', 2, '10:00', '15:00');
+Insert into Clinic values('Nutrition', 3, '08:00', '12:00');
+Insert into Clinic values('Dermatology', 4, '08:05', '10:00');
+Insert into Clinic values('Oncology', 5, '21:05', '23:00');
 
 -- Put static data into Room table.
 Insert into Room values(201, 2, 3, 2);
