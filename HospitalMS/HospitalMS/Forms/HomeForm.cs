@@ -119,7 +119,7 @@ namespace HospitalMS
 
         private void btnShowRooms_Click(object sender, EventArgs e)
         {
-            // openForm(new FromName());
+            openForm(new RoomForm());
             highlightSelectedButton(btnShowRooms);
         }
 

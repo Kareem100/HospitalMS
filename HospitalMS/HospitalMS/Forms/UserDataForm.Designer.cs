@@ -157,7 +157,7 @@ namespace HospitalMS.Forms
             this.lblMyData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblMyData.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lblMyData.ForeColor = System.Drawing.Color.Crimson;
-            this.lblMyData.Location = new System.Drawing.Point(223, 23);
+            this.lblMyData.Location = new System.Drawing.Point(223, 26);
             this.lblMyData.Name = "lblMyData";
             this.lblMyData.Size = new System.Drawing.Size(132, 40);
             this.lblMyData.TabIndex = 14;

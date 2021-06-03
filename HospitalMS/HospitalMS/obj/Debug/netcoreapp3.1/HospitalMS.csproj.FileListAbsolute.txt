@@ -85,3 +85,4 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\D
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.ReportForm1.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.ReportForm2.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.Forms.UserDataForm.resources
+C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.RoomForm.resources

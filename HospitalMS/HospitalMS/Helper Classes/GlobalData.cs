@@ -8,5 +8,7 @@ namespace HospitalMS.Helper_Classes
     {
         public static string doctorUser = "Doctor";
         public static string receptionistUser = "Receptionist";
+        public static string roomFull = "Full";
+        public static string roomAvailable = "Available";
     }
 }

@@ -31,5 +31,8 @@
     <Compile Update="Forms\UserDataForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
