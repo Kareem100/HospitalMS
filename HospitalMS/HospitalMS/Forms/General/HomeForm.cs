@@ -26,7 +26,6 @@ namespace HospitalMS
 
         private Form activeForm = null;
         private Thread thread;
-        private string userNID;
 
         public HomeForm(string userNID, string userType)
         {
@@ -45,7 +44,8 @@ namespace HospitalMS
                 btnClinic.Visible = false;
                 btnReports.Visible = false;
             }
-            this.userNID = userNID;
+
+            GlobalData.userNID = userNID;
         }
 
         /********************* PICTURE BUTTONS **************************/
