@@ -126,7 +126,7 @@ namespace HospitalMS
         private void btnShowReports_Click(object sender, EventArgs e)
         {
             openForm(new DisplayReportsForm());
-            highlightSelectedButton(btnReports);
+            resetContextMenus();
         }
 
         private void btnChangeNID_Click(object sender, EventArgs e)
@@ -137,6 +137,12 @@ namespace HospitalMS
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             // openForm(new FromName());
+        }
+
+        private void btnMedicine_Click(object sender, EventArgs e)
+        {
+            openForm(new MedicineForm());
+            resetContextMenus();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

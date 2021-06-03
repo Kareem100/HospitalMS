@@ -31,6 +31,7 @@ namespace HospitalMS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddReportForm));
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.comboPatientNationalID = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.PatientReport_btn = new System.Windows.Forms.Button();
             this.Medecines_checkBoxList = new System.Windows.Forms.CheckedListBox();
@@ -42,7 +43,6 @@ namespace HospitalMS
             this.Conditional_Illness_txt = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblAddReport = new System.Windows.Forms.Label();
-            this.comboPatientNationalID = new System.Windows.Forms.ComboBox();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,19 @@ namespace HospitalMS
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(395, 440);
             this.panelContainer.TabIndex = 5;
+            // 
+            // comboPatientNationalID
+            // 
+            this.comboPatientNationalID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
+            this.comboPatientNationalID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboPatientNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.comboPatientNationalID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboPatientNationalID.FormattingEnabled = true;
+            this.comboPatientNationalID.Location = new System.Drawing.Point(103, 26);
+            this.comboPatientNationalID.Name = "comboPatientNationalID";
+            this.comboPatientNationalID.Size = new System.Drawing.Size(209, 27);
+            this.comboPatientNationalID.TabIndex = 17;
+            this.comboPatientNationalID.Text = "Patient NationalID";
             // 
             // label4
             // 
@@ -220,18 +233,6 @@ namespace HospitalMS
             this.lblAddReport.Size = new System.Drawing.Size(169, 40);
             this.lblAddReport.TabIndex = 16;
             this.lblAddReport.Text = "Add Report";
-            // 
-            // comboPatientNationalID
-            // 
-            this.comboPatientNationalID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
-            this.comboPatientNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.comboPatientNationalID.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboPatientNationalID.FormattingEnabled = true;
-            this.comboPatientNationalID.Location = new System.Drawing.Point(103, 26);
-            this.comboPatientNationalID.Name = "comboPatientNationalID";
-            this.comboPatientNationalID.Size = new System.Drawing.Size(209, 27);
-            this.comboPatientNationalID.TabIndex = 17;
-            this.comboPatientNationalID.Text = "Patient NationalID";
             // 
             // AddReportForm
             // 

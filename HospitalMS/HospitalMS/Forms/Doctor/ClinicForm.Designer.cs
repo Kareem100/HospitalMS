@@ -43,19 +43,20 @@ namespace HospitalMS
             this.FloorBackGround = new System.Windows.Forms.PictureBox();
             this.ClinicName_txt = new System.Windows.Forms.TextBox();
             this.IdBackGround = new System.Windows.Forms.PictureBox();
+            this.AllClinics_Data = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.AllClinics_Radio = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.OneClinic_Radio = new System.Windows.Forms.RadioButton();
-            this.AllClinics_Data = new System.Windows.Forms.DataGridView();
+            this.lblClinic = new System.Windows.Forms.Label();
             this.panelContainer.SuspendLayout();
             this.OneClinic_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFromBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FloorBackGround)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdBackGround)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllClinics_Data)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelContainer
@@ -242,6 +243,19 @@ namespace HospitalMS
             this.IdBackGround.TabIndex = 22;
             this.IdBackGround.TabStop = false;
             // 
+            // AllClinics_Data
+            // 
+            this.AllClinics_Data.BackgroundColor = System.Drawing.Color.White;
+            this.AllClinics_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllClinics_Data.Location = new System.Drawing.Point(4, 11);
+            this.AllClinics_Data.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.AllClinics_Data.Name = "AllClinics_Data";
+            this.AllClinics_Data.RowHeadersWidth = 51;
+            this.AllClinics_Data.RowTemplate.Height = 29;
+            this.AllClinics_Data.Size = new System.Drawing.Size(346, 255);
+            this.AllClinics_Data.TabIndex = 37;
+            this.AllClinics_Data.Visible = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.AllClinics_Radio);
@@ -296,18 +310,17 @@ namespace HospitalMS
             this.OneClinic_Radio.Text = "My Clinic";
             this.OneClinic_Radio.UseVisualStyleBackColor = true;
             // 
-            // AllClinics_Data
+            // lblClinic
             // 
-            this.AllClinics_Data.BackgroundColor = System.Drawing.Color.White;
-            this.AllClinics_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AllClinics_Data.Location = new System.Drawing.Point(4, 11);
-            this.AllClinics_Data.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.AllClinics_Data.Name = "AllClinics_Data";
-            this.AllClinics_Data.RowHeadersWidth = 51;
-            this.AllClinics_Data.RowTemplate.Height = 29;
-            this.AllClinics_Data.Size = new System.Drawing.Size(346, 255);
-            this.AllClinics_Data.TabIndex = 37;
-            this.AllClinics_Data.Visible = false;
+            this.lblClinic.AutoSize = true;
+            this.lblClinic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblClinic.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblClinic.ForeColor = System.Drawing.Color.Crimson;
+            this.lblClinic.Location = new System.Drawing.Point(260, 20);
+            this.lblClinic.Name = "lblClinic";
+            this.lblClinic.Size = new System.Drawing.Size(203, 40);
+            this.lblClinic.TabIndex = 17;
+            this.lblClinic.Text = "Display Clinics";
             // 
             // ClinicForm
             // 
@@ -316,6 +329,7 @@ namespace HospitalMS
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 545);
+            this.Controls.Add(this.lblClinic);
             this.Controls.Add(this.panelContainer);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -330,10 +344,11 @@ namespace HospitalMS
             ((System.ComponentModel.ISupportInitialize)(this.picFromBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FloorBackGround)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdBackGround)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllClinics_Data)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AllClinics_Data)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -357,5 +372,6 @@ namespace HospitalMS
         private System.Windows.Forms.TextBox txtFrom;
         private System.Windows.Forms.PictureBox picFromBackground;
         private System.Windows.Forms.DataGridView AllClinics_Data;
+        private System.Windows.Forms.Label lblClinic;
     }
 }

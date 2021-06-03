@@ -59,6 +59,7 @@ namespace HospitalMS
             this.picClose = new System.Windows.Forms.PictureBox();
             this.panelSettingsContextMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnMedicine = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnChangeNID = new System.Windows.Forms.Button();
             this.panelChildContainer = new System.Windows.Forms.Panel();
@@ -457,11 +458,12 @@ namespace HospitalMS
             this.panelSettingsContextMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSettingsContextMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.panelSettingsContextMenu.Controls.Add(this.btnLogout);
+            this.panelSettingsContextMenu.Controls.Add(this.btnMedicine);
             this.panelSettingsContextMenu.Controls.Add(this.btnChangePassword);
             this.panelSettingsContextMenu.Controls.Add(this.btnChangeNID);
             this.panelSettingsContextMenu.Location = new System.Drawing.Point(475, 55);
             this.panelSettingsContextMenu.Name = "panelSettingsContextMenu";
-            this.panelSettingsContextMenu.Size = new System.Drawing.Size(228, 180);
+            this.panelSettingsContextMenu.Size = new System.Drawing.Size(228, 241);
             this.panelSettingsContextMenu.TabIndex = 1;
             this.panelSettingsContextMenu.Visible = false;
             // 
@@ -476,13 +478,32 @@ namespace HospitalMS
             this.btnLogout.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 120);
+            this.btnLogout.Location = new System.Drawing.Point(0, 180);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(228, 60);
-            this.btnLogout.TabIndex = 16;
+            this.btnLogout.Size = new System.Drawing.Size(228, 61);
+            this.btnLogout.TabIndex = 17;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnMedicine
+            // 
+            this.btnMedicine.BackColor = System.Drawing.Color.Transparent;
+            this.btnMedicine.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMedicine.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMedicine.FlatAppearance.BorderSize = 0;
+            this.btnMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedicine.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnMedicine.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnMedicine.Image")));
+            this.btnMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedicine.Location = new System.Drawing.Point(0, 120);
+            this.btnMedicine.Name = "btnMedicine";
+            this.btnMedicine.Size = new System.Drawing.Size(228, 60);
+            this.btnMedicine.TabIndex = 16;
+            this.btnMedicine.Text = "Pharmacy";
+            this.btnMedicine.UseVisualStyleBackColor = false;
+            this.btnMedicine.Click += new System.EventHandler(this.btnMedicine_Click);
             // 
             // btnChangePassword
             // 
@@ -621,11 +642,12 @@ namespace HospitalMS
         private System.Windows.Forms.Button btnAppointment;
         private System.Windows.Forms.Panel panelSettingsHolder;
         private System.Windows.Forms.Panel panelSettingsContextMenu;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnChangeNID;
         private System.Windows.Forms.Panel panelChildContainer;
         private System.Windows.Forms.Button btnShowRooms;
         private System.Windows.Forms.Button btnShowReports;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnMedicine;
     }
 }

@@ -31,6 +31,7 @@ namespace HospitalMS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayReportsForm));
             this.label1 = new System.Windows.Forms.Label();
+            this.lblAddReport = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -43,12 +44,25 @@ namespace HospitalMS
             this.label1.TabIndex = 1;
             this.label1.Text = "Crystal Report Here";
             // 
+            // lblAddReport
+            // 
+            this.lblAddReport.AutoSize = true;
+            this.lblAddReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAddReport.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAddReport.ForeColor = System.Drawing.Color.Crimson;
+            this.lblAddReport.Location = new System.Drawing.Point(200, 20);
+            this.lblAddReport.Name = "lblAddReport";
+            this.lblAddReport.Size = new System.Drawing.Size(197, 40);
+            this.lblAddReport.TabIndex = 18;
+            this.lblAddReport.Text = "Show Reports";
+            // 
             // DisplayReportsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 545);
+            this.Controls.Add(this.lblAddReport);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -64,5 +78,6 @@ namespace HospitalMS
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAddReport;
     }
 }
