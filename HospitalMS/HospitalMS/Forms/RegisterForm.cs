@@ -101,6 +101,22 @@ namespace HospitalMS
             }
         }
 
+        private void txtNationalID_Enter(object sender, EventArgs e)
+        {
+            if (txtNationalID.Text == "National ID")
+            {
+                txtNationalID.Text = ""; txtNationalID.ForeColor = Color.Gold;
+            }
+        }
+
+        private void txtNationalID_Leave(object sender, EventArgs e)
+        {
+            if (txtNationalID.Text == "")
+            {
+                txtNationalID.Text = "National ID"; txtNationalID.ForeColor = Color.WhiteSmoke;
+            }
+        }
+
         private void txtPassword_Enter(object sender, EventArgs e)
         {
             if (txtPassword.Text == "Password")
@@ -174,6 +190,28 @@ namespace HospitalMS
                     MessageBox.Show("Please Enter a Correct Phone Number...", "Invalid Phone Number !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
+            if (phone.Length != 11)
+            {
+                MessageBox.Show("Egypt Phone Number Should Consists of 11 Digits...", "Invalid Phone Number !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            string nationalID = txtNationalID.Text.Trim();
+            if (nationalID == "" || nationalID == "National ID" || nationalID == null)
+            {
+                MessageBox.Show("Please Enter Your National ID...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            for (int i = 0; i < nationalID.Length; ++i)
+                if (nationalID[i] > '9' || nationalID[i] < '0')
+                {
+                    MessageBox.Show("Please Enter a Correct Phone Number...", "Invalid National ID !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            if (nationalID.Length != 14)
+            {
+                MessageBox.Show("Egypt National ID Should Consists of 14 Digits...", "Invalid National ID !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             string pass = txtPassword.Text.Trim();
             if (pass == "" || pass == "Password" || pass == null)
             {

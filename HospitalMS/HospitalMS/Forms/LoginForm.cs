@@ -36,14 +36,14 @@ namespace HospitalMS
         }
 
         // ================================= MOUSE ENTER&LEAVE EFFECTS ================================= //
-        private void txtFullName_Enter(object sender, EventArgs e)
+        private void txtNationalID_Enter(object sender, EventArgs e)
         {
-            if (txtFullName.Text == "Full Name") { txtFullName.Text = ""; txtFullName.ForeColor = Color.Gold; }
+            if (txtNationalID.Text == "National ID") { txtNationalID.Text = ""; txtNationalID.ForeColor = Color.Gold; }
         }
 
-        private void txtFullName_Leave(object sender, EventArgs e)
+        private void txtNationalID_Leave(object sender, EventArgs e)
         {
-            if (txtFullName.Text == "") { txtFullName.ForeColor = Color.WhiteSmoke; txtFullName.Text = "Full Name"; }
+            if (txtNationalID.Text == "") { txtNationalID.ForeColor = Color.WhiteSmoke; txtNationalID.Text = "National ID"; }
         }
 
         private void txtPassword_Enter(object sender, EventArgs e)
@@ -108,10 +108,10 @@ namespace HospitalMS
         }
         private bool isValidData()
         {
-            string name = txtFullName.Text.Trim();
-            if (name == "" || name == "Full Name" || name == null)
+            string name = txtNationalID.Text.Trim();
+            if (name == "" || name == "National ID" || name == null)
             {
-                MessageBox.Show("Please Enter Your Full Name...", "INVALID LOGIN !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Enter Your National ID...", "INVALID LOGIN !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             string pass = txtPassword.Text.Trim();

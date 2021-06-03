@@ -32,6 +32,9 @@ namespace HospitalMS
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.pictureClose = new System.Windows.Forms.PictureBox();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.txtNationalID = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.pictureConfirmPasswordIcon = new System.Windows.Forms.PictureBox();
             this.pictureConfirmPasswordBackground = new System.Windows.Forms.PictureBox();
@@ -43,7 +46,6 @@ namespace HospitalMS
             this.radioMale = new System.Windows.Forms.RadioButton();
             this.groupSpecialization = new System.Windows.Forms.GroupBox();
             this.radioReceptionist = new System.Windows.Forms.RadioButton();
-            this.radioNurse = new System.Windows.Forms.RadioButton();
             this.radioDoctor = new System.Windows.Forms.RadioButton();
             this.dateEmploymentYear = new HospitalMS.Custom_Controls.CustomDatePicker();
             this.dateBirthdate = new HospitalMS.Custom_Controls.CustomDatePicker();
@@ -72,6 +74,8 @@ namespace HospitalMS
             this.txtToBeFocused = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
             this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureConfirmPasswordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureConfirmPasswordBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoneIcon)).BeginInit();
@@ -106,6 +110,9 @@ namespace HospitalMS
             // panelContainer
             // 
             this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelContainer.Controls.Add(this.txtNationalID);
+            this.panelContainer.Controls.Add(this.pictureBox1);
+            this.panelContainer.Controls.Add(this.pictureBox2);
             this.panelContainer.Controls.Add(this.txtConfirmPassword);
             this.panelContainer.Controls.Add(this.pictureConfirmPasswordIcon);
             this.panelContainer.Controls.Add(this.pictureConfirmPasswordBackground);
@@ -145,6 +152,44 @@ namespace HospitalMS
             this.panelContainer.Size = new System.Drawing.Size(420, 538);
             this.panelContainer.TabIndex = 2;
             // 
+            // txtNationalID
+            // 
+            this.txtNationalID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
+            this.txtNationalID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtNationalID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNationalID.Location = new System.Drawing.Point(260, 363);
+            this.txtNationalID.MaxLength = 14;
+            this.txtNationalID.Multiline = true;
+            this.txtNationalID.Name = "txtNationalID";
+            this.txtNationalID.Size = new System.Drawing.Size(131, 24);
+            this.txtNationalID.TabIndex = 8;
+            this.txtNationalID.Text = "National ID";
+            this.txtNationalID.Enter += new System.EventHandler(this.txtNationalID_Enter);
+            this.txtNationalID.Leave += new System.EventHandler(this.txtNationalID_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(232, 359);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(222, 351);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(176, 45);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
@@ -155,8 +200,8 @@ namespace HospitalMS
             this.txtConfirmPassword.Multiline = true;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(164, 25);
-            this.txtConfirmPassword.TabIndex = 9;
+            this.txtConfirmPassword.Size = new System.Drawing.Size(131, 25);
+            this.txtConfirmPassword.TabIndex = 10;
             this.txtConfirmPassword.Text = "Confirm Password";
             this.txtConfirmPassword.UseSystemPasswordChar = true;
             this.txtConfirmPassword.Enter += new System.EventHandler(this.txtConfirmPassword_Enter);
@@ -190,7 +235,8 @@ namespace HospitalMS
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.txtPhone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPhone.Location = new System.Drawing.Point(162, 367);
+            this.txtPhone.Location = new System.Drawing.Point(66, 367);
+            this.txtPhone.MaxLength = 11;
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(131, 24);
@@ -203,7 +249,7 @@ namespace HospitalMS
             // 
             this.picturePhoneIcon.BackColor = System.Drawing.Color.Transparent;
             this.picturePhoneIcon.Image = ((System.Drawing.Image)(resources.GetObject("picturePhoneIcon.Image")));
-            this.picturePhoneIcon.Location = new System.Drawing.Point(134, 363);
+            this.picturePhoneIcon.Location = new System.Drawing.Point(38, 363);
             this.picturePhoneIcon.Name = "picturePhoneIcon";
             this.picturePhoneIcon.Size = new System.Drawing.Size(28, 28);
             this.picturePhoneIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +260,7 @@ namespace HospitalMS
             // 
             this.picturePhoneBackground.BackColor = System.Drawing.Color.Transparent;
             this.picturePhoneBackground.Image = ((System.Drawing.Image)(resources.GetObject("picturePhoneBackground.Image")));
-            this.picturePhoneBackground.Location = new System.Drawing.Point(124, 355);
+            this.picturePhoneBackground.Location = new System.Drawing.Point(28, 355);
             this.picturePhoneBackground.Name = "picturePhoneBackground";
             this.picturePhoneBackground.Size = new System.Drawing.Size(176, 45);
             this.picturePhoneBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -243,7 +289,7 @@ namespace HospitalMS
             this.radioFemale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioFemale.Location = new System.Drawing.Point(22, 65);
             this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(88, 28);
+            this.radioFemale.Size = new System.Drawing.Size(70, 23);
             this.radioFemale.TabIndex = 1;
             this.radioFemale.TabStop = true;
             this.radioFemale.Text = "Female";
@@ -257,7 +303,7 @@ namespace HospitalMS
             this.radioMale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioMale.Location = new System.Drawing.Point(22, 32);
             this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(70, 28);
+            this.radioMale.Size = new System.Drawing.Size(56, 23);
             this.radioMale.TabIndex = 0;
             this.radioMale.TabStop = true;
             this.radioMale.Text = "Male";
@@ -267,7 +313,6 @@ namespace HospitalMS
             // 
             this.groupSpecialization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupSpecialization.Controls.Add(this.radioReceptionist);
-            this.groupSpecialization.Controls.Add(this.radioNurse);
             this.groupSpecialization.Controls.Add(this.radioDoctor);
             this.groupSpecialization.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.groupSpecialization.ForeColor = System.Drawing.Color.Goldenrod;
@@ -284,27 +329,13 @@ namespace HospitalMS
             this.radioReceptionist.BackColor = System.Drawing.Color.Transparent;
             this.radioReceptionist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.radioReceptionist.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioReceptionist.Location = new System.Drawing.Point(22, 78);
+            this.radioReceptionist.Location = new System.Drawing.Point(22, 65);
             this.radioReceptionist.Name = "radioReceptionist";
-            this.radioReceptionist.Size = new System.Drawing.Size(132, 28);
-            this.radioReceptionist.TabIndex = 2;
+            this.radioReceptionist.Size = new System.Drawing.Size(103, 23);
+            this.radioReceptionist.TabIndex = 1;
             this.radioReceptionist.TabStop = true;
             this.radioReceptionist.Text = "Receptionist";
             this.radioReceptionist.UseVisualStyleBackColor = false;
-            // 
-            // radioNurse
-            // 
-            this.radioNurse.AutoSize = true;
-            this.radioNurse.BackColor = System.Drawing.Color.Transparent;
-            this.radioNurse.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.radioNurse.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioNurse.Location = new System.Drawing.Point(22, 51);
-            this.radioNurse.Name = "radioNurse";
-            this.radioNurse.Size = new System.Drawing.Size(80, 28);
-            this.radioNurse.TabIndex = 1;
-            this.radioNurse.TabStop = true;
-            this.radioNurse.Text = "Nurse";
-            this.radioNurse.UseVisualStyleBackColor = false;
             // 
             // radioDoctor
             // 
@@ -312,9 +343,9 @@ namespace HospitalMS
             this.radioDoctor.BackColor = System.Drawing.Color.Transparent;
             this.radioDoctor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.radioDoctor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioDoctor.Location = new System.Drawing.Point(22, 24);
+            this.radioDoctor.Location = new System.Drawing.Point(22, 32);
             this.radioDoctor.Name = "radioDoctor";
-            this.radioDoctor.Size = new System.Drawing.Size(86, 28);
+            this.radioDoctor.Size = new System.Drawing.Size(69, 23);
             this.radioDoctor.TabIndex = 0;
             this.radioDoctor.TabStop = true;
             this.radioDoctor.Text = "Doctor";
@@ -355,7 +386,7 @@ namespace HospitalMS
             this.lblEmploymentYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.lblEmploymentYear.Location = new System.Drawing.Point(260, 148);
             this.lblEmploymentYear.Name = "lblEmploymentYear";
-            this.lblEmploymentYear.Size = new System.Drawing.Size(189, 30);
+            this.lblEmploymentYear.Size = new System.Drawing.Size(116, 19);
             this.lblEmploymentYear.TabIndex = 23;
             this.lblEmploymentYear.Text = "Employment Year";
             // 
@@ -376,7 +407,7 @@ namespace HospitalMS
             this.pictureEmploymentBackground.Image = ((System.Drawing.Image)(resources.GetObject("pictureEmploymentBackground.Image")));
             this.pictureEmploymentBackground.Location = new System.Drawing.Point(222, 135);
             this.pictureEmploymentBackground.Name = "pictureEmploymentBackground";
-            this.pictureEmploymentBackground.Size = new System.Drawing.Size(198, 45);
+            this.pictureEmploymentBackground.Size = new System.Drawing.Size(176, 45);
             this.pictureEmploymentBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureEmploymentBackground.TabIndex = 21;
             this.pictureEmploymentBackground.TabStop = false;
@@ -387,7 +418,7 @@ namespace HospitalMS
             this.lblBirthdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.lblBirthdate.Location = new System.Drawing.Point(66, 148);
             this.lblBirthdate.Name = "lblBirthdate";
-            this.lblBirthdate.Size = new System.Drawing.Size(111, 30);
+            this.lblBirthdate.Size = new System.Drawing.Size(69, 19);
             this.lblBirthdate.TabIndex = 20;
             this.lblBirthdate.Text = "Birthdate";
             // 
@@ -472,8 +503,8 @@ namespace HospitalMS
             this.lblLogin.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblLogin.Location = new System.Drawing.Point(241, 512);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(51, 24);
-            this.lblLogin.TabIndex = 11;
+            this.lblLogin.Size = new System.Drawing.Size(41, 19);
+            this.lblLogin.TabIndex = 12;
             this.lblLogin.Text = "Login";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
@@ -504,7 +535,7 @@ namespace HospitalMS
             this.btnLogin.Location = new System.Drawing.Point(124, 469);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(189, 44);
-            this.btnLogin.TabIndex = 10;
+            this.btnLogin.TabIndex = 11;
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -518,8 +549,8 @@ namespace HospitalMS
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(164, 25);
-            this.txtPassword.TabIndex = 8;
+            this.txtPassword.Size = new System.Drawing.Size(131, 25);
+            this.txtPassword.TabIndex = 9;
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
@@ -624,12 +655,12 @@ namespace HospitalMS
             // 
             this.txtToBeFocused.Location = new System.Drawing.Point(376, 146);
             this.txtToBeFocused.Name = "txtToBeFocused";
-            this.txtToBeFocused.Size = new System.Drawing.Size(16, 38);
+            this.txtToBeFocused.Size = new System.Drawing.Size(10, 26);
             this.txtToBeFocused.TabIndex = 0;
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -646,6 +677,8 @@ namespace HospitalMS
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureConfirmPasswordIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureConfirmPasswordBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePhoneIcon)).EndInit();
@@ -698,7 +731,6 @@ namespace HospitalMS
         private Custom_Controls.CustomDatePicker dateBirthdate;
         private System.Windows.Forms.GroupBox groupSpecialization;
         private System.Windows.Forms.RadioButton radioReceptionist;
-        private System.Windows.Forms.RadioButton radioNurse;
         private System.Windows.Forms.RadioButton radioDoctor;
         private System.Windows.Forms.GroupBox groupGender;
         private System.Windows.Forms.RadioButton radioFemale;
@@ -710,5 +742,8 @@ namespace HospitalMS
         private System.Windows.Forms.PictureBox pictureConfirmPasswordIcon;
         private System.Windows.Forms.PictureBox pictureConfirmPasswordBackground;
         private System.Windows.Forms.TextBox txtToBeFocused;
+        private System.Windows.Forms.TextBox txtNationalID;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

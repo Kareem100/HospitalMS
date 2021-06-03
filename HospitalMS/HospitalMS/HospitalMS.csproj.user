@@ -13,6 +13,9 @@
     <Compile Update="Forms\AppointmentForm2.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\ReportForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\UserDataForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
