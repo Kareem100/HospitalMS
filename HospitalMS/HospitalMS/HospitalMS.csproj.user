@@ -1,37 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Forms\ClinicForm.cs">
+    <Compile Update="Forms\Receptionist\BillForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\AppointmentForm1.cs">
+    <Compile Update="Forms\Doctor\ClinicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Receptionist\AppointmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Custom Controls\CustomDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Update="Forms\AppointmentForm2.cs">
+    <Compile Update="Forms\General\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\HomeForm.cs">
+    <Compile Update="Forms\General\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\LoginForm.cs">
+    <Compile Update="Forms\General\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\RegisterForm.cs">
+    <Compile Update="Forms\Doctor\AddReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ReportForm1.cs">
+    <Compile Update="Forms\Doctor\DisplayReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ReportForm2.cs">
+    <Compile Update="Forms\General\UserDataForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\UserDataForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\RoomForm.cs">
+    <Compile Update="Forms\Receptionist\RoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
