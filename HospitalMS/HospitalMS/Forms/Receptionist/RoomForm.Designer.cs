@@ -31,7 +31,7 @@ namespace HospitalMS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomForm));
             this.lblRooms = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
             this.btnNextRoom = new System.Windows.Forms.Button();
             this.btnPreviousRoom = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@ namespace HospitalMS
             this.lblFloorNumberDesign = new System.Windows.Forms.Label();
             this.lblRoomNumber = new System.Windows.Forms.Label();
             this.lblRoomNumberDesign = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panelContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblRooms
@@ -59,25 +59,25 @@ namespace HospitalMS
             this.lblRooms.TabIndex = 15;
             this.lblRooms.Text = "Rooms";
             // 
-            // panel1
+            // panelContainer
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.btnNextRoom);
-            this.panel1.Controls.Add(this.btnPreviousRoom);
-            this.panel1.Controls.Add(this.lblStatus);
-            this.panel1.Controls.Add(this.lblTakenBeds);
-            this.panel1.Controls.Add(this.lblNumberOfBeds);
-            this.panel1.Controls.Add(this.lblStatusDesign);
-            this.panel1.Controls.Add(this.lblNumberOfBedsDesign);
-            this.panel1.Controls.Add(this.lblTakenBedsDesign);
-            this.panel1.Controls.Add(this.lblFloorNumber);
-            this.panel1.Controls.Add(this.lblFloorNumberDesign);
-            this.panel1.Controls.Add(this.lblRoomNumber);
-            this.panel1.Controls.Add(this.lblRoomNumberDesign);
-            this.panel1.Location = new System.Drawing.Point(150, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 368);
-            this.panel1.TabIndex = 26;
+            this.panelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelContainer.Controls.Add(this.btnNextRoom);
+            this.panelContainer.Controls.Add(this.btnPreviousRoom);
+            this.panelContainer.Controls.Add(this.lblStatus);
+            this.panelContainer.Controls.Add(this.lblTakenBeds);
+            this.panelContainer.Controls.Add(this.lblNumberOfBeds);
+            this.panelContainer.Controls.Add(this.lblStatusDesign);
+            this.panelContainer.Controls.Add(this.lblNumberOfBedsDesign);
+            this.panelContainer.Controls.Add(this.lblTakenBedsDesign);
+            this.panelContainer.Controls.Add(this.lblFloorNumber);
+            this.panelContainer.Controls.Add(this.lblFloorNumberDesign);
+            this.panelContainer.Controls.Add(this.lblRoomNumber);
+            this.panelContainer.Controls.Add(this.lblRoomNumberDesign);
+            this.panelContainer.Location = new System.Drawing.Point(150, 100);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(377, 368);
+            this.panelContainer.TabIndex = 26;
             // 
             // btnNextRoom
             // 
@@ -222,7 +222,7 @@ namespace HospitalMS
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 545);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.lblRooms);
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,8 +230,8 @@ namespace HospitalMS
             this.Name = "RoomForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RoomForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelContainer.ResumeLayout(false);
+            this.panelContainer.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,7 +240,7 @@ namespace HospitalMS
         #endregion
 
         private System.Windows.Forms.Label lblRooms;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelContainer;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblTakenBeds;
         private System.Windows.Forms.Label lblNumberOfBeds;

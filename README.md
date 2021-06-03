@@ -16,6 +16,7 @@
     
 ![](Screenshots/1.%20Home/Doctor%20Home.png)
 ![](Screenshots/1.%20Home/Receptionist%20Home.png)
+![](Screenshots/1.%20Home/Doctor%20Home%20x2.png)
 
 </p>
 </details>
@@ -24,8 +25,7 @@
   <summary>UI Appointments Screenshots</summary>
 <p>
     
-![](Screenshots/2.%20Appointments/AppointmentForm1.png)
-![](Screenshots/2.%20Appointments/AppointmentForm2.png)
+![](Screenshots/2.%20Appointments/AppointmentForm.png)
 
 </p>
 </details>
@@ -34,8 +34,7 @@
   <summary>UI Appointments Screenshots</summary>
 <p>
     
-![](Screenshots/3.%20Reports/ReportForm1.png)
-![](Screenshots/3.%20Reports/ReportForm2.png)
+![](Screenshots/3.%20Reports/ReportForm.png)
 
 </p>
 </details>
