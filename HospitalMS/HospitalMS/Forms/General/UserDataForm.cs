@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace HospitalMS.Forms
@@ -17,6 +12,9 @@ namespace HospitalMS.Forms
 
         private void UserDataForm_Load(object sender, EventArgs e)
         {
+            dateEmploymentYear.visibleIcon = false;
+            dateShiftStarting.visibleIcon = false;
+            dateShiftEnding.visibleIcon = false;
         }
     }
 }

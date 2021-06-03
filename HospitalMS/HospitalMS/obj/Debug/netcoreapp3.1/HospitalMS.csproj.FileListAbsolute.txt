@@ -86,3 +86,4 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\D
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AppointmentForm.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AddReportForm.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.DisplayReportsForm.resources
+C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.test.resources

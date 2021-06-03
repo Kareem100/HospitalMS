@@ -34,5 +34,8 @@
     <Compile Update="Forms\Receptionist\RoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -54,6 +54,7 @@ namespace HospitalMS.Forms
             this.lblShiftEnds = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtPhones = new System.Windows.Forms.TextBox();
+            this.comboClinic = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFirstnameBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLastnameBackground)).BeginInit();
             this.groupGender.SuspendLayout();
@@ -235,6 +236,7 @@ namespace HospitalMS.Forms
             // groupSpecialization
             // 
             this.groupSpecialization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupSpecialization.Controls.Add(this.comboClinic);
             this.groupSpecialization.Controls.Add(this.radioReceptionist);
             this.groupSpecialization.Controls.Add(this.radioDoctor);
             this.groupSpecialization.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
@@ -359,6 +361,24 @@ namespace HospitalMS.Forms
             this.txtPhones.Size = new System.Drawing.Size(169, 73);
             this.txtPhones.TabIndex = 6;
             // 
+            // comboClinic
+            // 
+            this.comboClinic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
+            this.comboClinic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboClinic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboClinic.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.comboClinic.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboClinic.FormattingEnabled = true;
+            this.comboClinic.Items.AddRange(new object[] {
+            "Test A",
+            "Test B",
+            "Test C"});
+            this.comboClinic.Location = new System.Drawing.Point(22, 56);
+            this.comboClinic.Name = "comboClinic";
+            this.comboClinic.Size = new System.Drawing.Size(149, 27);
+            this.comboClinic.TabIndex = 5;
+            this.comboClinic.Visible = false;
+            // 
             // UserDataForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -430,5 +450,6 @@ namespace HospitalMS.Forms
         private System.Windows.Forms.Label lblShiftEnds;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtPhones;
+        private System.Windows.Forms.ComboBox comboClinic;
     }
 }

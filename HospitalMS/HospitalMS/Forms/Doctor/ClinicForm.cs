@@ -32,13 +32,39 @@ namespace HospitalMS
 
         private void ClinicName_txt_Enter(object sender, EventArgs e)
         {
-            if (ClinicName_txt.Text == "Clinic Name") ClinicName_txt.Text = "";
-
+            if (ClinicName_txt.Text == "Clinic Name")
+                ClinicName_txt.Text = "";
         }
 
         private void ClinicName_txt_Leave(object sender, EventArgs e)
         {
-            if (ClinicName_txt.Text == "") ClinicName_txt.Text = "Clinic Name";
+            if (ClinicName_txt.Text == "")
+                ClinicName_txt.Text = "Clinic Name";
+        }
+
+        private void FloorNumber_txt_Enter(object sender, EventArgs e)
+        {
+            if (FloorNumber_txt.Text == "Floor Number")
+                FloorNumber_txt.Text = "";
+        }
+
+        private void FloorNumber_txt_Leave(object sender, EventArgs e)
+        {
+            if (FloorNumber_txt.Text == "")
+                FloorNumber_txt.Text = "Floor Number";
+        }
+
+        private void AllClinics_Radio_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AllClinics_Radio.Checked == true)
+            {
+                AllClinics_Data.Visible = true;
+                AllClinics_Data.BringToFront();
+            }
+            else
+            {
+                AllClinics_Data.Visible = false;
+            }
         }
     }
 }

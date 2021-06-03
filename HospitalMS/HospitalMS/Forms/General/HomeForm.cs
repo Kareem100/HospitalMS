@@ -95,7 +95,7 @@ namespace HospitalMS
 
         private void btnClinic_Click(object sender, EventArgs e)
         {
-            // openForm(new FromName());
+            openForm(new ClinicForm());
             highlightSelectedButton(btnClinic);
         }
 

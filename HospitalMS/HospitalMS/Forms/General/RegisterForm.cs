@@ -28,8 +28,6 @@ namespace HospitalMS
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             panelContainer.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelContainer.Width, panelContainer.Height, 30, 30));
             dateEmploymentYear.visibleIcon = false;
-            radioDoctor.Checked = true;
-            radioMale.Checked = true;
         }
 
         private void pictureClose_Click(object sender, EventArgs e)
@@ -153,6 +151,28 @@ namespace HospitalMS
             }
         }
 
+        private void radioDoctor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioDoctor.Checked == true)
+            {
+                comboClinic.Visible = true;
+                lblX.Visible = true;
+            }
+            else
+            {
+                comboClinic.Visible = false;
+                lblX.Visible = false;
+            }
+                
+        }
+
+        private void lblX_Click(object sender, EventArgs e)
+        {
+            comboClinic.Visible = false;
+            lblX.Visible = false;
+            radioReceptionist.Checked = true;
+        }
+
         // ==================== REGISTER PART ==================== //
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -176,6 +196,11 @@ namespace HospitalMS
             if (name == "" || name == "Last Name" || name == null)
             {
                 MessageBox.Show("Please Enter Your Last Name...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (radioDoctor.Checked == true && comboClinic.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please Enter Your Assigned Clinic...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             string phone = txtPhone.Text.Trim();
@@ -231,6 +256,5 @@ namespace HospitalMS
             }
             return true;
         }
-
     }
 }

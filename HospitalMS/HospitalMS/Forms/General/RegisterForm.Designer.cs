@@ -45,6 +45,7 @@ namespace HospitalMS
             this.radioFemale = new System.Windows.Forms.RadioButton();
             this.radioMale = new System.Windows.Forms.RadioButton();
             this.groupSpecialization = new System.Windows.Forms.GroupBox();
+            this.comboClinic = new System.Windows.Forms.ComboBox();
             this.radioReceptionist = new System.Windows.Forms.RadioButton();
             this.radioDoctor = new System.Windows.Forms.RadioButton();
             this.dateEmploymentYear = new HospitalMS.Custom_Controls.CustomDatePicker();
@@ -72,6 +73,7 @@ namespace HospitalMS
             this.lblOspital = new System.Windows.Forms.Label();
             this.lblManagementSystem = new System.Windows.Forms.Label();
             this.txtToBeFocused = new System.Windows.Forms.TextBox();
+            this.lblX = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -285,6 +287,7 @@ namespace HospitalMS
             // 
             this.radioFemale.AutoSize = true;
             this.radioFemale.BackColor = System.Drawing.Color.Transparent;
+            this.radioFemale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioFemale.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.radioFemale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioFemale.Location = new System.Drawing.Point(22, 65);
@@ -299,6 +302,8 @@ namespace HospitalMS
             // 
             this.radioMale.AutoSize = true;
             this.radioMale.BackColor = System.Drawing.Color.Transparent;
+            this.radioMale.Checked = true;
+            this.radioMale.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioMale.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.radioMale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioMale.Location = new System.Drawing.Point(22, 32);
@@ -312,6 +317,8 @@ namespace HospitalMS
             // groupSpecialization
             // 
             this.groupSpecialization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupSpecialization.Controls.Add(this.lblX);
+            this.groupSpecialization.Controls.Add(this.comboClinic);
             this.groupSpecialization.Controls.Add(this.radioReceptionist);
             this.groupSpecialization.Controls.Add(this.radioDoctor);
             this.groupSpecialization.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
@@ -323,10 +330,30 @@ namespace HospitalMS
             this.groupSpecialization.TabStop = false;
             this.groupSpecialization.Text = "Specialization";
             // 
+            // comboClinic
+            // 
+            this.comboClinic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
+            this.comboClinic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboClinic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboClinic.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.comboClinic.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboClinic.FormattingEnabled = true;
+            this.comboClinic.Items.AddRange(new object[] {
+            "Test A",
+            "Test B",
+            "Test C"});
+            this.comboClinic.Location = new System.Drawing.Point(22, 64);
+            this.comboClinic.Name = "comboClinic";
+            this.comboClinic.Size = new System.Drawing.Size(149, 27);
+            this.comboClinic.TabIndex = 4;
+            this.comboClinic.Visible = false;
+            // 
             // radioReceptionist
             // 
             this.radioReceptionist.AutoSize = true;
             this.radioReceptionist.BackColor = System.Drawing.Color.Transparent;
+            this.radioReceptionist.Checked = true;
+            this.radioReceptionist.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioReceptionist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.radioReceptionist.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioReceptionist.Location = new System.Drawing.Point(22, 65);
@@ -341,15 +368,16 @@ namespace HospitalMS
             // 
             this.radioDoctor.AutoSize = true;
             this.radioDoctor.BackColor = System.Drawing.Color.Transparent;
+            this.radioDoctor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioDoctor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.radioDoctor.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioDoctor.Location = new System.Drawing.Point(22, 32);
             this.radioDoctor.Name = "radioDoctor";
             this.radioDoctor.Size = new System.Drawing.Size(69, 23);
             this.radioDoctor.TabIndex = 0;
-            this.radioDoctor.TabStop = true;
             this.radioDoctor.Text = "Doctor";
             this.radioDoctor.UseVisualStyleBackColor = false;
+            this.radioDoctor.CheckedChanged += new System.EventHandler(this.radioDoctor_CheckedChanged);
             // 
             // dateEmploymentYear
             // 
@@ -658,6 +686,18 @@ namespace HospitalMS
             this.txtToBeFocused.Size = new System.Drawing.Size(10, 26);
             this.txtToBeFocused.TabIndex = 0;
             // 
+            // lblX
+            // 
+            this.lblX.AutoSize = true;
+            this.lblX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblX.Location = new System.Drawing.Point(147, 33);
+            this.lblX.Name = "lblX";
+            this.lblX.Size = new System.Drawing.Size(22, 23);
+            this.lblX.TabIndex = 5;
+            this.lblX.Text = "X";
+            this.lblX.Visible = false;
+            this.lblX.Click += new System.EventHandler(this.lblX_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -745,5 +785,7 @@ namespace HospitalMS
         private System.Windows.Forms.TextBox txtNationalID;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboClinic;
+        private System.Windows.Forms.Label lblX;
     }
 }
