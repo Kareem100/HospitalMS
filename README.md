@@ -31,7 +31,7 @@
 </details>
 
 <details>
-  <summary>UI Appointments Screenshots</summary>
+  <summary>UI Reports Screenshots</summary>
 <p>
     
 ![](Screenshots/3.%20Reports/ReportForm.png)
