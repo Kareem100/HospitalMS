@@ -1,16 +1,44 @@
 -- CREATE DATABASE HospitalManagementSystemDatabase;
 
-Drop Table if exists Clinic;
-Drop Table if exists Medical_Stuff;
-Drop Table if exists Room;
-Drop Table if exists Patient;
-Drop Table if exists Case_Report;
-Drop Table if exists Case_Bill;
-Drop Table if exists Medicine;
-Drop Table if exists Appointment;
-Drop Table if exists Stuff_Contacts;
-Drop Table if exists Report_And_Medicine;
+BEGIN
+  EXECUTE IMMEDIATE 'drop TABLE Case_Bill';
+EXCEPTION
+  WHEN OTHERS THEN
+    IF sqlcode != -0942 THEN RAISE; 
+    END IF;
+END; 
 
+/
+
+BEGIN
+  EXECUTE IMMEDIATE 'drop TABLE Appointment';
+EXCEPTION
+  WHEN OTHERS THEN
+    IF sqlcode != -0942 THEN RAISE; 
+    END IF;
+END; 
+
+/
+
+BEGIN
+  EXECUTE IMMEDIATE 'drop TABLE Stuff_Contacts';
+EXCEPTION
+  WHEN OTHERS THEN
+    IF sqlcode != -0942 THEN RAISE; 
+    END IF;
+END; 
+
+/
+
+BEGIN
+  EXECUTE IMMEDIATE 'drop TABLE Report_And_Medicine';
+EXCEPTION
+  WHEN OTHERS THEN
+    IF sqlcode != -0942 THEN RAISE; 
+    END IF;
+END; 
+
+/
 
 Create Table Clinic (
     ClinicName varchar(20) not null primary key,
@@ -124,4 +152,3 @@ Insert into Medicine values(78054, 'Amoxicillin', 100, 5);
 Insert into Medicine values(78065, 'Penicillin', 200.80, 1);
 Insert into Medicine values(78074, 'Methotrexate', 154.60, 3);
 Insert into Medicine values(78089, 'Doxil', 130.5, 4);
-  
