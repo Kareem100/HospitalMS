@@ -5,7 +5,7 @@ Drop Table if exists Medical_Stuff;
 Drop Table if exists Room;
 Drop Table if exists Patient;
 Drop Table if exists Case_Report;
-Drop Table if exists Bill;
+Drop Table if exists Case_Bill;
 Drop Table if exists Medicine;
 Drop Table if exists Appointment;
 Drop Table if exists Stuff_Contacts;
@@ -62,7 +62,7 @@ Create Table Case_Report (
     Foreign key (DoctorID) References Medical_Stuff(NationalID) 
 );
 
-Create Table Bill ( 
+Create Table Case_Bill ( 
     BillNumber int not null primary key, 
     InDate date, 
     OutDate date, 
