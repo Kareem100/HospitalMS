@@ -89,15 +89,15 @@ Create Table Appointment (
 
 -- Intermediary table
 Create Table Stuff_Contacts (
-    EmployeeID varchar(20) unique,
+    EmployeeID varchar(20),
     ContactNumber varchar(20),
     Foreign key (EmployeeID) References Medical_Stuff(NationalID) 
 );
 
 -- Intermediary table
 Create Table Report_And_Medicine (
-    ReportID int unique, 
-    MedicineCode int unique,
+    ReportID int, 
+    MedicineCode int,
     Primary key(ReportID, MedicineCode),
     Foreign key(MedicineCode) References Medicine(CodeNumber),
     Foreign key(ReportID) References Case_Report(ReportID)  
