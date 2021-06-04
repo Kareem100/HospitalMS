@@ -87,3 +87,29 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\D
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AddReportForm.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.DisplayReportsForm.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.MedicineForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.exe
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.deps.json
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.runtimeconfig.json
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.runtimeconfig.dev.json
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.dll
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\bin\Debug\netcoreapp3.1\HospitalMS.pdb
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csprojAssemblyReference.cache
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AddReportForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.ClinicForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.DisplayReportsForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.MedicineForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.HomeForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.LoginForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.RegisterForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.Forms.UserDataForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AppointmentForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.BillForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.RoomForm.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.Properties.Resources.resources
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csproj.GenerateResource.cache
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AssemblyInfoInputs.cache
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.AssemblyInfo.cs
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.csproj.CoreCompileInputs.cache
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.dll
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.pdb
+D:\GitHub\HospitalMS\HospitalMS\HospitalMS\obj\Debug\netcoreapp3.1\HospitalMS.genruntimeconfig.cache
