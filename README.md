@@ -63,3 +63,4 @@
 </details>
 
 ***
+[Database SQL Script](HospitalMS/Database/HospitalManagementSystemDatabase.sql)
