@@ -64,5 +64,6 @@
 
 ***
 [Database SQL Script](HospitalMS/Database/HMS_Database_[Var_1].sql)
+
 [Database SQL Script](HospitalMS/Database/HMS_Database_[Var_2].sql)
 ***
