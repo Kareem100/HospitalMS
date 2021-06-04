@@ -1,8 +1,13 @@
 -- CREATE DATABASE HospitalManagementSystemDatabase;
 
 Drop Table if exists Clinic;
+Drop Table if exists Medical_Stuff;
 Drop Table if exists Room;
+Drop Table if exists Patient;
+Drop Table if exists Case_Report;
+Drop Table if exists Bill;
 Drop Table if exists Medicine;
+Drop Table if exists Appointment;
 Drop Table if exists Stuff_Contacts;
 Drop Table if exists Report_And_Medicine;
 
@@ -15,7 +20,7 @@ Create Table Clinic (
 );
 
 Create Table Medical_Stuff (
-    NationalID varchar(20) not null unique primary key,
+    NationalID varchar(20) not null primary key,
     FirstName varchar(20),
     LastName varchar(20), 
     Password varchar(20), 
