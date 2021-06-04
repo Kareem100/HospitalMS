@@ -15,7 +15,7 @@ Create Table Clinic (
 );
 
 Create Table Medical_Stuff (
-    NationalID varchar(20) not null primary key,
+    NationalID varchar(20) not null unique primary key,
     FirstName varchar(20),
     LastName varchar(20), 
     Password varchar(20), 
@@ -25,15 +25,8 @@ Create Table Medical_Stuff (
     ShiftEnd varchar(20),
     Specialization varchar(20),
     YearOfEmployment int,
-    ClinicName varchar(20)
-);
-
-Create Table Patient (
-    NationalID varchar(20) not null primary key,
-    FirstName varchar(20),
-    LastName varchar(20),
-    RoomNumber int, 
-    DoctorID varchar(20)
+    ClinicName varchar(20) not null,
+    Foreign key (ClinicName) References Clinic(ClinicName) 
 );
 
 Create Table Room (
@@ -43,13 +36,25 @@ Create Table Room (
     NumberOfTakenBeds int
 );
 
+Create Table Patient (
+    NationalID varchar(20) not null primary key,
+    FirstName varchar(20),
+    LastName varchar(20),
+    RoomNumber int not null unique, 
+    DoctorID varchar(20) unique,
+    Foreign key (RoomNumber) References Room(RoomNumber),
+    Foreign key (DoctorID) References Medical_Stuff(NationalID)
+);
+
 Create Table Case_Report (
     ReportID int not null primary key,
     DurationStart date,
     DurationEnd date, 
     ConditionalIllness varchar(20),
-    PatientID varchar(20), 
-    DoctorID varchar(20) 
+    PatientID varchar(20) unique, 
+    DoctorID varchar(20) unique,
+    Foreign key (PatientID) References Patient(NationalID),
+    Foreign key (DoctorID) References Medical_Stuff(NationalID) 
 );
 
 Create Table Bill ( 
@@ -57,7 +62,8 @@ Create Table Bill (
     InDate date, 
     OutDate date, 
     TotalAmount float,
-    ReportID int
+    ReportID int unique,
+    Foreign key (ReportID) References Case_Report(ReportID)
 );
 
 Create Table Medicine (
@@ -70,22 +76,26 @@ Create Table Medicine (
 Create Table Appointment (
     AppointmentID int not null primary key, 
     Description varchar(500), 
-    PatientID varchar(20), 
-    ReceptionistID varchar(20)
+    PatientID varchar(20) unique, 
+    ReceptionistID varchar(20) unique,
+    Foreign key (PatientID) References Patient(NationalID),
+    Foreign key (ReceptionistID) References Medical_Stuff(NationalID) 
 ); 
 
 -- Intermediary table
 Create Table Stuff_Contacts (
+    EmployeeID varchar(20) unique,
     ContactNumber varchar(20),
-    EmployeeID varchar(20),
-    primary key(ContactNumber, EmployeeID)
+    Foreign key (EmployeeID) References Medical_Stuff(NationalID) 
 );
 
 -- Intermediary table
 Create Table Report_And_Medicine (
-    ReportID int, 
-    MedicineCode int,
-    primary key(ReportID, MedicineCode)
+    ReportID int unique, 
+    MedicineCode int unique,
+    Primary key(ReportID, MedicineCode),
+    Foreign key(MedicineCode) References Medicine(CodeNumber),
+    Foreign key(ReportID) References Case_Report(ReportID)  
 );
 
 
@@ -109,3 +119,4 @@ Insert into Medicine values(78054, 'Amoxicillin', 100, 5);
 Insert into Medicine values(78065, 'Penicillin', 200.80, 1);
 Insert into Medicine values(78074, 'Methotrexate', 154.60, 3);
 Insert into Medicine values(78089, 'Doxil', 130.5, 4);
+  
