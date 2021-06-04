@@ -1,17 +1,20 @@
 # HospitalMS
 
 <details>
-  <summary>UI Authentication Screenshots</summary>
+  <summary>UI Screenshots</summary>
 <p>
+  <details>
+  <summary>Authentication</summary>
+  <p>
     
-![](Screenshots/0.%20Authentication/Login%20Form.png) 
-![](Screenshots/0.%20Authentication/Register%20Form.png)
+  ![](Screenshots/0.%20Authentication/Login%20Form.png) 
+  ![](Screenshots/0.%20Authentication/Register%20Form.png)
 
-</p>
-</details>
+  </p>
+  </details>
 
 <details>
-  <summary>UI Home Screenshots</summary>
+  <summary>Home</summary>
 <p>
     
 ![](Screenshots/1.%20Home/Doctor%20Home.png)
@@ -22,7 +25,7 @@
 </details>
 
 <details>
-  <summary>UI Appointments Screenshots</summary>
+  <summary>Appointments</summary>
 <p>
     
 ![](Screenshots/2.%20Appointments/AppointmentForm.png)
@@ -31,7 +34,7 @@
 </details>
 
 <details>
-  <summary>UI Reports Screenshots</summary>
+  <summary>Reports</summary>
 <p>
     
 ![](Screenshots/3.%20Reports/ReportForm.png)
@@ -40,7 +43,7 @@
 </details>
 
 <details>
-  <summary>UI Clinics Screenshots</summary>
+  <summary>Clinics</summary>
 <p>
     
 ![](Screenshots/4.%20Clinics/ClinicForm.png)
@@ -49,12 +52,14 @@
 </details>
 
 <details>
-  <summary>UI Rooms Screenshots</summary>
+  <summary>Rooms</summary>
 <p>
     
 ![](Screenshots/5.%20Rooms/RoomForm.png)
 
 </p>
 </details>
+</p>
+</details>
 
-
+***
