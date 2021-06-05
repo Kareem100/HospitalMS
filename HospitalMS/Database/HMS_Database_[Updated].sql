@@ -19,6 +19,21 @@ Create Table Clinic (
     WorkingEndTime varchar(20)
 );
 
+
+Create Table Room (
+    RoomNumber int not null primary key,
+    FloorNumber int,
+    NumberOfAllBeds int,    
+    NumberOfTakenBeds int
+);
+
+Create Table Medicine (
+    CodeNumber int not null primary key,
+    MedicineName varchar(20),
+    Price float,
+    Quantity int
+);
+
 Create Table Medical_Stuff (
     NationalID varchar(20) not null primary key,
     FirstName varchar(20),
@@ -34,11 +49,11 @@ Create Table Medical_Stuff (
     Foreign key (ClinicName) References Clinic(ClinicName) 
 );
 
-Create Table Room (
-    RoomNumber int not null primary key,
-    FloorNumber int,
-    NumberOfAllBeds int,    
-    NumberOfTakenBeds int
+-- Intermediary table
+Create Table Stuff_Contacts (
+    EmployeeID varchar(20),
+    ContactNumber varchar(20),
+    Foreign key (EmployeeID) References Medical_Stuff(NationalID) 
 );
 
 Create Table Patient (
@@ -51,6 +66,16 @@ Create Table Patient (
     Foreign key (DoctorID) References Medical_Stuff(NationalID)
 );
 
+
+Create Table Appointment (
+    AppointmentID int not null primary key, 
+    Description varchar(500), 
+    PatientID varchar(20) unique, 
+    ReceptionistID varchar(20),
+    Foreign key (PatientID) References Patient(NationalID),
+    Foreign key (ReceptionistID) References Medical_Stuff(NationalID) 
+); 
+
 Create Table Case_Report (
     ReportID int not null primary key,
     DurationStart date,
@@ -62,45 +87,23 @@ Create Table Case_Report (
     Foreign key (DoctorID) References Medical_Stuff(NationalID) 
 );
 
-Create Table Case_Bill ( 
-    BillNumber int not null primary key, 
-    InDate date, 
-    OutDate date, 
-    TotalAmount float,
-    ReportID int unique,
-    Foreign key (ReportID) References Case_Report(ReportID)
-);
-
-Create Table Medicine (
-    CodeNumber int not null primary key,
-    MedicineName varchar(20),
-    Price float,
-    Quantity int
-);
-
-Create Table Appointment (
-    AppointmentID int not null primary key, 
-    Description varchar(500), 
-    PatientID varchar(20) unique, 
-    ReceptionistID varchar(20) unique,
-    Foreign key (PatientID) References Patient(NationalID),
-    Foreign key (ReceptionistID) References Medical_Stuff(NationalID) 
-); 
-
--- Intermediary table
-Create Table Stuff_Contacts (
-    EmployeeID varchar(20),
-    ContactNumber varchar(20),
-    Foreign key (EmployeeID) References Medical_Stuff(NationalID) 
-);
 
 -- Intermediary table
 Create Table Report_And_Medicine (
-    ReportID int, 
+    ReportID int,
     MedicineCode int,
+    MedicQuantityTaken int,
     Primary key(ReportID, MedicineCode),
     Foreign key(MedicineCode) References Medicine(CodeNumber),
     Foreign key(ReportID) References Case_Report(ReportID)  
+);
+
+Create Table Case_Bill ( 
+    BillNumber int not null primary key,
+    ReportID int unique,
+    MedicsTotalPrice float,
+    TotalBillAmount float,
+    Foreign key (ReportID) References Case_Report(ReportID)
 );
 
 
@@ -136,14 +139,25 @@ Insert into stuff_contacts values ('29891011407730', '01230512870');
 Insert into stuff_contacts values ('29831011407729', '01144785954');
 Insert into stuff_contacts values ('29991011407725', '01531215648');
 
-
 -- Inserting static data into Patient table.
 Insert into patient values('30001011407738', 'Ahmed', 'Shaker', 201, '29891011407730');
 Insert into patient values('30001011407727', 'Bahaa', 'Aly', 205, '29891011407730');
 Insert into patient values('30101011407750', 'Salma', 'Nasser', 210, '29831011407729');
 
--- Inserting static data into Case_Report table.
-Insert Into case_report Values (1, '01-May-21', '06-May-21', 'Sharp pain on touching his tooth or bite down.', '30001011407738', '29891011407730');
-Insert Into case_report Values (2, '02-Apr-21', '20-Apr-21', 'Being overweight and obese.', '30101011407750', '29831011407729');
+-- Inserting static data into Appointment table.
+Insert into appointment values (10, 'Symptoms of teeth grinding during the night. When waking up, feeling pain in the jaw.', '30001011407738', '29991011407725');
+Insert into appointment values (11, 'Harmfull tooth causing a painful headach.', '30001011407727', '29991011407725');
+Insert into appointment values (12, 'Harmfull tooth causing a painful headach.', '30101011407750', '29991011407725');
 
-  
+-- Inserting static data into Case_Report table.
+Insert into case_report values (1, '01-May-21', '06-May-21', 'Sharp pain on touching his tooth or bite down.', '30001011407738', '29891011407730');
+Insert into case_report values (2, '02-Apr-21', '20-Apr-21', 'Being overweight and obese.', '30101011407750', '29831011407729');
+
+-- Inserting static data into Report_And_Medicine table.
+Insert into report_and_medicine values (2, 78089, 5);
+Insert into report_and_medicine values (2, 78019, 3);
+Insert into report_and_medicine values (1, 78074, 2);
+
+-- Inserting static data into Case_Bill table.
+Insert into case_bill values (113, 2, 2049, 3849);
+Insert into case_bill values (114, 1, 463.8, 963.8);
