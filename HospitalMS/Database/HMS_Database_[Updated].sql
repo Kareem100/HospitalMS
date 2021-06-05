@@ -30,7 +30,7 @@ Create Table Medical_Stuff (
     ShiftEnd varchar(20),
     Specialization varchar(20),
     YearOfEmployment int,
-    ClinicName varchar(20) not null,
+    ClinicName varchar(20),
     Foreign key (ClinicName) References Clinic(ClinicName) 
 );
 
@@ -45,8 +45,8 @@ Create Table Patient (
     NationalID varchar(20) not null primary key,
     FirstName varchar(20),
     LastName varchar(20),
-    RoomNumber int not null unique, 
-    DoctorID varchar(20) unique,
+    RoomNumber int not null, 
+    DoctorID varchar(20),
     Foreign key (RoomNumber) References Room(RoomNumber),
     Foreign key (DoctorID) References Medical_Stuff(NationalID)
 );
@@ -55,7 +55,7 @@ Create Table Case_Report (
     ReportID int not null primary key,
     DurationStart date,
     DurationEnd date, 
-    ConditionalIllness varchar(20),
+    ConditionalIllness varchar(50),
     PatientID varchar(20) unique, 
     DoctorID varchar(20) unique,
     Foreign key (PatientID) References Patient(NationalID),
@@ -104,24 +104,46 @@ Create Table Report_And_Medicine (
 );
 
 
--- Put static data into Clinic table.
+-- Inserting static data into Clinic table.
 Insert into Clinic values('Mental Health', 1, '10:05', '18:00');
 Insert into Clinic values('Dentistry', 2, '10:00', '15:00');
 Insert into Clinic values('Nutrition', 3, '08:00', '12:00');
 Insert into Clinic values('Dermatology', 4, '08:05', '10:00');
 Insert into Clinic values('Oncology', 5, '21:05', '23:00');
 
--- Put static data into Room table.
+-- Inserting static data into Room table.
 Insert into Room values(201, 2, 3, 2);
 Insert into Room values(205, 2, 3, 1);
 Insert into Room values(210, 3, 4, 2);
 Insert into Room values(218, 4, 2, 2);
 Insert into Room values(223, 3, 1, 0);
 
--- Put static data into Medicine table.
+-- Inserting static data into Medicine table.
 Insert into Medicine values(78019, 'Xanax', 30.5, 3);
 Insert into Medicine values(78054, 'Amoxicillin', 100, 5);
 Insert into Medicine values(78065, 'Penicillin', 200.80, 1);
 Insert into Medicine values(78074, 'Methotrexate', 154.60, 3);
 Insert into Medicine values(78089, 'Doxil', 130.5, 4);
+
+-- Inserting static data into Medical_Stuff table.
+Insert into medical_stuff values ('29891011407730', 'Sameh', 'Hussein', '1234', 'Male', 48, '12:08 PM', '06:10 PM', 'Doctor', 1999, 'Dentistry');
+Insert into medical_stuff values ('29831011407729', 'Adel', 'Emam', '1234', 'Male', 56, '02:00 PM', '10:00 PM', 'Doctor', 1993, 'Nutrition');
+Insert into medical_stuff values ('29991011407725', 'Sabry', 'Hamam', '1234', 'Male', 30, '08:00 AM', '06:00 PM', 'Receptionist', 2005, null);
+
+-- Inserting static data into Stuff_Contacts table.
+Insert into stuff_contacts values ('29891011407730', '01034512875');
+Insert into stuff_contacts values ('29891011407730', '01230512870');
+Insert into stuff_contacts values ('29831011407729', '01144785954');
+Insert into stuff_contacts values ('29991011407725', '01531215648');
+
+
+-- Inserting static data into Patient table.
+Insert into patient values('30001011407738', 'Ahmed', 'Shaker', 201, '29891011407730');
+Insert into patient values('30001011407727', 'Bahaa', 'Aly', 205, '29891011407730');
+Insert into patient values('30101011407750', 'Salma', 'Nasser', 210, '29831011407729');
+
+-- Inserting static data into Case_Report table.
+Insert Into case_report Values (1, '01-May-21', '06-May-21', 'Sharp pain on touching his tooth or bite down.', '30001011407738', '29891011407730');
+Insert Into case_report Values (2, '02-Apr-21', '20-Apr-21', 'Being overweight and obese.', '30101011407750', '29831011407729');
+
   

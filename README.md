@@ -63,7 +63,5 @@
 </details>
 
 ***
-[Database SQL Script [VAR #1]](HospitalMS/Database/HMS_Database_[Var_1].sql)
-
-[Database SQL Script [VAR #2]](HospitalMS/Database/HMS_Database_[Var_2].sql)
+[Updated Database SQL Script](HospitalMS/Database/HMS_Database_[Updated].sql)
 ***
