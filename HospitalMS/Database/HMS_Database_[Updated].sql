@@ -78,8 +78,8 @@ Create Table Appointment (
 
 Create Table Case_Report (
     ReportID int not null primary key,
-    DurationStart date,
-    DurationEnd date, 
+    DateIn date,
+    DurateOut date,
     ConditionalIllness varchar(50),
     PatientID varchar(20) unique, 
     DoctorID varchar(20) unique,
@@ -161,3 +161,7 @@ Insert into report_and_medicine values (1, 78074, 2);
 -- Inserting static data into Case_Bill table.
 Insert into case_bill values (113, 2, 2049, 3849);
 Insert into case_bill values (114, 1, 463.8, 963.8);
+
+
+-- Commit Changes Made
+commit;
