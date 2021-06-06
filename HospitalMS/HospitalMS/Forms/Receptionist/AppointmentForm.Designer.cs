@@ -56,7 +56,7 @@ namespace HospitalMS
             // 
             this.lblRooms.AutoSize = true;
             this.lblRooms.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRooms.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblRooms.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblRooms.ForeColor = System.Drawing.Color.Crimson;
             this.lblRooms.Location = new System.Drawing.Point(287, 20);
             this.lblRooms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -92,15 +92,17 @@ namespace HospitalMS
             // 
             this.txtNationalID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtNationalID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtNationalID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtNationalID.Location = new System.Drawing.Point(126, 161);
             this.txtNationalID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNationalID.Multiline = true;
             this.txtNationalID.Name = "txtNationalID";
-            this.txtNationalID.PlaceholderText = "National ID";
             this.txtNationalID.Size = new System.Drawing.Size(182, 25);
             this.txtNationalID.TabIndex = 36;
+            this.txtNationalID.Text = "National ID";
+            this.txtNationalID.Enter += new System.EventHandler(this.txtNationalID_Enter);
+            this.txtNationalID.Leave += new System.EventHandler(this.txtNationalID_Leave);
             // 
             // picNationalidBackround
             // 
@@ -118,15 +120,17 @@ namespace HospitalMS
             // 
             this.txtLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLastname.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtLastname.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtLastname.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtLastname.Location = new System.Drawing.Point(126, 96);
             this.txtLastname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtLastname.Multiline = true;
             this.txtLastname.Name = "txtLastname";
-            this.txtLastname.PlaceholderText = "Last Name";
             this.txtLastname.Size = new System.Drawing.Size(182, 25);
             this.txtLastname.TabIndex = 34;
+            this.txtLastname.Text = "Last Name";
+            this.txtLastname.Enter += new System.EventHandler(this.txtLastname_Enter);
+            this.txtLastname.Leave += new System.EventHandler(this.txtLastname_Leave);
             // 
             // picLastnameBackground
             // 
@@ -144,7 +148,7 @@ namespace HospitalMS
             // 
             this.lblAssignToRoom.AutoSize = true;
             this.lblAssignToRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
-            this.lblAssignToRoom.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAssignToRoom.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblAssignToRoom.Location = new System.Drawing.Point(256, 288);
             this.lblAssignToRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAssignToRoom.Name = "lblAssignToRoom";
@@ -165,7 +169,7 @@ namespace HospitalMS
             // 
             this.lblDoctor.AutoSize = true;
             this.lblDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
-            this.lblDoctor.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblDoctor.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblDoctor.Location = new System.Drawing.Point(29, 288);
             this.lblDoctor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDoctor.Name = "lblDoctor";
@@ -188,7 +192,7 @@ namespace HospitalMS
             this.btnAddAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddAppointment.FlatAppearance.BorderSize = 0;
             this.btnAddAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddAppointment.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddAppointment.Font = new System.Drawing.Font("Cooper Black", 10.2F);
             this.btnAddAppointment.ForeColor = System.Drawing.Color.White;
             this.btnAddAppointment.Location = new System.Drawing.Point(65, 375);
             this.btnAddAppointment.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -202,17 +206,19 @@ namespace HospitalMS
             // 
             this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescription.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtDescription.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtDescription.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtDescription.Location = new System.Drawing.Point(122, 229);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '*';
-            this.txtDescription.PlaceholderText = "Description";
             this.txtDescription.Size = new System.Drawing.Size(182, 32);
             this.txtDescription.TabIndex = 20;
+            this.txtDescription.Text = "Description";
             this.txtDescription.UseSystemPasswordChar = true;
+            this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
+            this.txtDescription.Leave += new System.EventHandler(this.txtDescription_Leave);
             // 
             // picDescriptionBackround
             // 
@@ -230,15 +236,17 @@ namespace HospitalMS
             // 
             this.txtFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFirstname.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtFirstname.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtFirstname.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtFirstname.Location = new System.Drawing.Point(126, 28);
             this.txtFirstname.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtFirstname.Multiline = true;
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.PlaceholderText = "First Name";
             this.txtFirstname.Size = new System.Drawing.Size(182, 25);
             this.txtFirstname.TabIndex = 7;
+            this.txtFirstname.Text = "First Name";
+            this.txtFirstname.Enter += new System.EventHandler(this.txtFirstname_Enter);
+            this.txtFirstname.Leave += new System.EventHandler(this.txtFirstname_Leave);
             // 
             // picFirstnameBackground
             // 
@@ -261,13 +269,14 @@ namespace HospitalMS
             this.ClientSize = new System.Drawing.Size(600, 545);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.lblRooms);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "AppointmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AppointmentForm";
+            this.Load += new System.EventHandler(this.AppointmentForm_Load);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picNationalidBackround)).EndInit();

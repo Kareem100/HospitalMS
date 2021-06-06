@@ -39,22 +39,22 @@ namespace HospitalMS.Forms
             this.radioMale = new System.Windows.Forms.RadioButton();
             this.lblMyData = new System.Windows.Forms.Label();
             this.lblBirthdate = new System.Windows.Forms.Label();
-            this.dateBirthdate = new HospitalMS.Custom_Controls.CustomDatePicker();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblMyAge = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dateEmploymentYear = new HospitalMS.Custom_Controls.CustomDatePicker();
             this.groupSpecialization = new System.Windows.Forms.GroupBox();
+            this.comboClinic = new System.Windows.Forms.ComboBox();
             this.radioReceptionist = new System.Windows.Forms.RadioButton();
             this.radioDoctor = new System.Windows.Forms.RadioButton();
             this.lblYearOfEmplyment = new System.Windows.Forms.Label();
-            this.dateShiftStarting = new HospitalMS.Custom_Controls.CustomDatePicker();
             this.lblShiftStarts = new System.Windows.Forms.Label();
-            this.dateShiftEnding = new HospitalMS.Custom_Controls.CustomDatePicker();
             this.lblShiftEnds = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtPhones = new System.Windows.Forms.TextBox();
-            this.comboClinic = new System.Windows.Forms.ComboBox();
+            this.dateShiftEnding = new HospitalMS.Custom_Controls.CustomDatePicker();
+            this.dateShiftStarting = new HospitalMS.Custom_Controls.CustomDatePicker();
+            this.dateEmploymentYear = new HospitalMS.Custom_Controls.CustomDatePicker();
+            this.dateBirthdate = new HospitalMS.Custom_Controls.CustomDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picFirstnameBackground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLastnameBackground)).BeginInit();
             this.groupGender.SuspendLayout();
@@ -66,14 +66,16 @@ namespace HospitalMS.Forms
             // 
             this.txtFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFirstName.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtFirstName.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtFirstName.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtFirstName.Location = new System.Drawing.Point(46, 105);
             this.txtFirstName.Multiline = true;
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.PlaceholderText = "First Name";
             this.txtFirstName.Size = new System.Drawing.Size(169, 24);
             this.txtFirstName.TabIndex = 0;
+            this.txtFirstName.Text = "First Name";
+            this.txtFirstName.Enter += new System.EventHandler(this.txtFirstName_Enter);
+            this.txtFirstName.Leave += new System.EventHandler(this.txtFirstName_Leave);
             // 
             // picFirstnameBackground
             // 
@@ -90,14 +92,16 @@ namespace HospitalMS.Forms
             // 
             this.txtLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLastName.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtLastName.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtLastName.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtLastName.Location = new System.Drawing.Point(361, 105);
             this.txtLastName.Multiline = true;
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.PlaceholderText = "Last Name";
             this.txtLastName.Size = new System.Drawing.Size(169, 24);
             this.txtLastName.TabIndex = 1;
+            this.txtLastName.Text = "Last Name";
+            this.txtLastName.Enter += new System.EventHandler(this.txtLastName_Enter);
+            this.txtLastName.Leave += new System.EventHandler(this.txtLastName_Leave);
             // 
             // picLastnameBackground
             // 
@@ -115,7 +119,7 @@ namespace HospitalMS.Forms
             this.groupGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupGender.Controls.Add(this.radioFemale);
             this.groupGender.Controls.Add(this.radioMale);
-            this.groupGender.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.groupGender.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupGender.ForeColor = System.Drawing.Color.Goldenrod;
             this.groupGender.Location = new System.Drawing.Point(30, 160);
             this.groupGender.Name = "groupGender";
@@ -128,7 +132,7 @@ namespace HospitalMS.Forms
             // 
             this.radioFemale.AutoSize = true;
             this.radioFemale.BackColor = System.Drawing.Color.Transparent;
-            this.radioFemale.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.radioFemale.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.radioFemale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioFemale.Location = new System.Drawing.Point(22, 60);
             this.radioFemale.Name = "radioFemale";
@@ -142,7 +146,7 @@ namespace HospitalMS.Forms
             // 
             this.radioMale.AutoSize = true;
             this.radioMale.BackColor = System.Drawing.Color.Transparent;
-            this.radioMale.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.radioMale.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.radioMale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioMale.Location = new System.Drawing.Point(22, 27);
             this.radioMale.Name = "radioMale";
@@ -156,7 +160,7 @@ namespace HospitalMS.Forms
             // 
             this.lblMyData.AutoSize = true;
             this.lblMyData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblMyData.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblMyData.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblMyData.ForeColor = System.Drawing.Color.Crimson;
             this.lblMyData.Location = new System.Drawing.Point(223, 26);
             this.lblMyData.Name = "lblMyData";
@@ -173,19 +177,6 @@ namespace HospitalMS.Forms
             this.lblBirthdate.TabIndex = 15;
             this.lblBirthdate.Text = "Birthdate";
             // 
-            // dateBirthdate
-            // 
-            this.dateBirthdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateBirthdate.BorderSize = 0;
-            this.dateBirthdate.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.dateBirthdate.Location = new System.Drawing.Point(345, 185);
-            this.dateBirthdate.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateBirthdate.Name = "dateBirthdate";
-            this.dateBirthdate.Size = new System.Drawing.Size(198, 35);
-            this.dateBirthdate.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dateBirthdate.TabIndex = 3;
-            this.dateBirthdate.TextColor = System.Drawing.Color.White;
-            // 
             // lblAge
             // 
             this.lblAge.AutoSize = true;
@@ -198,7 +189,7 @@ namespace HospitalMS.Forms
             // lblMyAge
             // 
             this.lblMyAge.AutoSize = true;
-            this.lblMyAge.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblMyAge.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblMyAge.ForeColor = System.Drawing.Color.Crimson;
             this.lblMyAge.Location = new System.Drawing.Point(408, 225);
             this.lblMyAge.Name = "lblMyAge";
@@ -217,29 +208,13 @@ namespace HospitalMS.Forms
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // dateEmploymentYear
-            // 
-            this.dateEmploymentYear.BorderColor = System.Drawing.Color.DarkOrange;
-            this.dateEmploymentYear.BorderSize = 1;
-            this.dateEmploymentYear.CustomFormat = "yyyy";
-            this.dateEmploymentYear.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.dateEmploymentYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateEmploymentYear.Location = new System.Drawing.Point(345, 299);
-            this.dateEmploymentYear.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateEmploymentYear.Name = "dateEmploymentYear";
-            this.dateEmploymentYear.ShowUpDown = true;
-            this.dateEmploymentYear.Size = new System.Drawing.Size(198, 35);
-            this.dateEmploymentYear.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dateEmploymentYear.TabIndex = 5;
-            this.dateEmploymentYear.TextColor = System.Drawing.Color.White;
-            // 
             // groupSpecialization
             // 
             this.groupSpecialization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupSpecialization.Controls.Add(this.comboClinic);
             this.groupSpecialization.Controls.Add(this.radioReceptionist);
             this.groupSpecialization.Controls.Add(this.radioDoctor);
-            this.groupSpecialization.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.groupSpecialization.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupSpecialization.ForeColor = System.Drawing.Color.Goldenrod;
             this.groupSpecialization.Location = new System.Drawing.Point(30, 272);
             this.groupSpecialization.Name = "groupSpecialization";
@@ -248,11 +223,29 @@ namespace HospitalMS.Forms
             this.groupSpecialization.TabStop = false;
             this.groupSpecialization.Text = "Specialiszation";
             // 
+            // comboClinic
+            // 
+            this.comboClinic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
+            this.comboClinic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboClinic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboClinic.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.comboClinic.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboClinic.FormattingEnabled = true;
+            this.comboClinic.Items.AddRange(new object[] {
+            "Test A",
+            "Test B",
+            "Test C"});
+            this.comboClinic.Location = new System.Drawing.Point(22, 56);
+            this.comboClinic.Name = "comboClinic";
+            this.comboClinic.Size = new System.Drawing.Size(149, 27);
+            this.comboClinic.TabIndex = 5;
+            this.comboClinic.Visible = false;
+            // 
             // radioReceptionist
             // 
             this.radioReceptionist.AutoSize = true;
             this.radioReceptionist.BackColor = System.Drawing.Color.Transparent;
-            this.radioReceptionist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.radioReceptionist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.radioReceptionist.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioReceptionist.Location = new System.Drawing.Point(22, 60);
             this.radioReceptionist.Name = "radioReceptionist";
@@ -266,7 +259,7 @@ namespace HospitalMS.Forms
             // 
             this.radioDoctor.AutoSize = true;
             this.radioDoctor.BackColor = System.Drawing.Color.Transparent;
-            this.radioDoctor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.radioDoctor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.radioDoctor.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioDoctor.Location = new System.Drawing.Point(22, 27);
             this.radioDoctor.Name = "radioDoctor";
@@ -285,23 +278,6 @@ namespace HospitalMS.Forms
             this.lblYearOfEmplyment.TabIndex = 24;
             this.lblYearOfEmplyment.Text = "Year of Employment";
             // 
-            // dateShiftStarting
-            // 
-            this.dateShiftStarting.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateShiftStarting.BorderSize = 0;
-            this.dateShiftStarting.CustomFormat = "";
-            this.dateShiftStarting.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.dateShiftStarting.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateShiftStarting.Location = new System.Drawing.Point(348, 373);
-            this.dateShiftStarting.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateShiftStarting.Name = "dateShiftStarting";
-            this.dateShiftStarting.ShowUpDown = true;
-            this.dateShiftStarting.Size = new System.Drawing.Size(198, 35);
-            this.dateShiftStarting.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dateShiftStarting.TabIndex = 7;
-            this.dateShiftStarting.TextColor = System.Drawing.Color.White;
-            this.dateShiftStarting.Value = new System.DateTime(2021, 6, 2, 0, 0, 0, 0);
-            // 
             // lblShiftStarts
             // 
             this.lblShiftStarts.AutoSize = true;
@@ -310,22 +286,6 @@ namespace HospitalMS.Forms
             this.lblShiftStarts.Size = new System.Drawing.Size(162, 23);
             this.lblShiftStarts.TabIndex = 25;
             this.lblShiftStarts.Text = "Shitft Starts From";
-            // 
-            // dateShiftEnding
-            // 
-            this.dateShiftEnding.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateShiftEnding.BorderSize = 0;
-            this.dateShiftEnding.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.dateShiftEnding.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateShiftEnding.Location = new System.Drawing.Point(348, 453);
-            this.dateShiftEnding.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateShiftEnding.Name = "dateShiftEnding";
-            this.dateShiftEnding.ShowUpDown = true;
-            this.dateShiftEnding.Size = new System.Drawing.Size(198, 35);
-            this.dateShiftEnding.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dateShiftEnding.TabIndex = 8;
-            this.dateShiftEnding.TextColor = System.Drawing.Color.White;
-            this.dateShiftEnding.Value = new System.DateTime(2021, 6, 3, 0, 0, 0, 0);
             // 
             // lblShiftEnds
             // 
@@ -352,32 +312,78 @@ namespace HospitalMS.Forms
             // 
             this.txtPhones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtPhones.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhones.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtPhones.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtPhones.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtPhones.Location = new System.Drawing.Point(46, 401);
             this.txtPhones.Multiline = true;
             this.txtPhones.Name = "txtPhones";
-            this.txtPhones.PlaceholderText = "Phones";
             this.txtPhones.Size = new System.Drawing.Size(169, 73);
             this.txtPhones.TabIndex = 6;
+            this.txtPhones.Text = "Phones";
+            this.txtPhones.Enter += new System.EventHandler(this.txtPhones_Enter);
+            this.txtPhones.Leave += new System.EventHandler(this.txtPhones_Leave);
             // 
-            // comboClinic
+            // dateShiftEnding
             // 
-            this.comboClinic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
-            this.comboClinic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboClinic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboClinic.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.comboClinic.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboClinic.FormattingEnabled = true;
-            this.comboClinic.Items.AddRange(new object[] {
-            "Test A",
-            "Test B",
-            "Test C"});
-            this.comboClinic.Location = new System.Drawing.Point(22, 56);
-            this.comboClinic.Name = "comboClinic";
-            this.comboClinic.Size = new System.Drawing.Size(149, 27);
-            this.comboClinic.TabIndex = 5;
-            this.comboClinic.Visible = false;
+            this.dateShiftEnding.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateShiftEnding.BorderSize = 0;
+            this.dateShiftEnding.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.dateShiftEnding.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateShiftEnding.Location = new System.Drawing.Point(348, 453);
+            this.dateShiftEnding.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateShiftEnding.Name = "dateShiftEnding";
+            this.dateShiftEnding.ShowUpDown = true;
+            this.dateShiftEnding.Size = new System.Drawing.Size(198, 35);
+            this.dateShiftEnding.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dateShiftEnding.TabIndex = 8;
+            this.dateShiftEnding.TextColor = System.Drawing.Color.White;
+            this.dateShiftEnding.Value = new System.DateTime(2021, 6, 3, 0, 0, 0, 0);
+            // 
+            // dateShiftStarting
+            // 
+            this.dateShiftStarting.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateShiftStarting.BorderSize = 0;
+            this.dateShiftStarting.CustomFormat = "";
+            this.dateShiftStarting.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.dateShiftStarting.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateShiftStarting.Location = new System.Drawing.Point(348, 373);
+            this.dateShiftStarting.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateShiftStarting.Name = "dateShiftStarting";
+            this.dateShiftStarting.ShowUpDown = true;
+            this.dateShiftStarting.Size = new System.Drawing.Size(198, 35);
+            this.dateShiftStarting.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dateShiftStarting.TabIndex = 7;
+            this.dateShiftStarting.TextColor = System.Drawing.Color.White;
+            this.dateShiftStarting.Value = new System.DateTime(2021, 6, 2, 0, 0, 0, 0);
+            // 
+            // dateEmploymentYear
+            // 
+            this.dateEmploymentYear.BorderColor = System.Drawing.Color.DarkOrange;
+            this.dateEmploymentYear.BorderSize = 1;
+            this.dateEmploymentYear.CustomFormat = "yyyy";
+            this.dateEmploymentYear.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.dateEmploymentYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateEmploymentYear.Location = new System.Drawing.Point(345, 299);
+            this.dateEmploymentYear.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateEmploymentYear.Name = "dateEmploymentYear";
+            this.dateEmploymentYear.ShowUpDown = true;
+            this.dateEmploymentYear.Size = new System.Drawing.Size(198, 35);
+            this.dateEmploymentYear.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dateEmploymentYear.TabIndex = 5;
+            this.dateEmploymentYear.TextColor = System.Drawing.Color.White;
+            // 
+            // dateBirthdate
+            // 
+            this.dateBirthdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateBirthdate.BorderSize = 0;
+            this.dateBirthdate.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.dateBirthdate.Location = new System.Drawing.Point(345, 185);
+            this.dateBirthdate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateBirthdate.Name = "dateBirthdate";
+            this.dateBirthdate.Size = new System.Drawing.Size(198, 35);
+            this.dateBirthdate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dateBirthdate.TabIndex = 3;
+            this.dateBirthdate.TextColor = System.Drawing.Color.White;
             // 
             // UserDataForm
             // 
@@ -405,7 +411,7 @@ namespace HospitalMS.Forms
             this.Controls.Add(this.picLastnameBackground);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.picFirstnameBackground);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserDataForm";
