@@ -79,7 +79,7 @@ Create Table Appointment (
 Create Table Case_Report (
     ReportID int not null primary key,
     DateIn date,
-    DurateOut date,
+    DateOut date,
     ConditionalIllness varchar(50),
     PatientID varchar(20) unique, 
     DoctorID varchar(20) unique,
