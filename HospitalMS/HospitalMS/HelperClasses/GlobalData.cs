@@ -8,6 +8,8 @@ namespace HospitalMS.HelperClasses
         public static string roomFull = "Full";
         public static string roomAvailable = "Available";
         public static string userNID = "";
+        public static string userFullName = "";
+        public static string userType = "";
         public static int dayAccomodationCost = 100;
     }
 }

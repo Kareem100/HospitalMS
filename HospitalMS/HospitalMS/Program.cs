@@ -14,9 +14,9 @@ namespace HospitalMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginForm());
+            Application.Run(new LoginForm());
             //Application.Run(new RegisterForm());
-            Application.Run(new HomeForm("30001011407731", GlobalData.receptionistUser));
+            //Application.Run(new HomeForm());
         }
     }
 }

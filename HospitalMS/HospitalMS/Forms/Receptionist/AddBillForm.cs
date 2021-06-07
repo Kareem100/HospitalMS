@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 
 namespace HospitalMS
 {
-    public partial class BillForm : Form
+    public partial class AddBillForm : Form
     {
         // ========================== Rounding Edges ==========================//
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -25,7 +25,6 @@ namespace HospitalMS
         );
         // =====================================================================//
 
-        private string dbConnection;
         private OracleConnection conn;
         private List<int> medicineCodeList;
         private List<int> medicineQuantityList;
@@ -33,7 +32,7 @@ namespace HospitalMS
         private float totalBillCost;
         private string fullName;
 
-        public BillForm()
+        public AddBillForm()
         {
             InitializeComponent();
         }
@@ -41,7 +40,7 @@ namespace HospitalMS
         private void BillForm_Load(object sender, EventArgs e)
         {
             panelContainer.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelContainer.Width, panelContainer.Height, 30, 30));
-            dbConnection = ConfigurationManager.ConnectionStrings["databaseConnection"].ConnectionString;
+            string dbConnection = ConfigurationManager.ConnectionStrings["databaseConnection"].ConnectionString;
             conn = new OracleConnection(dbConnection);
             conn.Open();
 

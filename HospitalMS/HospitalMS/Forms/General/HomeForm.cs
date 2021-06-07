@@ -27,13 +27,9 @@ namespace HospitalMS
         private Form activeForm = null;
         private Thread thread;
         private bool isRegion;
-        private string userType;
-        public HomeForm(string userNID, string userType)
+        public HomeForm()
         {
             InitializeComponent();
-
-            GlobalData.userNID = userNID;
-            this.userType = userType;
         }
 
 
@@ -41,14 +37,17 @@ namespace HospitalMS
         {
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
             isRegion = true;
-
-            if (userType == GlobalData.doctorUser)
+            
+            lblUserName.Text = "";
+            string[] names = GlobalData.userFullName.Split(' ');
+            lblUserName.Text = names[0][0] + "." + names[1];
+            if (GlobalData.userType == GlobalData.doctorUser)
             {
                 btnAppointment.Visible = false;
                 btnBill.Visible = false;
                 btnShowRooms.Visible = false;
             }
-            else if (userType == GlobalData.receptionistUser)
+            else if (GlobalData.userType == GlobalData.receptionistUser)
             {
                 btnClinic.Visible = false;
                 btnReports.Visible = false;
@@ -121,7 +120,7 @@ namespace HospitalMS
 
         private void btnBill_Click(object sender, EventArgs e)
         {
-            openForm(new BillForm());
+            openForm(new AddBillForm());
             highlightSelectedButton(btnBill);
         }
 
@@ -133,7 +132,7 @@ namespace HospitalMS
 
         private void btnShowReports_Click(object sender, EventArgs e)
         {
-            if (userType == GlobalData.doctorUser)
+            if (GlobalData.userType == GlobalData.doctorUser)
                 openForm(new DisplayReportsForm());
             else
                 openForm(new DisplayBillsForm());

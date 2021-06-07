@@ -58,7 +58,6 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\bin\D
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\bin\Debug\stdole.dll
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.DisplayBillsForm.resources
-C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.BillForm.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.AddReportForm.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.AppointmentForm.resources
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.ClinicForm.resources
@@ -77,3 +76,4 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\D
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.pdb
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.csproj.AssemblyReference.cache
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\bin\Debug\Oracle.DataAccess.dll
+C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.AddBillForm.resources

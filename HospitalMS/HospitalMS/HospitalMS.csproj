@@ -69,11 +69,11 @@
     <Compile Include="Forms\Receptionist\DisplayBillsForm.Designer.cs">
       <DependentUpon>DisplayBillsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Receptionist\BillForm.cs">
+    <Compile Include="Forms\Receptionist\AddBillForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Receptionist\BillForm.designer.cs">
-      <DependentUpon>BillForm.cs</DependentUpon>
+    <Compile Include="Forms\Receptionist\AddBillForm.designer.cs">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Doctor\AddReportForm.cs">
       <SubType>Form</SubType>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="Forms\Receptionist\DisplayBillsForm.resx">
       <DependentUpon>DisplayBillsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Receptionist\BillForm.resx">
-      <DependentUpon>BillForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Receptionist\AddBillForm.resx">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor\AddReportForm.resx">
       <DependentUpon>AddReportForm.cs</DependentUpon>

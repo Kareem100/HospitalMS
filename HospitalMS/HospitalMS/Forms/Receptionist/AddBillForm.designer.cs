@@ -1,7 +1,7 @@
 ﻿
 namespace HospitalMS
 {
-    partial class BillForm
+    partial class AddBillForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace HospitalMS
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBillForm));
             this.lblAddBill = new System.Windows.Forms.Label();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -252,7 +252,7 @@ namespace HospitalMS
             this.btnAddBill.UseVisualStyleBackColor = false;
             this.btnAddBill.Click += new System.EventHandler(this.btnAddBill_Click);
             // 
-            // BillForm
+            // AddBillForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -264,7 +264,7 @@ namespace HospitalMS
             this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "BillForm";
+            this.Name = "AddBillForm";
             this.Text = "BillForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BillForm_FormClosing);
             this.Load += new System.EventHandler(this.BillForm_Load);
