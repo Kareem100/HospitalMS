@@ -46,7 +46,8 @@
   <summary>Bills</summary>
 <p>
     
-![](Screenshots/6.%20Bills/Display%20Bills%20Form.png)
+![](Screenshots/6.%20Bills/AddBillForm.png)
+![](Screenshots/6.%20Bills/DisplayBillsForm.png)
 
 </p>
 </details>
