@@ -43,6 +43,15 @@
 </details>
 
 <details>
+  <summary>Bills</summary>
+<p>
+    
+![](Screenshots/6.%20Bills/Display%20Bills%20Form.png)
+
+</p>
+</details>
+
+<details>
   <summary>Clinics</summary>
 <p>
     
