@@ -23,6 +23,10 @@ namespace HospitalMS
         public RoomForm()
         {
             InitializeComponent();
+        }
+
+        private void RoomForm_Load(object sender, EventArgs e)
+        {
             panelContainer.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelContainer.Width, panelContainer.Height, 30, 30));
         }
 
@@ -39,6 +43,5 @@ namespace HospitalMS
         {
 
         }
-
     }
 }

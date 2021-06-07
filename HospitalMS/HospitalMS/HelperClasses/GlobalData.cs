@@ -7,7 +7,7 @@ namespace HospitalMS.HelperClasses
         public static string receptionistUser = "Receptionist";
         public static string roomFull = "Full";
         public static string roomAvailable = "Available";
-
         public static string userNID = "";
+        public static int dayAccomodationCost = 100;
     }
 }

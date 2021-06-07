@@ -51,7 +51,7 @@ namespace HospitalMS
             // 
             this.lblRooms.AutoSize = true;
             this.lblRooms.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblRooms.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblRooms.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblRooms.ForeColor = System.Drawing.Color.Crimson;
             this.lblRooms.Location = new System.Drawing.Point(285, 20);
             this.lblRooms.Name = "lblRooms";
@@ -84,7 +84,7 @@ namespace HospitalMS
             this.btnNextRoom.BackColor = System.Drawing.Color.Crimson;
             this.btnNextRoom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNextRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextRoom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnNextRoom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnNextRoom.ForeColor = System.Drawing.Color.Gold;
             this.btnNextRoom.Location = new System.Drawing.Point(335, 333);
             this.btnNextRoom.Name = "btnNextRoom";
@@ -99,7 +99,7 @@ namespace HospitalMS
             this.btnPreviousRoom.BackColor = System.Drawing.Color.Crimson;
             this.btnPreviousRoom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPreviousRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPreviousRoom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPreviousRoom.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.btnPreviousRoom.ForeColor = System.Drawing.Color.Gold;
             this.btnPreviousRoom.Location = new System.Drawing.Point(1, 333);
             this.btnPreviousRoom.Name = "btnPreviousRoom";
@@ -224,12 +224,13 @@ namespace HospitalMS
             this.ClientSize = new System.Drawing.Size(600, 545);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.lblRooms);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "RoomForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RoomForm";
+            this.Load += new System.EventHandler(this.RoomForm_Load);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
             this.ResumeLayout(false);

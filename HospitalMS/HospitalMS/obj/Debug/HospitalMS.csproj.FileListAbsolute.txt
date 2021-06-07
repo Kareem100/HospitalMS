@@ -76,3 +76,4 @@ C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\D
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.exe
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.pdb
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.csproj.AssemblyReference.cache
+C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\bin\Debug\Oracle.DataAccess.dll
