@@ -1,5 +1,5 @@
 ﻿using HospitalMS.Forms;
-using HospitalMS.Helper_Classes;
+using HospitalMS.HelperClasses;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -26,12 +26,21 @@ namespace HospitalMS
 
         private Form activeForm = null;
         private Thread thread;
-
+        private bool isRegion;
+        private string userType;
         public HomeForm(string userNID, string userType)
         {
             InitializeComponent();
 
+            GlobalData.userNID = userNID;
+            this.userType = userType;
+        }
+
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            isRegion = true;
 
             if (userType == GlobalData.doctorUser)
             {
@@ -43,9 +52,8 @@ namespace HospitalMS
             {
                 btnClinic.Visible = false;
                 btnReports.Visible = false;
+                btnShowReports.Text = "Show Bills";
             }
-
-            GlobalData.userNID = userNID;
         }
 
         /********************* PICTURE BUTTONS **************************/
@@ -125,7 +133,14 @@ namespace HospitalMS
 
         private void btnShowReports_Click(object sender, EventArgs e)
         {
-            openForm(new DisplayReportsForm());
+            if (userType == GlobalData.doctorUser)
+                openForm(new DisplayReportsForm());
+            else
+                openForm(new DisplayBillsForm());
+
+            Region = null;
+            isRegion = false;
+            WindowState = FormWindowState.Maximized;
             resetContextMenus();
         }
 
@@ -170,6 +185,13 @@ namespace HospitalMS
                 }
                 else if (b is Button)
                     b.ForeColor = Color.WhiteSmoke;
+
+            if (!isRegion)
+            {
+                Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+                WindowState = FormWindowState.Normal;
+                isRegion = true;
+            }
         }
 
         private void resetContextMenus()

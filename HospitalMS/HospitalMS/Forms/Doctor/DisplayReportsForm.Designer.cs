@@ -30,31 +30,48 @@ namespace HospitalMS
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DisplayReportsForm));
-            this.label1 = new System.Windows.Forms.Label();
             this.lblAddReport = new System.Windows.Forms.Label();
+            this.reportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(175, 255);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 34);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Crystal Report Here";
             // 
             // lblAddReport
             // 
+            this.lblAddReport.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAddReport.AutoSize = true;
             this.lblAddReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAddReport.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAddReport.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblAddReport.ForeColor = System.Drawing.Color.Crimson;
-            this.lblAddReport.Location = new System.Drawing.Point(200, 20);
+            this.lblAddReport.Location = new System.Drawing.Point(177, 20);
             this.lblAddReport.Name = "lblAddReport";
-            this.lblAddReport.Size = new System.Drawing.Size(197, 40);
+            this.lblAddReport.Size = new System.Drawing.Size(233, 40);
             this.lblAddReport.TabIndex = 18;
-            this.lblAddReport.Text = "Show Reports";
+            this.lblAddReport.Text = "Showing Reports";
+            // 
+            // reportViewer
+            // 
+            this.reportViewer.ActiveViewIndex = -1;
+            this.reportViewer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.reportViewer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.reportViewer.Location = new System.Drawing.Point(150, 100);
+            this.reportViewer.Name = "reportViewer";
+            this.reportViewer.ShowCloseButton = false;
+            this.reportViewer.ShowCopyButton = false;
+            this.reportViewer.ShowExportButton = false;
+            this.reportViewer.ShowGotoPageButton = false;
+            this.reportViewer.ShowGroupTreeButton = false;
+            this.reportViewer.ShowLogo = false;
+            this.reportViewer.ShowPageNavigateButtons = false;
+            this.reportViewer.ShowParameterPanelButton = false;
+            this.reportViewer.ShowPrintButton = false;
+            this.reportViewer.ShowRefreshButton = false;
+            this.reportViewer.ShowTextSearchButton = false;
+            this.reportViewer.ShowZoomButton = false;
+            this.reportViewer.Size = new System.Drawing.Size(449, 445);
+            this.reportViewer.TabIndex = 19;
+            this.reportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // DisplayReportsForm
             // 
@@ -62,9 +79,9 @@ namespace HospitalMS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 545);
+            this.Controls.Add(this.reportViewer);
             this.Controls.Add(this.lblAddReport);
-            this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -76,8 +93,7 @@ namespace HospitalMS
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAddReport;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer reportViewer;
     }
 }

@@ -106,7 +106,7 @@ namespace HospitalMS
             // 
             this.lblH.AutoSize = true;
             this.lblH.BackColor = System.Drawing.Color.Transparent;
-            this.lblH.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblH.Font = new System.Drawing.Font("Cooper Black", 21.75F, System.Drawing.FontStyle.Italic);
             this.lblH.ForeColor = System.Drawing.Color.White;
             this.lblH.Location = new System.Drawing.Point(14, 95);
             this.lblH.Name = "lblH";
@@ -128,7 +128,7 @@ namespace HospitalMS
             // 
             this.lblOras.AutoSize = true;
             this.lblOras.BackColor = System.Drawing.Color.Transparent;
-            this.lblOras.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblOras.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Italic);
             this.lblOras.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblOras.Location = new System.Drawing.Point(46, 101);
             this.lblOras.Name = "lblOras";
@@ -171,7 +171,7 @@ namespace HospitalMS
             this.btnShowRooms.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnShowRooms.FlatAppearance.BorderSize = 0;
             this.btnShowRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowRooms.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnShowRooms.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnShowRooms.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnShowRooms.Image = ((System.Drawing.Image)(resources.GetObject("btnShowRooms.Image")));
             this.btnShowRooms.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,7 +190,7 @@ namespace HospitalMS
             this.btnBill.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBill.FlatAppearance.BorderSize = 0;
             this.btnBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBill.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnBill.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnBill.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnBill.Image = ((System.Drawing.Image)(resources.GetObject("btnBill.Image")));
             this.btnBill.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -209,7 +209,7 @@ namespace HospitalMS
             this.btnAppointment.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAppointment.FlatAppearance.BorderSize = 0;
             this.btnAppointment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAppointment.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnAppointment.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnAppointment.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAppointment.Image = ((System.Drawing.Image)(resources.GetObject("btnAppointment.Image")));
             this.btnAppointment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,7 +228,7 @@ namespace HospitalMS
             this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReports.FlatAppearance.BorderSize = 0;
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnReports.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnReports.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
             this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,7 +247,7 @@ namespace HospitalMS
             this.btnClinic.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClinic.FlatAppearance.BorderSize = 0;
             this.btnClinic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClinic.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnClinic.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnClinic.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnClinic.Image = ((System.Drawing.Image)(resources.GetObject("btnClinic.Image")));
             this.btnClinic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -266,7 +266,7 @@ namespace HospitalMS
             this.btnData.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnData.FlatAppearance.BorderSize = 0;
             this.btnData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnData.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnData.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnData.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnData.Image = ((System.Drawing.Image)(resources.GetObject("btnData.Image")));
             this.btnData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -285,7 +285,7 @@ namespace HospitalMS
             this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnHome.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnHome.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -329,7 +329,7 @@ namespace HospitalMS
             // lblWelcom
             // 
             this.lblWelcom.AutoSize = true;
-            this.lblWelcom.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblWelcom.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblWelcom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.lblWelcom.Location = new System.Drawing.Point(12, 20);
             this.lblWelcom.Name = "lblWelcom";
@@ -474,7 +474,7 @@ namespace HospitalMS
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnLogout.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -493,7 +493,7 @@ namespace HospitalMS
             this.btnMedicine.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMedicine.FlatAppearance.BorderSize = 0;
             this.btnMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMedicine.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnMedicine.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnMedicine.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnMedicine.Image = ((System.Drawing.Image)(resources.GetObject("btnMedicine.Image")));
             this.btnMedicine.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -512,7 +512,7 @@ namespace HospitalMS
             this.btnChangePassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChangePassword.FlatAppearance.BorderSize = 0;
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangePassword.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnChangePassword.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnChangePassword.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
             this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -531,7 +531,7 @@ namespace HospitalMS
             this.btnChangeNID.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChangeNID.FlatAppearance.BorderSize = 0;
             this.btnChangeNID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChangeNID.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnChangeNID.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnChangeNID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnChangeNID.Image = ((System.Drawing.Image)(resources.GetObject("btnChangeNID.Image")));
             this.btnChangeNID.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -561,7 +561,7 @@ namespace HospitalMS
             this.btnShowReports.FlatAppearance.BorderSize = 0;
             this.btnShowReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Crimson;
             this.btnShowReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowReports.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnShowReports.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnShowReports.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnShowReports.Image = ((System.Drawing.Image)(resources.GetObject("btnShowReports.Image")));
             this.btnShowReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -585,13 +585,14 @@ namespace HospitalMS
             this.Controls.Add(this.shadedPanel);
             this.Controls.Add(this.panelNavbar);
             this.Controls.Add(this.panelTopHeader);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeForm";
+            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
