@@ -73,5 +73,5 @@
 </details>
 
 ***
-[Updated Database SQL Script](HospitalMS/Database/HMS_Database_[Updated].sql)
+[Database SQL Script](HospitalMS/Database/HMS_Database_[Updated].sql)
 ***
