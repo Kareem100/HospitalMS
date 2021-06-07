@@ -101,6 +101,12 @@ namespace HospitalMS
         {
             Application.Run(new HomeForm());
         }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
+        }
+
         // =====================================================================//
 
         // ========================== LOGIN PART ========================== //
@@ -149,7 +155,8 @@ namespace HospitalMS
                     GlobalData.userType = GlobalData.doctorUser;
                 else
                     GlobalData.userType = GlobalData.receptionistUser;
-                
+
+                reader.Close();
                 thread = new Thread(openHomeForm);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();

@@ -102,7 +102,7 @@ namespace HospitalMS
             // 
             this.lblHere.AutoSize = true;
             this.lblHere.BackColor = System.Drawing.Color.Transparent;
-            this.lblHere.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblHere.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.lblHere.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblHere.Location = new System.Drawing.Point(206, 430);
             this.lblHere.Name = "lblHere";
@@ -116,7 +116,7 @@ namespace HospitalMS
             this.lblRegister.BackColor = System.Drawing.Color.Transparent;
             this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblRegister.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblRegister.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblRegister.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblRegister.Location = new System.Drawing.Point(150, 430);
             this.lblRegister.Name = "lblRegister";
@@ -129,7 +129,7 @@ namespace HospitalMS
             // 
             this.lblNewStaff.AutoSize = true;
             this.lblNewStaff.BackColor = System.Drawing.Color.Transparent;
-            this.lblNewStaff.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblNewStaff.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Italic);
             this.lblNewStaff.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblNewStaff.Location = new System.Drawing.Point(68, 430);
             this.lblNewStaff.Name = "lblNewStaff";
@@ -148,7 +148,7 @@ namespace HospitalMS
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogin.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
             this.btnLogin.Location = new System.Drawing.Point(56, 376);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(203, 52);
@@ -162,7 +162,7 @@ namespace HospitalMS
             // 
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtPassword.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtPassword.Location = new System.Drawing.Point(72, 300);
             this.txtPassword.Multiline = true;
@@ -201,7 +201,7 @@ namespace HospitalMS
             // 
             this.txtNationalID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtNationalID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtNationalID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtNationalID.Location = new System.Drawing.Point(72, 232);
             this.txtNationalID.MaxLength = 14;
@@ -240,11 +240,11 @@ namespace HospitalMS
             this.lblGetStarted.AutoSize = true;
             this.lblGetStarted.BackColor = System.Drawing.Color.Transparent;
             this.lblGetStarted.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblGetStarted.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGetStarted.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblGetStarted.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblGetStarted.Location = new System.Drawing.Point(75, 175);
             this.lblGetStarted.Name = "lblGetStarted";
-            this.lblGetStarted.Size = new System.Drawing.Size(180, 18);
+            this.lblGetStarted.Size = new System.Drawing.Size(181, 18);
             this.lblGetStarted.TabIndex = 4;
             this.lblGetStarted.Text = "Get Started From Login Below !";
             // 
@@ -252,7 +252,7 @@ namespace HospitalMS
             // 
             this.lblH.AutoSize = true;
             this.lblH.BackColor = System.Drawing.Color.Transparent;
-            this.lblH.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblH.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Italic);
             this.lblH.ForeColor = System.Drawing.Color.White;
             this.lblH.Location = new System.Drawing.Point(85, 19);
             this.lblH.Name = "lblH";
@@ -264,7 +264,7 @@ namespace HospitalMS
             // 
             this.lblOspital.AutoSize = true;
             this.lblOspital.BackColor = System.Drawing.Color.Transparent;
-            this.lblOspital.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.lblOspital.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Italic);
             this.lblOspital.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblOspital.Location = new System.Drawing.Point(119, 25);
             this.lblOspital.Name = "lblOspital";
@@ -287,11 +287,11 @@ namespace HospitalMS
             // 
             this.lblManagementSystem.AutoSize = true;
             this.lblManagementSystem.BackColor = System.Drawing.Color.Transparent;
-            this.lblManagementSystem.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblManagementSystem.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblManagementSystem.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblManagementSystem.Location = new System.Drawing.Point(123, 48);
             this.lblManagementSystem.Name = "lblManagementSystem";
-            this.lblManagementSystem.Size = new System.Drawing.Size(118, 16);
+            this.lblManagementSystem.Size = new System.Drawing.Size(119, 16);
             this.lblManagementSystem.TabIndex = 2;
             this.lblManagementSystem.Text = "Management System";
             // 
@@ -312,13 +312,14 @@ namespace HospitalMS
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.pictureClose);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).EndInit();
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();

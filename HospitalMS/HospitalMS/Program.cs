@@ -1,5 +1,4 @@
-﻿using HospitalMS.HelperClasses;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace HospitalMS
@@ -14,9 +13,8 @@ namespace HospitalMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
-            //Application.Run(new RegisterForm());
-            //Application.Run(new HomeForm());
+            //Application.Run(new LoginForm());
+            Application.Run(new HomeForm());
         }
     }
 }

@@ -43,9 +43,7 @@ namespace HospitalMS.Forms
             this.lblMyAge = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupSpecialization = new System.Windows.Forms.GroupBox();
-            this.comboClinic = new System.Windows.Forms.ComboBox();
-            this.radioReceptionist = new System.Windows.Forms.RadioButton();
-            this.radioDoctor = new System.Windows.Forms.RadioButton();
+            this.comboClinics = new System.Windows.Forms.ComboBox();
             this.lblYearOfEmplyment = new System.Windows.Forms.Label();
             this.lblShiftStarts = new System.Windows.Forms.Label();
             this.lblShiftEnds = new System.Windows.Forms.Label();
@@ -211,9 +209,7 @@ namespace HospitalMS.Forms
             // groupSpecialization
             // 
             this.groupSpecialization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.groupSpecialization.Controls.Add(this.comboClinic);
-            this.groupSpecialization.Controls.Add(this.radioReceptionist);
-            this.groupSpecialization.Controls.Add(this.radioDoctor);
+            this.groupSpecialization.Controls.Add(this.comboClinics);
             this.groupSpecialization.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupSpecialization.ForeColor = System.Drawing.Color.Goldenrod;
             this.groupSpecialization.Location = new System.Drawing.Point(30, 272);
@@ -223,51 +219,18 @@ namespace HospitalMS.Forms
             this.groupSpecialization.TabStop = false;
             this.groupSpecialization.Text = "Specialiszation";
             // 
-            // comboClinic
+            // comboClinics
             // 
-            this.comboClinic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
-            this.comboClinic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboClinic.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboClinic.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.comboClinic.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.comboClinic.FormattingEnabled = true;
-            this.comboClinic.Items.AddRange(new object[] {
-            "Test A",
-            "Test B",
-            "Test C"});
-            this.comboClinic.Location = new System.Drawing.Point(22, 56);
-            this.comboClinic.Name = "comboClinic";
-            this.comboClinic.Size = new System.Drawing.Size(149, 27);
-            this.comboClinic.TabIndex = 5;
-            this.comboClinic.Visible = false;
-            // 
-            // radioReceptionist
-            // 
-            this.radioReceptionist.AutoSize = true;
-            this.radioReceptionist.BackColor = System.Drawing.Color.Transparent;
-            this.radioReceptionist.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.radioReceptionist.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioReceptionist.Location = new System.Drawing.Point(22, 60);
-            this.radioReceptionist.Name = "radioReceptionist";
-            this.radioReceptionist.Size = new System.Drawing.Size(103, 23);
-            this.radioReceptionist.TabIndex = 1;
-            this.radioReceptionist.TabStop = true;
-            this.radioReceptionist.Text = "Receptionist";
-            this.radioReceptionist.UseVisualStyleBackColor = false;
-            // 
-            // radioDoctor
-            // 
-            this.radioDoctor.AutoSize = true;
-            this.radioDoctor.BackColor = System.Drawing.Color.Transparent;
-            this.radioDoctor.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.radioDoctor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioDoctor.Location = new System.Drawing.Point(22, 27);
-            this.radioDoctor.Name = "radioDoctor";
-            this.radioDoctor.Size = new System.Drawing.Size(69, 23);
-            this.radioDoctor.TabIndex = 0;
-            this.radioDoctor.TabStop = true;
-            this.radioDoctor.Text = "Doctor";
-            this.radioDoctor.UseVisualStyleBackColor = false;
+            this.comboClinics.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
+            this.comboClinics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboClinics.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboClinics.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.comboClinics.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.comboClinics.FormattingEnabled = true;
+            this.comboClinics.Location = new System.Drawing.Point(16, 45);
+            this.comboClinics.Name = "comboClinics";
+            this.comboClinics.Size = new System.Drawing.Size(149, 27);
+            this.comboClinics.TabIndex = 5;
             // 
             // lblYearOfEmplyment
             // 
@@ -307,6 +270,7 @@ namespace HospitalMS.Forms
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update My Data";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtPhones
             // 
@@ -384,6 +348,7 @@ namespace HospitalMS.Forms
             this.dateBirthdate.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.dateBirthdate.TabIndex = 3;
             this.dateBirthdate.TextColor = System.Drawing.Color.White;
+            this.dateBirthdate.ValueChanged += new System.EventHandler(this.dateBirthdate_ValueChanged);
             // 
             // UserDataForm
             // 
@@ -417,6 +382,7 @@ namespace HospitalMS.Forms
             this.Name = "UserDataForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserData";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserDataForm_FormClosing);
             this.Load += new System.EventHandler(this.UserDataForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picFirstnameBackground)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLastnameBackground)).EndInit();
@@ -424,7 +390,6 @@ namespace HospitalMS.Forms
             this.groupGender.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupSpecialization.ResumeLayout(false);
-            this.groupSpecialization.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,8 +412,6 @@ namespace HospitalMS.Forms
         private System.Windows.Forms.PictureBox pictureBox1;
         private Custom_Controls.CustomDatePicker dateEmploymentYear;
         private System.Windows.Forms.GroupBox groupSpecialization;
-        private System.Windows.Forms.RadioButton radioReceptionist;
-        private System.Windows.Forms.RadioButton radioDoctor;
         private System.Windows.Forms.Label lblYearOfEmplyment;
         private Custom_Controls.CustomDatePicker dateShiftStarting;
         private System.Windows.Forms.Label lblShiftStarts;
@@ -456,6 +419,6 @@ namespace HospitalMS.Forms
         private System.Windows.Forms.Label lblShiftEnds;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtPhones;
-        private System.Windows.Forms.ComboBox comboClinic;
+        private System.Windows.Forms.ComboBox comboClinics;
     }
 }
