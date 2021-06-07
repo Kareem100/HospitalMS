@@ -159,8 +159,8 @@ Insert into report_and_medicine values (2, 78019, 3);
 Insert into report_and_medicine values (1, 78074, 2);
 
 -- Inserting static data into Case_Bill table.
-Insert into case_bill values (113, 2, 2049, 3849);
-Insert into case_bill values (114, 1, 463.8, 963.8);
+Insert into case_bill values (113, 2, 744, 2544);
+Insert into case_bill values (114, 1, 309.2, 809.2);
 
 
 -- Commit Changes Made
