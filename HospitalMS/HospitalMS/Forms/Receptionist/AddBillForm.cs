@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Data;
-using System.Drawing;
+using System.Drawing;                   // Needed for Rounded Edges
 using System.Windows.Forms;
-using System.Configuration;
-using Oracle.DataAccess.Client;
+using System.Configuration;             // Needed to access the App.config file to establish db connection
+using Oracle.DataAccess.Client;         // Needed for Oracle Commands
 using System.Collections.Generic;
-using HospitalMS.HelperClasses;
+using HospitalMS.HelperClasses;         // Needed to access the logged in user info
 using System.Runtime.InteropServices;
 
 namespace HospitalMS
 {
     public partial class AddBillForm : Form
     {
-        // ========================== Rounding Edges ==========================//
+        // ==================== Rounding Design Edges ==========================//
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -39,7 +39,10 @@ namespace HospitalMS
 
         private void BillForm_Load(object sender, EventArgs e)
         {
+            // For Adding Rounded Edges Around the Form Borders
             panelContainer.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelContainer.Width, panelContainer.Height, 30, 30));
+            
+            // Establishing a database connection for SCOTT Schema
             string dbConnection = ConfigurationManager.ConnectionStrings["databaseConnection"].ConnectionString;
             conn = new OracleConnection(dbConnection);
             conn.Open();
@@ -54,7 +57,7 @@ namespace HospitalMS
             totalMedsCost = 0;
             // Total Bill Cost the patient has to pay --> totalMedsPrice + Days Stayed * dayAccomodationCost
             totalBillCost = 0;
-            // Full Name of the selected Patient
+            // Patient Full Name of The Selected One.
             fullName = "";
         }
 
@@ -65,10 +68,10 @@ namespace HospitalMS
             cmd.Connection = conn;
             cmd.CommandText = "SELECT reportid FROM case_report";
             cmd.CommandType = CommandType.Text;
-            OracleDataReader reader = cmd.ExecuteReader();
+            OracleDataReader reader = cmd.ExecuteReader();// ExecuteReader for Selecting more than one value
             while (reader.Read())
                 comboReportID.Items.Add(reader[0].ToString());
-            reader.Close();
+            reader.Close(); // Don't Forget This Line xD
         }
 
         private int getMaxID()
@@ -80,11 +83,11 @@ namespace HospitalMS
             int maxID;
             try
             {
-                maxID = Convert.ToInt32(cmd.ExecuteScalar());
+                maxID = Convert.ToInt32(cmd.ExecuteScalar()); // For Selecting only one value (1 x 1 grid) 
             }
             catch
             {
-                maxID = 112;
+                maxID = 112;    // Starting Bill ID
             }
             return maxID;
         }
@@ -124,6 +127,7 @@ namespace HospitalMS
             string firstName = reader[0].ToString();
             string lastName = reader[1].ToString();
             fullName = firstName + " " + lastName;
+            reader.Close();
         }
 
         private void setMedicineLists(int reportID)
@@ -179,7 +183,6 @@ namespace HospitalMS
         }
 
         // ================== STORE TO DATABASE ================= //
-
         private void btnAddBill_Click(object sender, EventArgs e)
         {
             int billID = getMaxID() + 1;
@@ -219,11 +222,11 @@ namespace HospitalMS
             else
                 MessageBox.Show("Something went Wrong ...", "Patient Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         // ======================================================= //
+
         private void BillForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            conn.Dispose();
+            conn.Dispose(); // The Most Important Line
         }
 
     }

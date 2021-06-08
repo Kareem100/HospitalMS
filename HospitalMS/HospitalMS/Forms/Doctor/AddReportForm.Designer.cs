@@ -75,7 +75,7 @@ namespace HospitalMS
             // 
             this.comboPatientNationalID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.comboPatientNationalID.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboPatientNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.comboPatientNationalID.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.comboPatientNationalID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.comboPatientNationalID.FormattingEnabled = true;
             this.comboPatientNationalID.Location = new System.Drawing.Point(103, 26);
@@ -89,7 +89,7 @@ namespace HospitalMS
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(148, 235);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -104,7 +104,7 @@ namespace HospitalMS
             this.PatientReport_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PatientReport_btn.FlatAppearance.BorderSize = 0;
             this.PatientReport_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PatientReport_btn.Font = new System.Drawing.Font("Cooper Black", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PatientReport_btn.Font = new System.Drawing.Font("Cooper Black", 10.2F);
             this.PatientReport_btn.ForeColor = System.Drawing.Color.White;
             this.PatientReport_btn.Location = new System.Drawing.Point(47, 393);
             this.PatientReport_btn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -118,7 +118,7 @@ namespace HospitalMS
             // 
             this.Medecines_checkBoxList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.Medecines_checkBoxList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Medecines_checkBoxList.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Medecines_checkBoxList.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Medecines_checkBoxList.ForeColor = System.Drawing.Color.White;
             this.Medecines_checkBoxList.FormattingEnabled = true;
             this.Medecines_checkBoxList.Location = new System.Drawing.Point(47, 281);
@@ -132,7 +132,7 @@ namespace HospitalMS
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(91, 127);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -144,7 +144,7 @@ namespace HospitalMS
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.Location = new System.Drawing.Point(201, 167);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -155,7 +155,7 @@ namespace HospitalMS
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label1.Location = new System.Drawing.Point(16, 167);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -167,7 +167,7 @@ namespace HospitalMS
             // 
             this.Duration_to.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.Duration_to.BorderSize = 0;
-            this.Duration_to.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Duration_to.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Duration_to.Location = new System.Drawing.Point(201, 189);
             this.Duration_to.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Duration_to.MinimumSize = new System.Drawing.Size(4, 35);
@@ -181,7 +181,7 @@ namespace HospitalMS
             // 
             this.Duration_From.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.Duration_From.BorderSize = 0;
-            this.Duration_From.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Duration_From.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Duration_From.Location = new System.Drawing.Point(16, 189);
             this.Duration_From.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Duration_From.MaxDate = new System.DateTime(2021, 12, 31, 0, 0, 0, 0);
@@ -196,7 +196,7 @@ namespace HospitalMS
             // 
             this.Conditional_Illness_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.Conditional_Illness_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Conditional_Illness_txt.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Conditional_Illness_txt.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Conditional_Illness_txt.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Conditional_Illness_txt.Location = new System.Drawing.Point(116, 88);
             this.Conditional_Illness_txt.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -226,13 +226,13 @@ namespace HospitalMS
             // 
             this.lblAddReport.AutoSize = true;
             this.lblAddReport.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblAddReport.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblAddReport.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblAddReport.ForeColor = System.Drawing.Color.Crimson;
-            this.lblAddReport.Location = new System.Drawing.Point(260, 20);
+            this.lblAddReport.Location = new System.Drawing.Point(251, 20);
             this.lblAddReport.Name = "lblAddReport";
-            this.lblAddReport.Size = new System.Drawing.Size(169, 40);
+            this.lblAddReport.Size = new System.Drawing.Size(205, 40);
             this.lblAddReport.TabIndex = 16;
-            this.lblAddReport.Text = "Add Report";
+            this.lblAddReport.Text = "Adding Report";
             // 
             // AddReportForm
             // 
@@ -243,7 +243,7 @@ namespace HospitalMS
             this.ClientSize = new System.Drawing.Size(600, 545);
             this.Controls.Add(this.lblAddReport);
             this.Controls.Add(this.panelContainer);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

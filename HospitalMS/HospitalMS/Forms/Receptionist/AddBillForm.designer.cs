@@ -57,11 +57,11 @@ namespace HospitalMS
             this.lblAddBill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblAddBill.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblAddBill.ForeColor = System.Drawing.Color.Crimson;
-            this.lblAddBill.Location = new System.Drawing.Point(285, 20);
+            this.lblAddBill.Location = new System.Drawing.Point(268, 20);
             this.lblAddBill.Name = "lblAddBill";
-            this.lblAddBill.Size = new System.Drawing.Size(122, 40);
+            this.lblAddBill.Size = new System.Drawing.Size(158, 40);
             this.lblAddBill.TabIndex = 17;
-            this.lblAddBill.Text = "Add Bill";
+            this.lblAddBill.Text = "Adding Bill";
             // 
             // panelContainer
             // 
