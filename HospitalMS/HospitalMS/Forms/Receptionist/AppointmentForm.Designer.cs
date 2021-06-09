@@ -61,7 +61,7 @@ namespace HospitalMS
             this.lblRooms.Location = new System.Drawing.Point(287, 20);
             this.lblRooms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRooms.Name = "lblRooms";
-            this.lblRooms.Size = new System.Drawing.Size(224, 50);
+            this.lblRooms.Size = new System.Drawing.Size(179, 40);
             this.lblRooms.TabIndex = 16;
             this.lblRooms.Text = "Appointment";
             // 
@@ -153,17 +153,18 @@ namespace HospitalMS
             this.lblAssignToRoom.Location = new System.Drawing.Point(256, 288);
             this.lblAssignToRoom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAssignToRoom.Name = "lblAssignToRoom";
-            this.lblAssignToRoom.Size = new System.Drawing.Size(164, 29);
+            this.lblAssignToRoom.Size = new System.Drawing.Size(127, 23);
             this.lblAssignToRoom.TabIndex = 32;
             this.lblAssignToRoom.Text = "Assign to Room";
             // 
             // comboRooms
             // 
+            this.comboRooms.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboRooms.FormattingEnabled = true;
             this.comboRooms.Location = new System.Drawing.Point(230, 316);
             this.comboRooms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboRooms.Name = "comboRooms";
-            this.comboRooms.Size = new System.Drawing.Size(179, 37);
+            this.comboRooms.Size = new System.Drawing.Size(179, 31);
             this.comboRooms.TabIndex = 31;
             // 
             // lblDoctor
@@ -174,17 +175,18 @@ namespace HospitalMS
             this.lblDoctor.Location = new System.Drawing.Point(29, 288);
             this.lblDoctor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDoctor.Name = "lblDoctor";
-            this.lblDoctor.Size = new System.Drawing.Size(178, 29);
+            this.lblDoctor.Size = new System.Drawing.Size(141, 23);
             this.lblDoctor.TabIndex = 30;
             this.lblDoctor.Text = "Assign to Doctor";
             // 
             // comboDoctors
             // 
+            this.comboDoctors.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboDoctors.FormattingEnabled = true;
             this.comboDoctors.Location = new System.Drawing.Point(14, 316);
             this.comboDoctors.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboDoctors.Name = "comboDoctors";
-            this.comboDoctors.Size = new System.Drawing.Size(179, 37);
+            this.comboDoctors.Size = new System.Drawing.Size(179, 31);
             this.comboDoctors.TabIndex = 29;
             // 
             // btnAddAppointment
@@ -264,7 +266,7 @@ namespace HospitalMS
             // 
             // AppointmentForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

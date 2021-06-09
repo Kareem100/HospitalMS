@@ -15,16 +15,17 @@ namespace HospitalMS
     {// ========================== Rounding Edges ==========================//
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
-       (
+        (
            int nLeftRect,     // x-coordinate of upper-left corner
            int nTopRect,      // y-coordinate of upper-left corner
            int nRightRect,    // x-coordinate of lower-right corner
            int nBottomRect,   // y-coordinate of lower-right corner
            int nWidthEllipse, // width of ellipse
            int nHeightEllipse // height of ellipse
-       );
+        );
         // =====================================================================//
         private OracleConnection conn;
+
         public AppointmentForm()
         {
             InitializeComponent();
@@ -32,7 +33,6 @@ namespace HospitalMS
 
         private void AppointmentForm_Load(object sender, EventArgs e)
         {
-            panelContainer.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelContainer.Width, panelContainer.Height, 30, 30));
             panelContainer.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelContainer.Width, panelContainer.Height, 30, 30));
             string dbConnection = ConfigurationManager.ConnectionStrings["databaseConnection"].ConnectionString;
             conn = new OracleConnection(dbConnection);
@@ -44,7 +44,7 @@ namespace HospitalMS
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
             int AppointmentId = getMaxID() + 1;
-            String ReceptionistId = GlobalData.userNID;
+            string ReceptionistId = GlobalData.userNID;
             if (IsValid())
             {
                 if (!PatientIsExist())
@@ -62,6 +62,7 @@ namespace HospitalMS
                 MessageBox.Show("Please Fill All Data..", "Missing Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         //------------ GET DOCTORS IDS --------------------
         private void getDoctorsIds()
         {
@@ -74,6 +75,7 @@ namespace HospitalMS
                 comboDoctors.Items.Add(reader[0].ToString());
             reader.Close();
         }
+
         //----------- GET AVAILABLE ROOMS -----------------
         private void getAvailableRooms()
         {
@@ -86,11 +88,12 @@ namespace HospitalMS
                 comboRooms.Items.Add(reader[0].ToString());
             reader.Close();
         }
+
         //------------- CHECK PATIENT --------------------
         private bool PatientIsExist()
         {
-            String PatientId = txtNationalID.Text;
-            List<String> IDS = new List<string>();
+            string PatientId = txtNationalID.Text;
+            List<string> IDS = new List<string>();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandText = "SELECT NATIONALID FROM PATIENT";
@@ -110,6 +113,7 @@ namespace HospitalMS
             }
             return false;
         }
+
         //------------ INSERT PATIENT DATA -------------------
         private void insertPatientData()
         {
@@ -124,6 +128,7 @@ namespace HospitalMS
             cmd.Parameters.Add("DoctorID", comboDoctors.SelectedItem);
             cmd.ExecuteNonQuery();      
         }
+
         //------------ SET APPOINTMENT ID --------------------
         private int getMaxID()
         {
@@ -138,15 +143,16 @@ namespace HospitalMS
             }
             catch
             {
-                maxID = 112;
+                maxID = 79;
             }
             return maxID;
         }
+
         //------------ INSERT APPOINTMENT --------------------
-        private void insertAppointmentData(int AppointmentId, String ReceptionistId)
+        private void insertAppointmentData(int AppointmentId, string ReceptionistId)
         {
-            String FirstName = txtFirstname.Text;
-            String LastName = txtLastname.Text;
+            string FirstName = txtFirstname.Text;
+            string LastName = txtLastname.Text;
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
@@ -156,10 +162,11 @@ namespace HospitalMS
             cmd.Parameters.Add("Description", txtDescription.Text);
             cmd.Parameters.Add("PatientID", txtNationalID.Text);
             cmd.Parameters.Add("ReceptionistID", ReceptionistId);
-            int res =  cmd.ExecuteNonQuery();
+            cmd.ExecuteNonQuery();
             MessageBox.Show(" Appointment For Patient " + FirstName +" "+ LastName + " has been Added Successfully !", "Add Appointment", MessageBoxButtons.OK, MessageBoxIcon.Information);
             updateNumberOfTakenBeds(int.Parse(comboRooms.SelectedItem.ToString()));
         }
+
         //----------- INCREASE NUMBER OF TAKEN BEDS --------------
         private void updateNumberOfTakenBeds( int NumberOfRoom)
         {
@@ -170,6 +177,7 @@ namespace HospitalMS
             cmd.Parameters.Add("RoomNum", NumberOfRoom);
             int res = cmd.ExecuteNonQuery();
         }
+
         //------------ CHECK VALIDATION--------------------
         private bool IsValid()
         {
@@ -181,6 +189,7 @@ namespace HospitalMS
             }
             return true;
         }
+
         //---------- Validate NationalID (Should be 14 digits and only numbers)------------
         private void txtNationalID_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {   
@@ -189,12 +198,12 @@ namespace HospitalMS
                 MessageBox.Show("National Id should be only numbers..", "National Id Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNationalID.Text.Remove(txtNationalID.Text.Length - 1);
             }
-            if(txtNationalID.Text.Length != 14)
+            else if(txtNationalID.Text.Length != 14)
             {
                 MessageBox.Show("National Id should be 14 digits..", "National Id Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
+        
         //-----------------------------------------------------
         private void txtFirstname_Enter(object sender, EventArgs e)
         {
