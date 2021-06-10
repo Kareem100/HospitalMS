@@ -173,6 +173,7 @@ namespace HospitalMS
             this.txtPassword.Text = "Password";
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // picturePasswordIcon
@@ -211,6 +212,7 @@ namespace HospitalMS
             this.txtNationalID.TabIndex = 7;
             this.txtNationalID.Text = "National ID";
             this.txtNationalID.Enter += new System.EventHandler(this.txtNationalID_Enter);
+            this.txtNationalID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNationalID_KeyPress);
             this.txtNationalID.Leave += new System.EventHandler(this.txtNationalID_Leave);
             // 
             // pictureFullnameIcon

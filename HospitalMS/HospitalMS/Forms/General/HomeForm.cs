@@ -32,7 +32,6 @@ namespace HospitalMS
             InitializeComponent();
         }
 
-
         private void HomeForm_Load(object sender, EventArgs e)
         {
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
@@ -46,12 +45,14 @@ namespace HospitalMS
                 btnAppointment.Visible = false;
                 btnBill.Visible = false;
                 btnShowRooms.Visible = false;
+                lblDoctorReceptionist.Text = "Doctor";
             }
             else if (GlobalData.userType == GlobalData.receptionistUser)
             {
                 btnClinic.Visible = false;
                 btnReports.Visible = false;
                 btnShowReports.Text = "Show Bills";
+                lblDoctorReceptionist.Text = "Recept";
             }
         }
 
@@ -157,6 +158,7 @@ namespace HospitalMS
         {
             openForm(new MedicineForm());
             resetContextMenus();
+            WindowState = FormWindowState.Normal;
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

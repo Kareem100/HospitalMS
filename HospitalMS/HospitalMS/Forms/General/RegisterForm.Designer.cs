@@ -49,6 +49,8 @@ namespace HospitalMS
             this.comboClinics = new System.Windows.Forms.ComboBox();
             this.radioReceptionist = new System.Windows.Forms.RadioButton();
             this.radioDoctor = new System.Windows.Forms.RadioButton();
+            this.dateEmploymentYear = new HospitalMS.Custom_Controls.CustomDatePicker();
+            this.dateBirthdate = new HospitalMS.Custom_Controls.CustomDatePicker();
             this.lblEmploymentYear = new System.Windows.Forms.Label();
             this.pictureEmploymentIcon = new System.Windows.Forms.PictureBox();
             this.pictureEmploymentBackground = new System.Windows.Forms.PictureBox();
@@ -61,7 +63,7 @@ namespace HospitalMS
             this.lblHere = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblAlreadyRegistered = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.picturePasswordIcon = new System.Windows.Forms.PictureBox();
             this.picturePasswordBackground = new System.Windows.Forms.PictureBox();
@@ -72,8 +74,6 @@ namespace HospitalMS
             this.lblOspital = new System.Windows.Forms.Label();
             this.lblManagementSystem = new System.Windows.Forms.Label();
             this.txtToBeFocused = new System.Windows.Forms.TextBox();
-            this.dateEmploymentYear = new HospitalMS.Custom_Controls.CustomDatePicker();
-            this.dateBirthdate = new HospitalMS.Custom_Controls.CustomDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureClose)).BeginInit();
             this.panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -137,7 +137,7 @@ namespace HospitalMS
             this.panelContainer.Controls.Add(this.lblHere);
             this.panelContainer.Controls.Add(this.lblLogin);
             this.panelContainer.Controls.Add(this.lblAlreadyRegistered);
-            this.panelContainer.Controls.Add(this.btnLogin);
+            this.panelContainer.Controls.Add(this.btnRegister);
             this.panelContainer.Controls.Add(this.txtPassword);
             this.panelContainer.Controls.Add(this.picturePasswordIcon);
             this.panelContainer.Controls.Add(this.picturePasswordBackground);
@@ -387,6 +387,35 @@ namespace HospitalMS
             this.radioDoctor.UseVisualStyleBackColor = false;
             this.radioDoctor.CheckedChanged += new System.EventHandler(this.radioDoctor_CheckedChanged);
             // 
+            // dateEmploymentYear
+            // 
+            this.dateEmploymentYear.BorderColor = System.Drawing.Color.DarkOrange;
+            this.dateEmploymentYear.BorderSize = 1;
+            this.dateEmploymentYear.CustomFormat = "yyyy";
+            this.dateEmploymentYear.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.dateEmploymentYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateEmploymentYear.Location = new System.Drawing.Point(222, 185);
+            this.dateEmploymentYear.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateEmploymentYear.Name = "dateEmploymentYear";
+            this.dateEmploymentYear.ShowUpDown = true;
+            this.dateEmploymentYear.Size = new System.Drawing.Size(176, 35);
+            this.dateEmploymentYear.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dateEmploymentYear.TabIndex = 4;
+            this.dateEmploymentYear.TextColor = System.Drawing.Color.White;
+            // 
+            // dateBirthdate
+            // 
+            this.dateBirthdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.dateBirthdate.BorderSize = 0;
+            this.dateBirthdate.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.dateBirthdate.Location = new System.Drawing.Point(28, 185);
+            this.dateBirthdate.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateBirthdate.Name = "dateBirthdate";
+            this.dateBirthdate.Size = new System.Drawing.Size(176, 35);
+            this.dateBirthdate.SkinColor = System.Drawing.Color.MediumSlateBlue;
+            this.dateBirthdate.TabIndex = 3;
+            this.dateBirthdate.TextColor = System.Drawing.Color.White;
+            // 
             // lblEmploymentYear
             // 
             this.lblEmploymentYear.AutoSize = true;
@@ -527,24 +556,24 @@ namespace HospitalMS
             this.lblAlreadyRegistered.TabIndex = 12;
             this.lblAlreadyRegistered.Text = "Already Registered ?";
             // 
-            // btnLogin
+            // btnRegister
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
-            this.btnLogin.Location = new System.Drawing.Point(124, 469);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(189, 44);
-            this.btnLogin.TabIndex = 11;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnRegister.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
+            this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegister.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
+            this.btnRegister.Location = new System.Drawing.Point(124, 469);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(189, 44);
+            this.btnRegister.TabIndex = 11;
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtPassword
             // 
@@ -665,35 +694,6 @@ namespace HospitalMS
             this.txtToBeFocused.Size = new System.Drawing.Size(10, 26);
             this.txtToBeFocused.TabIndex = 0;
             // 
-            // dateEmploymentYear
-            // 
-            this.dateEmploymentYear.BorderColor = System.Drawing.Color.DarkOrange;
-            this.dateEmploymentYear.BorderSize = 1;
-            this.dateEmploymentYear.CustomFormat = "yyyy";
-            this.dateEmploymentYear.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.dateEmploymentYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateEmploymentYear.Location = new System.Drawing.Point(222, 185);
-            this.dateEmploymentYear.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateEmploymentYear.Name = "dateEmploymentYear";
-            this.dateEmploymentYear.ShowUpDown = true;
-            this.dateEmploymentYear.Size = new System.Drawing.Size(176, 35);
-            this.dateEmploymentYear.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dateEmploymentYear.TabIndex = 4;
-            this.dateEmploymentYear.TextColor = System.Drawing.Color.White;
-            // 
-            // dateBirthdate
-            // 
-            this.dateBirthdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.dateBirthdate.BorderSize = 0;
-            this.dateBirthdate.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.dateBirthdate.Location = new System.Drawing.Point(28, 185);
-            this.dateBirthdate.MinimumSize = new System.Drawing.Size(4, 35);
-            this.dateBirthdate.Name = "dateBirthdate";
-            this.dateBirthdate.Size = new System.Drawing.Size(176, 35);
-            this.dateBirthdate.SkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.dateBirthdate.TabIndex = 3;
-            this.dateBirthdate.TextColor = System.Drawing.Color.White;
-            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -746,7 +746,7 @@ namespace HospitalMS
         private System.Windows.Forms.Label lblHere;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblAlreadyRegistered;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.PictureBox picturePasswordIcon;
         private System.Windows.Forms.PictureBox picturePasswordBackground;

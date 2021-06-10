@@ -78,8 +78,10 @@ namespace HospitalMS
             // 
             // patientid
             // 
+            this.patientid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.patientid.AutoSize = true;
-            this.patientid.Location = new System.Drawing.Point(167, 63);
+            this.patientid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.patientid.Location = new System.Drawing.Point(167, 102);
             this.patientid.Name = "patientid";
             this.patientid.Size = new System.Drawing.Size(90, 23);
             this.patientid.TabIndex = 21;
@@ -87,18 +89,25 @@ namespace HospitalMS
             // 
             // Evaluate_btn
             // 
-            this.Evaluate_btn.Location = new System.Drawing.Point(282, 98);
+            this.Evaluate_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Evaluate_btn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Evaluate_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Evaluate_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Evaluate_btn.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Evaluate_btn.Location = new System.Drawing.Point(466, 94);
             this.Evaluate_btn.Name = "Evaluate_btn";
-            this.Evaluate_btn.Size = new System.Drawing.Size(94, 29);
+            this.Evaluate_btn.Size = new System.Drawing.Size(183, 31);
             this.Evaluate_btn.TabIndex = 26;
-            this.Evaluate_btn.Text = "Generate";
-            this.Evaluate_btn.UseVisualStyleBackColor = true;
+            this.Evaluate_btn.Text = "Generate Report";
+            this.Evaluate_btn.UseVisualStyleBackColor = false;
             this.Evaluate_btn.Click += new System.EventHandler(this.Evaluate_btn_Click);
             // 
             // patientid_cmb
             // 
+            this.patientid_cmb.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.patientid_cmb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.patientid_cmb.FormattingEnabled = true;
-            this.patientid_cmb.Location = new System.Drawing.Point(272, 55);
+            this.patientid_cmb.Location = new System.Drawing.Point(275, 96);
             this.patientid_cmb.Name = "patientid_cmb";
             this.patientid_cmb.Size = new System.Drawing.Size(176, 31);
             this.patientid_cmb.TabIndex = 29;

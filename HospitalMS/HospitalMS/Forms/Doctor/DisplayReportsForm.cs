@@ -19,9 +19,9 @@ namespace HospitalMS
         }
         private async void LoadReport()
         {
-            await Task.Delay(500);
-            ReportData = new ReportData();          
-            
+            //await Task.Delay(500);
+            ReportData = new ReportData();
+            ReportData.SetDatabaseLogon("scott", "tiger");
             //get all available ids into cmb
             foreach (ParameterDiscreteValue value in ReportData.ParameterFields[0].DefaultValues)
                        patientid_cmb.Items.Add(value.Value);

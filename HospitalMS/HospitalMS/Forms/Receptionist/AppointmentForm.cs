@@ -25,7 +25,6 @@ namespace HospitalMS
         );
         // =====================================================================//
         private OracleConnection conn;
-        private List<double> DoctorsIDS = new List<Double>();
 
         public AppointmentForm()
         {
@@ -38,7 +37,7 @@ namespace HospitalMS
             string dbConnection = ConfigurationManager.ConnectionStrings["databaseConnection"].ConnectionString;
             conn = new OracleConnection(dbConnection);
             conn.Open();
-            getDoctorsNames();
+            getDoctorsIds();
             getAvailableRooms();
         }
 
@@ -64,31 +63,20 @@ namespace HospitalMS
             }
         }
 
-        //------------ GET DOCTORS NAMES --------------------
-        private void getDoctorsNames()
+        //------------ GET DOCTORS IDS --------------------
+        private void getDoctorsIds()
         {
-            String FullName;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT NATIONALID ,FIRSTNAME ,LASTNAME FROM MEDICAL_STUFF";
+            cmd.CommandText = "SELECT NATIONALID FROM MEDICAL_STUFF";
             cmd.CommandType = CommandType.Text;
             OracleDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
-            {
-                DoctorsIDS.Add(double.Parse(reader[0].ToString()));
-                FullName = reader[1].ToString() + " " + reader[2].ToString();
-                comboDoctors.Items.Add(FullName);
-            }
+                comboDoctors.Items.Add(reader[0].ToString());
             reader.Close();
         }
-        //---------- GET DOCTORS IDS ----------------------
-        private double getDoctorID()
-        {
-            int IndexOfName = comboDoctors.SelectedIndex;
-            double DoctorId = DoctorsIDS[IndexOfName];
-            return DoctorId;
-        }
-       //----------- GET AVAILABLE ROOMS -----------------
+
+        //----------- GET AVAILABLE ROOMS -----------------
         private void getAvailableRooms()
         {
             OracleCommand cmd = new OracleCommand();
@@ -137,7 +125,7 @@ namespace HospitalMS
             cmd.Parameters.Add("FirstName", txtFirstname.Text);
             cmd.Parameters.Add("LastName", txtLastname.Text);
             cmd.Parameters.Add("RoomNum", comboRooms.SelectedItem);
-            cmd.Parameters.Add("DoctorID", getDoctorID());
+            cmd.Parameters.Add("DoctorID", comboDoctors.SelectedItem);
             cmd.ExecuteNonQuery();      
         }
 

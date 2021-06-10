@@ -8,6 +8,7 @@ using System.Configuration;
 using Oracle.DataAccess.Client;
 using HospitalMS.HelperClasses;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace HospitalMS
 {
@@ -78,22 +79,22 @@ namespace HospitalMS
         }
 
         // ========================= REGISTER PART ========================= //
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             if (isValidData())
             {
                 if (isNewMember())
                 {
                     MedicalStuff medicalStuff = new MedicalStuff();
-                    medicalStuff.firstName = txtFirstName.Text;
-                    medicalStuff.lastName = txtLastName.Text;
+                    medicalStuff.firstName = txtFirstName.Text.Trim();
+                    medicalStuff.lastName = txtLastName.Text.Trim();
                     medicalStuff.age = DateTime.Now.Year - dateBirthdate.Value.Year;
                     medicalStuff.employmentYear = dateEmploymentYear.Value.Year;
                     medicalStuff.specialization = groupSpecialization.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
                     medicalStuff.gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
-                    medicalStuff.phone = txtPhone.Text;
-                    medicalStuff.nationalID = txtNationalID.Text;
-                    medicalStuff.password = txtPassword.Text;
+                    medicalStuff.phones = new List<string>(); medicalStuff.phones.Add(txtPhone.Text.Trim());
+                    medicalStuff.nationalID = txtNationalID.Text.Trim();
+                    medicalStuff.password = txtPassword.Text.Trim();
                     if (radioDoctor.Checked)
                         medicalStuff.clinic = comboClinics.Text.ToString();
                     else
@@ -122,6 +123,7 @@ namespace HospitalMS
             cmd.Parameters.Add("Specialization", medicalStuff.specialization);
             cmd.Parameters.Add("YearOfEmployment", medicalStuff.employmentYear);
             cmd.Parameters.Add("ClinicName", medicalStuff.clinic);
+            cmd.Parameters.Add("Phone", medicalStuff.phones[0]);
             // END PARAMETERS
             cmd.ExecuteNonQuery();
             MessageBox.Show("You Have Been Registered Successfully !!", "Congratulations...", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -189,7 +191,7 @@ namespace HospitalMS
             for (int i = 0; i < nationalID.Length; ++i)
                 if (nationalID[i] > '9' || nationalID[i] < '0')
                 {
-                    MessageBox.Show("Please Enter a Correct Phone Number...", "Invalid National ID !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Enter a Correct National ID Number...", "Invalid National ID !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             if (nationalID.Length != 14)

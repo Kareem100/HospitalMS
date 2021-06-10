@@ -102,6 +102,18 @@ namespace HospitalMS
             Application.Run(new HomeForm());
         }
 
+        private void txtNationalID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnLogin_Click(sender, e);
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+                btnLogin_Click(sender, e);
+        }
+
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
@@ -166,7 +178,7 @@ namespace HospitalMS
                 MessageBox.Show("No Such User Exist. !!\nMaybe You Need to Register.", "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
         }
-
         // =========================================================== //
+
     }
 }

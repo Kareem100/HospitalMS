@@ -64,6 +64,7 @@ namespace HospitalMS
             this.btnChangeNID = new System.Windows.Forms.Button();
             this.panelChildContainer = new System.Windows.Forms.Panel();
             this.btnShowReports = new System.Windows.Forms.Button();
+            this.lblDoctorReceptionist = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panelNavbar.SuspendLayout();
@@ -139,8 +140,9 @@ namespace HospitalMS
             // panelNavbar
             // 
             this.panelNavbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.panelNavbar.Controls.Add(this.panelButtonsNavigation);
             this.panelNavbar.Controls.Add(this.lblUserName);
+            this.panelNavbar.Controls.Add(this.lblDoctorReceptionist);
+            this.panelNavbar.Controls.Add(this.panelButtonsNavigation);
             this.panelNavbar.Controls.Add(this.lblWelcom);
             this.panelNavbar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavbar.Location = new System.Drawing.Point(0, 15);
@@ -320,7 +322,7 @@ namespace HospitalMS
             // 
             this.lblUserName.AutoSize = true;
             this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
-            this.lblUserName.Location = new System.Drawing.Point(80, 58);
+            this.lblUserName.Location = new System.Drawing.Point(95, 58);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(76, 23);
             this.lblUserName.TabIndex = 4;
@@ -573,6 +575,16 @@ namespace HospitalMS
             this.btnShowReports.UseVisualStyleBackColor = false;
             this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
             // 
+            // lblDoctorReceptionist
+            // 
+            this.lblDoctorReceptionist.AutoSize = true;
+            this.lblDoctorReceptionist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.lblDoctorReceptionist.Location = new System.Drawing.Point(39, 58);
+            this.lblDoctorReceptionist.Name = "lblDoctorReceptionist";
+            this.lblDoctorReceptionist.Size = new System.Drawing.Size(62, 23);
+            this.lblDoctorReceptionist.TabIndex = 6;
+            this.lblDoctorReceptionist.Text = "Doctor";
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
@@ -650,5 +662,6 @@ namespace HospitalMS
         private System.Windows.Forms.Button btnShowReports;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnMedicine;
+        private System.Windows.Forms.Label lblDoctorReceptionist;
     }
 }

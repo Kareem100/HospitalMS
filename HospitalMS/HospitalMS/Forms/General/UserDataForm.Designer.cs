@@ -291,8 +291,9 @@ namespace HospitalMS.Forms
             // 
             this.dateShiftEnding.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dateShiftEnding.BorderSize = 0;
+            this.dateShiftEnding.CustomFormat = "hh:mm tt";
             this.dateShiftEnding.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.dateShiftEnding.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateShiftEnding.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateShiftEnding.Location = new System.Drawing.Point(348, 453);
             this.dateShiftEnding.MinimumSize = new System.Drawing.Size(4, 35);
             this.dateShiftEnding.Name = "dateShiftEnding";
@@ -301,15 +302,15 @@ namespace HospitalMS.Forms
             this.dateShiftEnding.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.dateShiftEnding.TabIndex = 8;
             this.dateShiftEnding.TextColor = System.Drawing.Color.White;
-            this.dateShiftEnding.Value = new System.DateTime(2021, 6, 3, 0, 0, 0, 0);
+            this.dateShiftEnding.Value = new System.DateTime(2021, 6, 3, 18, 0, 0, 0);
             // 
             // dateShiftStarting
             // 
             this.dateShiftStarting.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.dateShiftStarting.BorderSize = 0;
-            this.dateShiftStarting.CustomFormat = "";
+            this.dateShiftStarting.CustomFormat = "hh:mm tt";
             this.dateShiftStarting.Font = new System.Drawing.Font("Comic Sans MS", 7.5F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.dateShiftStarting.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateShiftStarting.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateShiftStarting.Location = new System.Drawing.Point(348, 373);
             this.dateShiftStarting.MinimumSize = new System.Drawing.Size(4, 35);
             this.dateShiftStarting.Name = "dateShiftStarting";
@@ -318,7 +319,7 @@ namespace HospitalMS.Forms
             this.dateShiftStarting.SkinColor = System.Drawing.Color.MediumSlateBlue;
             this.dateShiftStarting.TabIndex = 7;
             this.dateShiftStarting.TextColor = System.Drawing.Color.White;
-            this.dateShiftStarting.Value = new System.DateTime(2021, 6, 2, 0, 0, 0, 0);
+            this.dateShiftStarting.Value = new System.DateTime(2021, 6, 10, 10, 0, 0, 0);
             // 
             // dateEmploymentYear
             // 
