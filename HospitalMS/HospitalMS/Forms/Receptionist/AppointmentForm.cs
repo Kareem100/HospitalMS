@@ -252,6 +252,10 @@ namespace HospitalMS
             if (txtDescription.Text.Equals(""))
                 txtDescription.Text = "Description";
         }
-    
+
+        private void AppointmentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
+        }
     }
 }

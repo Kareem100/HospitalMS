@@ -121,6 +121,7 @@
     <Compile Include="Forms\Doctor\MedicineForm.designer.cs">
       <DependentUpon>MedicineForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperClasses\MedicalStuff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\General\UserDataForm.cs">

@@ -280,6 +280,7 @@ namespace HospitalMS
             this.Name = "AppointmentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AppointmentForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AppointmentForm_FormClosing);
             this.Load += new System.EventHandler(this.AppointmentForm_Load);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
