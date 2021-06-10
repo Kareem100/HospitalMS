@@ -63,6 +63,12 @@
       <DependentUpon>BillReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\Doctor\DisplayReportsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Doctor\DisplayReportsForm.designer.cs">
+      <DependentUpon>DisplayReportsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Receptionist\DisplayBillsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,12 +102,6 @@
     <Compile Include="Custom Controls\CustomDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\Doctor\DisplayReportsForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Doctor\DisplayReportsForm.designer.cs">
-      <DependentUpon>DisplayReportsForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="HelperClasses\GlobalData.cs" />
     <Compile Include="Forms\General\HomeForm.cs">
       <SubType>Form</SubType>
@@ -115,13 +115,13 @@
     <Compile Include="Forms\General\LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperClasses\MedicalStuff.cs" />
     <Compile Include="Forms\Doctor\MedicineForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Doctor\MedicineForm.designer.cs">
       <DependentUpon>MedicineForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelperClasses\MedicalStuff.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\General\UserDataForm.cs">
@@ -142,9 +142,18 @@
     <Compile Include="Forms\Receptionist\RoomForm.designer.cs">
       <DependentUpon>RoomForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReports\ReportData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="CrystalReports\BillReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BillReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Doctor\DisplayReportsForm.resx">
+      <DependentUpon>DisplayReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Receptionist\DisplayBillsForm.resx">
       <DependentUpon>DisplayBillsForm.cs</DependentUpon>
@@ -160,9 +169,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor\ClinicForm.resx">
       <DependentUpon>ClinicForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Doctor\DisplayReportsForm.resx">
-      <DependentUpon>DisplayReportsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\General\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
@@ -191,6 +197,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Receptionist\RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\ReportData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportData.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
