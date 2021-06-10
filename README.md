@@ -112,9 +112,18 @@ and price.
 <details>
   <summary>Medical Stuff Data</summary>
 <p>
-    
+  
 ![](Screenshots/8.%20Stuff/UserDataForm.png)
-
+  
+</p>
+</details>
+  
+  <details>
+  <summary>Change Password</summary>
+<p>
+  
+![](Screenshots/9.%20Password/ChangePasswordForm.png)
+  
 </p>
 </details>
   
