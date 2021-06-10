@@ -46,9 +46,9 @@ and price.
   <summary>Home</summary>
 <p>
     
-![](Screenshots/1.%20Home/Doctor%20Home.png)
+![](Screenshots/1.%20Home/DoctorHome.png)
 ![](Screenshots/1.%20Home/Receptionist%20Home.png)
-![](Screenshots/1.%20Home/Doctor%20Home%20x2.png)
+![](Screenshots/1.%20Home/DoctorHome%20x2.png)
 
 </p>
 </details>
@@ -67,7 +67,8 @@ and price.
 <p>
     
 ![](Screenshots/3.%20Reports/ReportForm.png)
-
+![](Screenshots/3.%20Reports/DisplayReports.png)
+  
 </p>
 </details>
 
@@ -98,6 +99,25 @@ and price.
 
 </p>
 </details>
+  
+<details>
+  <summary>Pharmacy</summary>
+<p>
+    
+![](Screenshots/7.%20Pharmacy/PharmacyForm.png)
+
+</p>
+</details>
+
+<details>
+  <summary>Medical Stuff Data</summary>
+<p>
+    
+![](Screenshots/8.%20Stuff/UserDataForm.png)
+
+</p>
+</details>
+  
 </p>
 </details>
 
