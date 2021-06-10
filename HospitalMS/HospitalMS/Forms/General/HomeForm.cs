@@ -35,6 +35,7 @@ namespace HospitalMS
         private void HomeForm_Load(object sender, EventArgs e)
         {
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+            btnShowReports.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnShowReports.Width, btnShowReports.Height, 30, 30));
             isRegion = true;
             
             lblUserName.Text = "";
@@ -151,7 +152,8 @@ namespace HospitalMS
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            // openForm(new FromName());
+            //openForm(new ChangePasswordForm());
+            openForm(new ChangePasswordForm());
         }
 
         private void btnMedicine_Click(object sender, EventArgs e)
