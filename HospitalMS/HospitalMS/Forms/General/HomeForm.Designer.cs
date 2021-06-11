@@ -36,6 +36,8 @@ namespace HospitalMS
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblOras = new System.Windows.Forms.Label();
             this.panelNavbar = new System.Windows.Forms.Panel();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblDoctorReceptionist = new System.Windows.Forms.Label();
             this.panelButtonsNavigation = new System.Windows.Forms.Panel();
             this.btnShowRooms = new System.Windows.Forms.Button();
             this.btnBill = new System.Windows.Forms.Button();
@@ -46,7 +48,6 @@ namespace HospitalMS
             this.btnHome = new System.Windows.Forms.Button();
             this.panelSidebarTraveller = new System.Windows.Forms.Panel();
             this.panelSidebar = new System.Windows.Forms.Panel();
-            this.lblUserName = new System.Windows.Forms.Label();
             this.lblWelcom = new System.Windows.Forms.Label();
             this.shadedPanel = new System.Windows.Forms.Panel();
             this.panelSettingsHolder = new System.Windows.Forms.Panel();
@@ -59,12 +60,13 @@ namespace HospitalMS
             this.picClose = new System.Windows.Forms.PictureBox();
             this.panelSettingsContextMenu = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnPatients = new System.Windows.Forms.Button();
             this.btnMedicine = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnChangeNID = new System.Windows.Forms.Button();
             this.panelChildContainer = new System.Windows.Forms.Panel();
+            this.panelFooter = new System.Windows.Forms.Panel();
             this.btnShowReports = new System.Windows.Forms.Button();
-            this.lblDoctorReceptionist = new System.Windows.Forms.Label();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.panelNavbar.SuspendLayout();
@@ -80,6 +82,7 @@ namespace HospitalMS
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             this.panelSettingsContextMenu.SuspendLayout();
             this.panelChildContainer.SuspendLayout();
+            this.panelFooter.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTopHeader
@@ -150,6 +153,26 @@ namespace HospitalMS
             this.panelNavbar.Name = "panelNavbar";
             this.panelNavbar.Size = new System.Drawing.Size(200, 585);
             this.panelNavbar.TabIndex = 3;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.ForeColor = System.Drawing.Color.Goldenrod;
+            this.lblUserName.Location = new System.Drawing.Point(95, 58);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(76, 23);
+            this.lblUserName.TabIndex = 4;
+            this.lblUserName.Text = "K.Sherif";
+            // 
+            // lblDoctorReceptionist
+            // 
+            this.lblDoctorReceptionist.AutoSize = true;
+            this.lblDoctorReceptionist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.lblDoctorReceptionist.Location = new System.Drawing.Point(39, 58);
+            this.lblDoctorReceptionist.Name = "lblDoctorReceptionist";
+            this.lblDoctorReceptionist.Size = new System.Drawing.Size(62, 23);
+            this.lblDoctorReceptionist.TabIndex = 6;
+            this.lblDoctorReceptionist.Text = "Doctor";
             // 
             // panelButtonsNavigation
             // 
@@ -318,16 +341,6 @@ namespace HospitalMS
             this.panelSidebar.Size = new System.Drawing.Size(10, 60);
             this.panelSidebar.TabIndex = 0;
             // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(132)))), ((int)(((byte)(32)))));
-            this.lblUserName.Location = new System.Drawing.Point(95, 58);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(76, 23);
-            this.lblUserName.TabIndex = 4;
-            this.lblUserName.Text = "K.Sherif";
-            // 
             // lblWelcom
             // 
             this.lblWelcom.AutoSize = true;
@@ -460,12 +473,13 @@ namespace HospitalMS
             this.panelSettingsContextMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSettingsContextMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.panelSettingsContextMenu.Controls.Add(this.btnLogout);
+            this.panelSettingsContextMenu.Controls.Add(this.btnPatients);
             this.panelSettingsContextMenu.Controls.Add(this.btnMedicine);
             this.panelSettingsContextMenu.Controls.Add(this.btnChangePassword);
             this.panelSettingsContextMenu.Controls.Add(this.btnChangeNID);
             this.panelSettingsContextMenu.Location = new System.Drawing.Point(475, 55);
             this.panelSettingsContextMenu.Name = "panelSettingsContextMenu";
-            this.panelSettingsContextMenu.Size = new System.Drawing.Size(228, 241);
+            this.panelSettingsContextMenu.Size = new System.Drawing.Size(228, 301);
             this.panelSettingsContextMenu.TabIndex = 1;
             this.panelSettingsContextMenu.Visible = false;
             // 
@@ -480,7 +494,7 @@ namespace HospitalMS
             this.btnLogout.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 180);
+            this.btnLogout.Location = new System.Drawing.Point(0, 240);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(228, 61);
             this.btnLogout.TabIndex = 17;
@@ -488,12 +502,33 @@ namespace HospitalMS
             this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnPatients
+            // 
+            this.btnPatients.BackColor = System.Drawing.Color.Transparent;
+            this.btnPatients.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPatients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPatients.FlatAppearance.BorderSize = 0;
+            this.btnPatients.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
+            this.btnPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatients.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.btnPatients.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPatients.Image = ((System.Drawing.Image)(resources.GetObject("btnPatients.Image")));
+            this.btnPatients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPatients.Location = new System.Drawing.Point(0, 180);
+            this.btnPatients.Name = "btnPatients";
+            this.btnPatients.Size = new System.Drawing.Size(228, 60);
+            this.btnPatients.TabIndex = 17;
+            this.btnPatients.Text = "Patients";
+            this.btnPatients.UseVisualStyleBackColor = false;
+            this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
+            // 
             // btnMedicine
             // 
             this.btnMedicine.BackColor = System.Drawing.Color.Transparent;
             this.btnMedicine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMedicine.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMedicine.FlatAppearance.BorderSize = 0;
+            this.btnMedicine.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnMedicine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedicine.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnMedicine.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -513,6 +548,7 @@ namespace HospitalMS
             this.btnChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangePassword.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChangePassword.FlatAppearance.BorderSize = 0;
+            this.btnChangePassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnChangePassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangePassword.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnChangePassword.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -532,6 +568,7 @@ namespace HospitalMS
             this.btnChangeNID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeNID.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChangeNID.FlatAppearance.BorderSize = 0;
+            this.btnChangeNID.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Goldenrod;
             this.btnChangeNID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChangeNID.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnChangeNID.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -549,12 +586,21 @@ namespace HospitalMS
             // 
             this.panelChildContainer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelChildContainer.BackgroundImage")));
             this.panelChildContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelChildContainer.Controls.Add(this.btnShowReports);
+            this.panelChildContainer.Controls.Add(this.panelFooter);
             this.panelChildContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildContainer.Location = new System.Drawing.Point(200, 55);
             this.panelChildContainer.Name = "panelChildContainer";
             this.panelChildContainer.Size = new System.Drawing.Size(600, 545);
             this.panelChildContainer.TabIndex = 7;
+            // 
+            // panelFooter
+            // 
+            this.panelFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panelFooter.Controls.Add(this.btnShowReports);
+            this.panelFooter.Location = new System.Drawing.Point(0, 433);
+            this.panelFooter.Name = "panelFooter";
+            this.panelFooter.Size = new System.Drawing.Size(600, 77);
+            this.panelFooter.TabIndex = 18;
             // 
             // btnShowReports
             // 
@@ -567,23 +613,13 @@ namespace HospitalMS
             this.btnShowReports.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnShowReports.Image = ((System.Drawing.Image)(resources.GetObject("btnShowReports.Image")));
             this.btnShowReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnShowReports.Location = new System.Drawing.Point(190, 441);
+            this.btnShowReports.Location = new System.Drawing.Point(187, 9);
             this.btnShowReports.Name = "btnShowReports";
             this.btnShowReports.Size = new System.Drawing.Size(228, 60);
             this.btnShowReports.TabIndex = 17;
             this.btnShowReports.Text = "Show Reports";
             this.btnShowReports.UseVisualStyleBackColor = false;
             this.btnShowReports.Click += new System.EventHandler(this.btnShowReports_Click);
-            // 
-            // lblDoctorReceptionist
-            // 
-            this.lblDoctorReceptionist.AutoSize = true;
-            this.lblDoctorReceptionist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            this.lblDoctorReceptionist.Location = new System.Drawing.Point(39, 58);
-            this.lblDoctorReceptionist.Name = "lblDoctorReceptionist";
-            this.lblDoctorReceptionist.Size = new System.Drawing.Size(62, 23);
-            this.lblDoctorReceptionist.TabIndex = 6;
-            this.lblDoctorReceptionist.Text = "Doctor";
             // 
             // HomeForm
             // 
@@ -622,6 +658,7 @@ namespace HospitalMS
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             this.panelSettingsContextMenu.ResumeLayout(false);
             this.panelChildContainer.ResumeLayout(false);
+            this.panelFooter.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -663,5 +700,7 @@ namespace HospitalMS
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnMedicine;
         private System.Windows.Forms.Label lblDoctorReceptionist;
+        private System.Windows.Forms.Panel panelFooter;
+        private System.Windows.Forms.Button btnPatients;
     }
 }

@@ -414,6 +414,22 @@
         T9bbAnku+p2FuMvMAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnPatients.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAlhJREFUSEvVlbtrFFEUxm9lZRMLbcwaTRC0iZpVgjaG9UFA8R9QRGwshAiCIlj5
+        CARLEyLWCloIKkSRaNBgxMoQEMWI4iOQrOus+5qdmfv0u8uesLueVKuFB37MN9/M+fbunbl3hHPun8Ga
+        yxhTw2o95Kz9Cj4ZpU4aLQXB9tVhTUJHkdBJ0g/dWMhMtugkxrWY7SNYk1DVUJgkOQrdVEbKQR0jHOB0
+        RViT0FIJa2wXdBZQfTFKrsXocT1h+wjWJHQYiHjpuyjOvdmpyqWbmPPxapDbqsKKsAi2qo1wE3wU3x7c
+        7hlKb3/++fWrPfD2RvkgjfB+G0e1H2jtaYQ1ieLsy9VnBg/MdnSscXeujUzDu4rR37fGTFuljgC2j2BN
+        4uHFc6e7O1MutXGTO54ZmHdh5RJ856yZt0Y/0nHknwfb62FN4tTuXe/Wpbrchu4et3l9Z/JsfHQCoy06
+        6woY/Qwe7AWuj2BNYuzEsbuH+nbkD6f7Cgd7e4tn9w+8Vb/yH3DNIvwJmGztaYQ1l4mjfeZnblFmlxZU
+        LrugS8VF+AZEmJaJ2qrl+uqwJoG/vQ3HP8vaHwifggoB2+thTQIPbJW1dg66qTAdL+C/hywAttfDmoSK
+        qhi9GoNuKiz/y1j6GRwzOGV7PaxJyAh7i1LXoX0poL3AZjYsy+X29pZ6+Ci0n4opzPWM19jMhmWpJFSl
+        wvYRrEm0hPu346nXFO5H7+9bCdYkWsIfI9y/If9P+A1oHz6JcL95+fCRtsPrr+IV6ACL5ha+p/dqWsrz
+        KgzxpaqyfQRr/h2c+A1SMGa6QeNKwwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnMedicine.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

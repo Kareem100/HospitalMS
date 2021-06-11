@@ -189,12 +189,12 @@ namespace HospitalMS
             this.lblChangePassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblChangePassword.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblChangePassword.ForeColor = System.Drawing.Color.Crimson;
-            this.lblChangePassword.Location = new System.Drawing.Point(215, 28);
+            this.lblChangePassword.Location = new System.Drawing.Point(205, 28);
             this.lblChangePassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChangePassword.Name = "lblChangePassword";
-            this.lblChangePassword.Size = new System.Drawing.Size(238, 40);
+            this.lblChangePassword.Size = new System.Drawing.Size(259, 40);
             this.lblChangePassword.TabIndex = 18;
-            this.lblChangePassword.Text = "Change Password";
+            this.lblChangePassword.Text = "Changing Password";
             // 
             // ChangePasswordForm
             // 

@@ -116,11 +116,17 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperClasses\MedicalStuff.cs" />
-    <Compile Include="Forms\Doctor\MedicineForm.cs">
+    <Compile Include="Forms\General\MedicineForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Doctor\MedicineForm.designer.cs">
+    <Compile Include="Forms\General\MedicineForm.designer.cs">
       <DependentUpon>MedicineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\General\PatientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\General\PatientsForm.Designer.cs">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,8 +188,11 @@
     <EmbeddedResource Include="Forms\General\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Doctor\MedicineForm.resx">
+    <EmbeddedResource Include="Forms\General\MedicineForm.resx">
       <DependentUpon>MedicineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\General\PatientsForm.resx">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

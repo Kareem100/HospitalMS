@@ -147,20 +147,47 @@ namespace HospitalMS
 
         private void btnChangeNID_Click(object sender, EventArgs e)
         {
-            // openForm(new FromName());
+            // openForm(new FormName());
         }
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             //openForm(new ChangePasswordForm());
             openForm(new ChangePasswordForm());
+            resetContextMenus();
+
+            if (!isRegion)
+            {
+                Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+                WindowState = FormWindowState.Normal;
+                isRegion = true;
+            }
         }
 
         private void btnMedicine_Click(object sender, EventArgs e)
         {
             openForm(new MedicineForm());
             resetContextMenus();
-            WindowState = FormWindowState.Normal;
+
+            if (!isRegion)
+            {
+                Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+                WindowState = FormWindowState.Normal;
+                isRegion = true;
+            }
+        }
+
+        private void btnPatients_Click(object sender, EventArgs e)
+        {
+            openForm(new PatientsForm());
+            resetContextMenus();
+
+            if (!isRegion)
+            {
+                Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 30, 30));
+                WindowState = FormWindowState.Normal;
+                isRegion = true;
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
