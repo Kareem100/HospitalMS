@@ -32,7 +32,7 @@ namespace HospitalMS
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClinicForm));
             this.panelContainer = new System.Windows.Forms.Panel();
             this.OneClinic_panel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTo = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtFrom = new System.Windows.Forms.TextBox();
             this.picFromBackground = new System.Windows.Forms.PictureBox();
@@ -71,7 +71,7 @@ namespace HospitalMS
             // 
             // OneClinic_panel
             // 
-            this.OneClinic_panel.Controls.Add(this.textBox1);
+            this.OneClinic_panel.Controls.Add(this.txtTo);
             this.OneClinic_panel.Controls.Add(this.pictureBox1);
             this.OneClinic_panel.Controls.Add(this.txtFrom);
             this.OneClinic_panel.Controls.Add(this.picFromBackground);
@@ -89,22 +89,22 @@ namespace HospitalMS
             this.OneClinic_panel.Size = new System.Drawing.Size(354, 268);
             this.OneClinic_panel.TabIndex = 12;
             // 
-            // textBox1
+            // txtTo
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox1.Location = new System.Drawing.Point(204, 223);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(111, 18);
-            this.textBox1.TabIndex = 36;
-            this.textBox1.Text = "08:00 PM";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.UseSystemPasswordChar = true;
+            this.txtTo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
+            this.txtTo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTo.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.txtTo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.txtTo.Location = new System.Drawing.Point(204, 223);
+            this.txtTo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.txtTo.Multiline = true;
+            this.txtTo.Name = "txtTo";
+            this.txtTo.PasswordChar = '*';
+            this.txtTo.Size = new System.Drawing.Size(111, 18);
+            this.txtTo.TabIndex = 36;
+            this.txtTo.Text = "08:00 PM";
+            this.txtTo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTo.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
@@ -122,7 +122,7 @@ namespace HospitalMS
             // 
             this.txtFrom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.txtFrom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFrom.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.txtFrom.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.txtFrom.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtFrom.Location = new System.Drawing.Point(31, 223);
             this.txtFrom.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -152,12 +152,12 @@ namespace HospitalMS
             this.lblWorkingHours.AutoSize = true;
             this.lblWorkingHours.BackColor = System.Drawing.Color.Transparent;
             this.lblWorkingHours.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblWorkingHours.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblWorkingHours.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold);
             this.lblWorkingHours.ForeColor = System.Drawing.Color.White;
             this.lblWorkingHours.Location = new System.Drawing.Point(93, 133);
             this.lblWorkingHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblWorkingHours.Name = "lblWorkingHours";
-            this.lblWorkingHours.Size = new System.Drawing.Size(149, 29);
+            this.lblWorkingHours.Size = new System.Drawing.Size(190, 37);
             this.lblWorkingHours.TabIndex = 32;
             this.lblWorkingHours.Text = "Working Hours";
             // 
@@ -167,7 +167,7 @@ namespace HospitalMS
             this.lblTo.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblTo.Location = new System.Drawing.Point(190, 183);
             this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(29, 23);
+            this.lblTo.Size = new System.Drawing.Size(38, 29);
             this.lblTo.TabIndex = 31;
             this.lblTo.Text = "To";
             // 
@@ -177,7 +177,7 @@ namespace HospitalMS
             this.lblFrom.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblFrom.Location = new System.Drawing.Point(15, 183);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(48, 23);
+            this.lblFrom.Size = new System.Drawing.Size(62, 29);
             this.lblFrom.TabIndex = 30;
             this.lblFrom.Text = "From";
             // 
@@ -185,7 +185,7 @@ namespace HospitalMS
             // 
             this.FloorNumber_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.FloorNumber_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FloorNumber_txt.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.FloorNumber_txt.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FloorNumber_txt.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.FloorNumber_txt.Location = new System.Drawing.Point(77, 82);
             this.FloorNumber_txt.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -216,7 +216,7 @@ namespace HospitalMS
             // 
             this.ClinicName_txt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(79)))), ((int)(((byte)(118)))));
             this.ClinicName_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ClinicName_txt.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.ClinicName_txt.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.ClinicName_txt.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.ClinicName_txt.Location = new System.Drawing.Point(77, 31);
             this.ClinicName_txt.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -271,12 +271,12 @@ namespace HospitalMS
             // 
             this.AllClinics_Radio.AutoSize = true;
             this.AllClinics_Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AllClinics_Radio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.AllClinics_Radio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.AllClinics_Radio.ForeColor = System.Drawing.Color.White;
             this.AllClinics_Radio.Location = new System.Drawing.Point(177, 57);
             this.AllClinics_Radio.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.AllClinics_Radio.Name = "AllClinics_Radio";
-            this.AllClinics_Radio.Size = new System.Drawing.Size(141, 23);
+            this.AllClinics_Radio.Size = new System.Drawing.Size(178, 29);
             this.AllClinics_Radio.TabIndex = 8;
             this.AllClinics_Radio.Text = "Display All Clinics";
             this.AllClinics_Radio.UseVisualStyleBackColor = true;
@@ -285,12 +285,12 @@ namespace HospitalMS
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(50, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(268, 23);
+            this.label1.Size = new System.Drawing.Size(339, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Select what do you want to show";
             // 
@@ -299,12 +299,12 @@ namespace HospitalMS
             this.OneClinic_Radio.AutoSize = true;
             this.OneClinic_Radio.Checked = true;
             this.OneClinic_Radio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.OneClinic_Radio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.OneClinic_Radio.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.OneClinic_Radio.ForeColor = System.Drawing.Color.White;
             this.OneClinic_Radio.Location = new System.Drawing.Point(50, 57);
             this.OneClinic_Radio.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.OneClinic_Radio.Name = "OneClinic_Radio";
-            this.OneClinic_Radio.Size = new System.Drawing.Size(85, 23);
+            this.OneClinic_Radio.Size = new System.Drawing.Size(108, 29);
             this.OneClinic_Radio.TabIndex = 9;
             this.OneClinic_Radio.TabStop = true;
             this.OneClinic_Radio.Text = "My Clinic";
@@ -314,29 +314,30 @@ namespace HospitalMS
             // 
             this.lblClinic.AutoSize = true;
             this.lblClinic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblClinic.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblClinic.Font = new System.Drawing.Font("Comic Sans MS", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.lblClinic.ForeColor = System.Drawing.Color.Crimson;
             this.lblClinic.Location = new System.Drawing.Point(260, 20);
             this.lblClinic.Name = "lblClinic";
-            this.lblClinic.Size = new System.Drawing.Size(203, 40);
+            this.lblClinic.Size = new System.Drawing.Size(256, 50);
             this.lblClinic.TabIndex = 17;
             this.lblClinic.Text = "Display Clinics";
             // 
             // ClinicForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 545);
             this.Controls.Add(this.lblClinic);
             this.Controls.Add(this.panelContainer);
-            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.Name = "ClinicForm";
             this.Text = "ClinicForm";
+            this.Load += new System.EventHandler(this.ClinicForm_Load);
             this.panelContainer.ResumeLayout(false);
             this.OneClinic_panel.ResumeLayout(false);
             this.OneClinic_panel.PerformLayout();
@@ -367,7 +368,7 @@ namespace HospitalMS
         private System.Windows.Forms.Label lblTo;
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.Label lblWorkingHours;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtFrom;
         private System.Windows.Forms.PictureBox picFromBackground;
