@@ -50,12 +50,15 @@ namespace HospitalMS
         {
             if (OldPasswordIsCorrect())
             {
-                updatePassword();
-                MessageBox.Show("Your Password Is Updated ..", "Update Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                thread = new Thread(openLoginForm);
-                thread.SetApartmentState(ApartmentState.STA);
-                thread.Start();
-                Close();
+                if (newPasswordIsOk())
+                {
+                    updatePassword();
+                    MessageBox.Show("Your Password Is Updated ..", "Update Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    thread = new Thread(openLoginForm);
+                    thread.SetApartmentState(ApartmentState.STA);
+                    thread.Start();
+                    Close();
+                }
             }
             else
             {
@@ -97,7 +100,21 @@ namespace HospitalMS
             cmd.Parameters.Add("NewPassword", txtNewPassword.Text);
             cmd.ExecuteNonQuery();
         }
-
+        //---------------- CHECK NEW PASSWORD --------------------
+        private bool newPasswordIsOk()
+        {
+            if (string.IsNullOrWhiteSpace(txtNewPassword.Text) || txtNewPassword.Text.Equals("New Password"))
+            {
+                MessageBox.Show("Please Enter New Password..", "Change Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (txtNewPassword.Text.Length < 3)
+            {
+                MessageBox.Show("New Password should be at least 3 digits..", "Change Password Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
         //---------------- OPEN LOGIN FORM ------------------------
         private void openLoginForm(object obj)
         {
@@ -142,5 +159,6 @@ namespace HospitalMS
                 txtNewPassword.Text = "New Password";
             }
         }
+
     }
 }

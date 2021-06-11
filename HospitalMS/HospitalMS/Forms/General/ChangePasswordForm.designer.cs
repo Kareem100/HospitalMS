@@ -192,13 +192,13 @@ namespace HospitalMS
             this.lblChangePassword.Location = new System.Drawing.Point(205, 28);
             this.lblChangePassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblChangePassword.Name = "lblChangePassword";
-            this.lblChangePassword.Size = new System.Drawing.Size(259, 40);
+            this.lblChangePassword.Size = new System.Drawing.Size(327, 50);
             this.lblChangePassword.TabIndex = 18;
             this.lblChangePassword.Text = "Changing Password";
             // 
             // ChangePasswordForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
