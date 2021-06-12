@@ -45,7 +45,11 @@ namespace HospitalMS
         {
             int AppointmentId = getMaxID() + 1;
             string ReceptionistId = GlobalData.userNID;
-            if (IsValid())
+            if (!checkNumberOfCharactersOfInputs())
+            {
+                // Do nothing
+            }
+            else if (IsValid())
             {
                 if (!PatientIsExist())
                 {
@@ -185,6 +189,33 @@ namespace HospitalMS
               string.IsNullOrWhiteSpace(txtNationalID.Text) || string.IsNullOrWhiteSpace(txtDescription.Text)||
               comboDoctors.SelectedItem == null || comboRooms.SelectedItem == null)
             {
+                return false;
+            }
+            return true;
+        }
+
+	private bool checkNumberOfCharactersOfInputs()
+        {
+            if (!checkIfMoreThan20(txtFirstname.Text.ToString(), "First Name"))
+            {
+                return false;
+            }
+            else if (!checkIfMoreThan20(txtLastname.Text.ToString(), "Last Name"))
+            {
+                return false;
+            }
+            else if (!checkIfMoreThan20(txtDescription.Text.ToString(), "Description"))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private bool checkIfMoreThan20(string name, string label)
+        {
+            if (name.Length > 20)
+            {
+                MessageBox.Show("You can't add more than 20 characters in " + label, "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

@@ -168,6 +168,11 @@ namespace HospitalMS.Forms
                     MessageBox.Show("First Name Cannot Contains Numbers...", "Invalid Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
+	    if (!checkIfMoreThan20(name, "First Name"))
+            {
+                return false;
+            }
+
             name = txtLastName.Text.Trim();
             if (name == "" || name == "Last Name" || name == null)
             {
@@ -180,6 +185,11 @@ namespace HospitalMS.Forms
                     MessageBox.Show("Last Name Cannot Contains Numbers...", "Invalid Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
+            if (!checkIfMoreThan20(name, "Last Name"))
+            {
+                return false;
+            }
+
             // ------- CLINIC COMBOBOX
             if (GlobalData.userType == GlobalData.doctorUser && comboClinics.SelectedIndex == -1)
             {
@@ -210,6 +220,16 @@ namespace HospitalMS.Forms
                     MessageBox.Show("Egypt Phone Number Should Consists of 11 Digits...", "Invalid Phone Number !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
+            return true;
+        }
+
+	private bool checkIfMoreThan20(string name, string label)
+        {
+            if (name.Length > 20)
+            {
+                MessageBox.Show("You can't add more than 20 characters in "+ label, "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             return true;
         }
 
