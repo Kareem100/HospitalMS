@@ -156,40 +156,12 @@ namespace HospitalMS.Forms
         private bool isValidData()
         {
             // ------- FIRST & LAST NAME
-            string name = txtFirstName.Text.Trim();
-            if (name == "" || name == "First Name" || name == null)
-            {
-                MessageBox.Show("Please Enter Your First Name...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            foreach (char c in name)
-                if (c <= '9' && c >= '0')
-                {
-                    MessageBox.Show("First Name Cannot Contains Numbers...", "Invalid Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-	        if (!checkIfMoreThan20(name, "First Name"))
+            string firstName = txtFirstName.Text.Trim();
+            string lastName = txtLastName.Text.Trim();
+            if (!isNameValid(firstName, "First Name") || !isNameValid(lastName, "Last Name"))
             {
                 return false;
             }
-
-            name = txtLastName.Text.Trim();
-            if (name == "" || name == "Last Name" || name == null)
-            {
-                MessageBox.Show("Please Enter Your Last Name...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-            foreach (char c in name)
-                if (c <= '9' && c >= '0')
-                {
-                    MessageBox.Show("Last Name Cannot Contains Numbers...", "Invalid Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
-            if (!checkIfMoreThan20(name, "Last Name"))
-            {
-                return false;
-            }
-
             // ------- CLINIC COMBOBOX
             if (GlobalData.userType == GlobalData.doctorUser && comboClinics.SelectedIndex == -1)
             {
@@ -238,7 +210,29 @@ namespace HospitalMS.Forms
             return true;
         }
 
-	    private bool checkIfMoreThan20(string name, string label)
+	      private bool isNameValid(string name, string label)
+        {
+            if (name == "" || name == label || name == null)
+            {
+                MessageBox.Show("Please Enter Your "+ label, "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            foreach (char c in name)
+            {
+                if (c <= '9' && c >= '0')
+                {
+                    MessageBox.Show(label + " cannot contain Numbers...", "Invalid Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+            if (!checkIfMoreThan20(name, label))
+            {
+                return false;
+            }
+            return true;
+        }	
+
+      	private bool checkIfMoreThan20(string name, string label)
         {
             if (name.Length > 20)
             {
