@@ -19,10 +19,12 @@ namespace HospitalMS
 
         private void LoadReport()
         {
-            ReportData = new ReportData();
-            ReportData.SetParameterValue(1, true);
+            ReportData = new ReportData();                      
             ReportData.SetDatabaseLogon("scott", "tiger");
+            ReportData.Refresh();
             reportViewer.ReportSource = ReportData;
+            ReportData.SetParameterValue(1, true);
+            ReportData.SetParameterValue(0, patientid_cmb.Text);
             foreach (ParameterDiscreteValue value in ReportData.ParameterFields[0].DefaultValues)
                 patientid_cmb.Items.Add(value.Value);
         }
