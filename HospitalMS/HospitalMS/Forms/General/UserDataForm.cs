@@ -168,7 +168,7 @@ namespace HospitalMS.Forms
                     MessageBox.Show("First Name Cannot Contains Numbers...", "Invalid Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-	    if (!checkIfMoreThan20(name, "First Name"))
+	        if (!checkIfMoreThan20(name, "First Name"))
             {
                 return false;
             }
