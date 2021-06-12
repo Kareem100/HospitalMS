@@ -134,7 +134,7 @@ namespace HospitalMS.Forms
             this.radioFemale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioFemale.Location = new System.Drawing.Point(22, 60);
             this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(70, 23);
+            this.radioFemale.Size = new System.Drawing.Size(90, 29);
             this.radioFemale.TabIndex = 1;
             this.radioFemale.TabStop = true;
             this.radioFemale.Text = "Female";
@@ -148,7 +148,7 @@ namespace HospitalMS.Forms
             this.radioMale.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.radioMale.Location = new System.Drawing.Point(22, 27);
             this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(56, 23);
+            this.radioMale.Size = new System.Drawing.Size(72, 29);
             this.radioMale.TabIndex = 0;
             this.radioMale.TabStop = true;
             this.radioMale.Text = "Male";
@@ -162,7 +162,7 @@ namespace HospitalMS.Forms
             this.lblMyData.ForeColor = System.Drawing.Color.Crimson;
             this.lblMyData.Location = new System.Drawing.Point(223, 26);
             this.lblMyData.Name = "lblMyData";
-            this.lblMyData.Size = new System.Drawing.Size(132, 40);
+            this.lblMyData.Size = new System.Drawing.Size(165, 50);
             this.lblMyData.TabIndex = 14;
             this.lblMyData.Text = "My Data";
             // 
@@ -171,7 +171,7 @@ namespace HospitalMS.Forms
             this.lblBirthdate.AutoSize = true;
             this.lblBirthdate.Location = new System.Drawing.Point(345, 160);
             this.lblBirthdate.Name = "lblBirthdate";
-            this.lblBirthdate.Size = new System.Drawing.Size(84, 23);
+            this.lblBirthdate.Size = new System.Drawing.Size(106, 29);
             this.lblBirthdate.TabIndex = 15;
             this.lblBirthdate.Text = "Birthdate";
             // 
@@ -180,7 +180,7 @@ namespace HospitalMS.Forms
             this.lblAge.AutoSize = true;
             this.lblAge.Location = new System.Drawing.Point(348, 225);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(54, 23);
+            this.lblAge.Size = new System.Drawing.Size(68, 29);
             this.lblAge.TabIndex = 17;
             this.lblAge.Text = "Age: ";
             // 
@@ -191,7 +191,7 @@ namespace HospitalMS.Forms
             this.lblMyAge.ForeColor = System.Drawing.Color.Crimson;
             this.lblMyAge.Location = new System.Drawing.Point(408, 225);
             this.lblMyAge.Name = "lblMyAge";
-            this.lblMyAge.Size = new System.Drawing.Size(30, 23);
+            this.lblMyAge.Size = new System.Drawing.Size(37, 29);
             this.lblMyAge.TabIndex = 18;
             this.lblMyAge.Text = "45";
             // 
@@ -229,7 +229,7 @@ namespace HospitalMS.Forms
             this.comboClinics.FormattingEnabled = true;
             this.comboClinics.Location = new System.Drawing.Point(16, 45);
             this.comboClinics.Name = "comboClinics";
-            this.comboClinics.Size = new System.Drawing.Size(149, 27);
+            this.comboClinics.Size = new System.Drawing.Size(149, 31);
             this.comboClinics.TabIndex = 5;
             // 
             // lblYearOfEmplyment
@@ -237,7 +237,7 @@ namespace HospitalMS.Forms
             this.lblYearOfEmplyment.AutoSize = true;
             this.lblYearOfEmplyment.Location = new System.Drawing.Point(346, 272);
             this.lblYearOfEmplyment.Name = "lblYearOfEmplyment";
-            this.lblYearOfEmplyment.Size = new System.Drawing.Size(165, 23);
+            this.lblYearOfEmplyment.Size = new System.Drawing.Size(209, 29);
             this.lblYearOfEmplyment.TabIndex = 24;
             this.lblYearOfEmplyment.Text = "Year of Employment";
             // 
@@ -246,7 +246,7 @@ namespace HospitalMS.Forms
             this.lblShiftStarts.AutoSize = true;
             this.lblShiftStarts.Location = new System.Drawing.Point(348, 348);
             this.lblShiftStarts.Name = "lblShiftStarts";
-            this.lblShiftStarts.Size = new System.Drawing.Size(162, 23);
+            this.lblShiftStarts.Size = new System.Drawing.Size(203, 29);
             this.lblShiftStarts.TabIndex = 25;
             this.lblShiftStarts.Text = "Shitft Starts From";
             // 
@@ -255,7 +255,7 @@ namespace HospitalMS.Forms
             this.lblShiftEnds.AutoSize = true;
             this.lblShiftEnds.Location = new System.Drawing.Point(348, 428);
             this.lblShiftEnds.Name = "lblShiftEnds";
-            this.lblShiftEnds.Size = new System.Drawing.Size(124, 23);
+            this.lblShiftEnds.Size = new System.Drawing.Size(156, 29);
             this.lblShiftEnds.TabIndex = 27;
             this.lblShiftEnds.Text = "Shitft Ends In";
             // 
@@ -353,7 +353,7 @@ namespace HospitalMS.Forms
             // 
             // UserDataForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 545);

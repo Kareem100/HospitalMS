@@ -188,21 +188,22 @@ namespace HospitalMS.Forms
             }
             // ------- PHONENUMBER
             string phone = txtPhones.Text.Trim();
+
+            for (int i = 0; i < phone.Length; i++)
+            {
+                if (!char.IsNumber(phone[i]))
+                {
+                    MessageBox.Show("Phone number can't contain letters !");
+                    return false;
+                }
+            }
+
             if (phone == "" || phone == "Phone Number" || phone == null)
             {
                 MessageBox.Show("Please Enter at Least One Phone Number...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            for (int i = 0; i < txtPhones.Lines.Length; ++i)
-            {
-                phone = txtPhones.Lines[i];
-                for (int j = 0; j < phone.Length; ++j)
-                    if ((phone[i] > '9' || phone[i] < '0') && phone[i] != '\n')
-                    {
-                        MessageBox.Show("Please Enter a Correct Phone Number...", "Invalid Phone Number !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return false;
-                    }
-            }
+
             for (int i = 0; i < txtPhones.Lines.Length; ++i)
                 if (txtPhones.Lines[i].Length % 11 != 0)
                 {
@@ -309,6 +310,8 @@ namespace HospitalMS.Forms
         {
             conn.Dispose();
         }
+
+
         // ===================================================================== //
     }
 }
