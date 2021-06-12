@@ -26,6 +26,7 @@ namespace HospitalMS
         );
         // =====================================================================//
         private OracleConnection conn;
+        private List<double> DoctorsIDS = new List<Double>();
 
         public AppointmentForm()
         {
@@ -38,7 +39,7 @@ namespace HospitalMS
             string dbConnection = ConfigurationManager.ConnectionStrings["databaseConnection"].ConnectionString;
             conn = new OracleConnection(dbConnection);
             conn.Open();
-            getDoctorsIds();
+            getDoctorsNames();
             getAvailableRooms();
         }
 
@@ -68,16 +69,29 @@ namespace HospitalMS
             }
         }
 
-        //------------ GET DOCTORS IDS --------------------
-        private void getDoctorsIds()
+        //---------- GET DOCTORS IDS ----------------------
+        private double getDoctorID()
         {
+            int IndexOfName = comboDoctors.SelectedIndex;
+            double DoctorId = DoctorsIDS[IndexOfName];
+            return DoctorId;
+        }
+
+        //------------ GET DOCTORS NAMES --------------------
+        private void getDoctorsNames()
+        {
+            String FullName;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT NATIONALID FROM MEDICAL_STAFF";
+            cmd.CommandText = "SELECT NATIONALID ,FIRSTNAME ,LASTNAME FROM MEDICAL_STAFF";
             cmd.CommandType = CommandType.Text;
             OracleDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
-                comboDoctors.Items.Add(reader[0].ToString());
+            {
+                DoctorsIDS.Add(double.Parse(reader[0].ToString()));
+                FullName = reader[1].ToString() + " " + reader[2].ToString();
+                comboDoctors.Items.Add(FullName);
+            }
             reader.Close();
         }
 
@@ -130,7 +144,7 @@ namespace HospitalMS
             cmd.Parameters.Add("FirstName", txtFirstname.Text);
             cmd.Parameters.Add("LastName", txtLastname.Text);
             cmd.Parameters.Add("RoomNum", comboRooms.SelectedItem);
-            cmd.Parameters.Add("DoctorID", comboDoctors.SelectedItem);
+            cmd.Parameters.Add("DoctorID", getDoctorID());
             cmd.ExecuteNonQuery();      
         }
 
