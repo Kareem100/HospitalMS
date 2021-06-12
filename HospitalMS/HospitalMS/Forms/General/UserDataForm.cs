@@ -196,6 +196,21 @@ namespace HospitalMS.Forms
                 MessageBox.Show("Please Enter Your Assigned Clinic...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+
+            // ------- BIRTHDATE AND AGE
+            int age = Convert.ToInt32(lblMyAge.Text);
+            if (age <= 0)
+            {
+                MessageBox.Show("Please Enter a Valid Birthdate");
+                return false;
+            }
+            // ------- YEAR OF EMPLOYMENT
+            int yearOfEmployment = Convert.ToInt32(dateEmploymentYear.Text.Trim());
+            if (yearOfEmployment > DateTime.Now.Year)
+            {
+                MessageBox.Show("Please Enter a Valid Year of Employment");
+                return false;
+            }
             // ------- PHONENUMBER
             string phone = txtPhones.Text.Trim();
 
@@ -203,7 +218,7 @@ namespace HospitalMS.Forms
             {
                 if (!char.IsNumber(phone[i]))
                 {
-                    MessageBox.Show("Phone number can't contain letters !");
+                    MessageBox.Show("Phone Number Can't Contain Letters !");
                     return false;
                 }
             }

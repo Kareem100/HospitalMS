@@ -163,19 +163,37 @@ namespace HospitalMS
                 MessageBox.Show("Please Enter Your Assigned Clinic...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            // ------- BIRTHDATE AND AGE
+            int age = DateTime.Now.Year - dateBirthdate.Value.Year;
+            if (age <= 0)
+            {
+                MessageBox.Show("Please Enter a Valid Birthdate");
+                return false;
+            }
+            // ------- YEAR OF EMPLOYMENT
+            int yearOfEmployment = Convert.ToInt32(dateEmploymentYear.Text.Trim());
+            if (yearOfEmployment > DateTime.Now.Year)
+            {
+                MessageBox.Show("Please Enter a Valid Year of Employment");
+                return false;
+            }
             // ------- PHONENUMBER
             string phone = txtPhone.Text.Trim();
+            for (int i = 0; i < phone.Length; i++)
+            {
+                if (!char.IsNumber(phone[i]))
+                {
+                    MessageBox.Show("Phone Number Can't Contain Letters !");
+                    return false;
+                }
+            }
+
             if (phone == "" || phone == "Phone Number" || phone == null)
             {
                 MessageBox.Show("Please Enter Your Phone Number...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            for (int i = 0; i < phone.Length; ++i)
-                if (phone[i] > '9' || phone[i] < '0')
-                {
-                    MessageBox.Show("Please Enter a Correct Phone Number...", "Invalid Phone Number !", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return false;
-                }
+
             if (phone.Length != 11)
             {
                 MessageBox.Show("Egypt Phone Number Should Consists of 11 Digits...", "Invalid Phone Number !", MessageBoxButtons.OK, MessageBoxIcon.Error);
