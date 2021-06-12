@@ -1,5 +1,11 @@
-# Hospital Management System
-Hospital Management System using C#, Windows Forms and Oracle Database.
+# Hospital Management System (HMS)
+Hospital Management System using C#, Windows Forms and Oracle Database. <br>
+
+# Description
+The HMS is organized into clinics. Each clinic has a name, working hours and floor number. We keep track of :
+- **Medical Staff** (first and last name, age, gender, specialization, shifting time, year of employment, and contact number). The Medical Staff Includes [Doctors - Receptionists]
+- **Patient** (National ID number, full name, conditional illness, responsible doctor, and the room he stayed at)
+- **The current available Medicine** (code number, name, quantity, and price).
 
 # Prerequisites
 1. Install Visual Studio 
@@ -16,7 +22,6 @@ Hospital Management System using C#, Windows Forms and Oracle Database.
 
 </p>
 </details>
-
 <details>
   <summary>Schema</summary>
 <p>
@@ -27,14 +32,15 @@ Hospital Management System using C#, Windows Forms and Oracle Database.
 </details>
 
 
- [Database SQL Script](HospitalMS/Database/HMS_Database.sql) <br>
- [Database Procedures](HospitalMS/Database/Procedures) 
- 
+🔸 [Database SQL Script](HospitalMS/Database/HMS_Database.sql) <br>
+🔸 [Database Procedures](HospitalMS/Database/Procedures) 
+
+
 ’Login’ Page where the Doctors & Receptionists can login into their accounts. <br>
 
 ![Screenshot (180)](https://user-images.githubusercontent.com/48657780/121788826-d90bd700-cbd0-11eb-93b4-a2e3d6ed0778.png)
 
-’Register’ Page allows Doctors & Receptionists to register and make an account. All fields have validation checkers. <br>
+’Register’ Page allows Doctors & Receptionists to register and make an account, all fields have validation checkers. <br>
 
 ![Screenshot (182)](https://user-images.githubusercontent.com/48657780/121789016-8df2c380-cbd2-11eb-97e4-745eb7d551de.png)
 
@@ -50,7 +56,8 @@ Hospital Management System using C#, Windows Forms and Oracle Database.
 
 ![Screenshot (188)](https://user-images.githubusercontent.com/48657780/121789424-23438700-cbd6-11eb-9f0f-c4c05ea71976.png)
 
-’Add Report’ Page, where the doctor writes a report for the case "patient" with his illness, medecine and so on.
+’Add Report’ Page, Each doctor writes a detailed Report for each patient describing the medicines which the patient took,
+the duration patient spent and his conditional illness.
 
 ![Screenshot (191)](https://user-images.githubusercontent.com/48657780/121789512-d613e500-cbd6-11eb-9700-968b191e27cb.png)
 
@@ -69,7 +76,7 @@ Hospital Management System using C#, Windows Forms and Oracle Database.
 
 ![Screenshot (199)](https://user-images.githubusercontent.com/48657780/121789882-1163e300-cbda-11eb-9185-9ba2fb19d788.png)
 
-’Show Rooms’ Page, where the receptionist shows all the rooms, floor number, number of all beds and taken beds.
+’Show Rooms’ Page, where the receptionist shows all the rooms. Each room has a unique number, floor number, number of all beds and taken beds.
 
 ![Screenshot (203)](https://user-images.githubusercontent.com/48657780/121789922-7ae3f180-cbda-11eb-97f4-ea3b99f8db9d.png)
 
