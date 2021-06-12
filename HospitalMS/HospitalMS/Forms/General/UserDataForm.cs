@@ -195,7 +195,7 @@ namespace HospitalMS.Forms
             return true;
         }
 
-	private bool isNameValid(string name, string label)
+	      private bool isNameValid(string name, string label)
         {
             if (name == "" || name == label || name == null)
             {
@@ -217,7 +217,7 @@ namespace HospitalMS.Forms
             return true;
         }	
 
-	private bool checkIfMoreThan20(string name, string label)
+      	private bool checkIfMoreThan20(string name, string label)
         {
             if (name.Length > 20)
             {

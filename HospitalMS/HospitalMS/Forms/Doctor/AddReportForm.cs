@@ -47,8 +47,7 @@ namespace HospitalMS
 
         //  ======== LOAD PATIENT & MEDICINE DATA FROM DATABASE  ======== //
         // SELECT ONLY the patients who has not a report yet.
-        #region pointOfView
-        /* private void loadPatientsIDs()
+         private void loadPatientsIDs()
          {
              OracleCommand cmd = new OracleCommand();
              cmd.Connection = conn;
@@ -59,22 +58,23 @@ namespace HospitalMS
                  comboPatientNationalID.Items.Add(reader[0]);
 
              reader.Close();
-         }*/
-        #endregion
+        }
 
         // SELECT All patients
-        private void loadPatientsIDs()
-         {
-             OracleCommand cmd = new OracleCommand();
-             cmd.Connection = conn;
-             cmd.CommandText = "SELECT NationalID FROM patient";
-             cmd.CommandType = CommandType.Text;
-             OracleDataReader reader = cmd.ExecuteReader();
-             while (reader.Read())
-                 comboPatientNationalID.Items.Add(reader[0]);
+        #region pointOfView
+        /*private void loadPatientsIDs()
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "SELECT NationalID FROM patient";
+            cmd.CommandType = CommandType.Text;
+            OracleDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+                comboPatientNationalID.Items.Add(reader[0]);
 
-             reader.Close();
-         }
+            reader.Close();
+        }*/
+        #endregion
 
         private void loadMedicines()
         {
