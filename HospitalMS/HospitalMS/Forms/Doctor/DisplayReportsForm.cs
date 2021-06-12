@@ -21,22 +21,26 @@ namespace HospitalMS
         {
             //await Task.Delay(500);
             ReportData = new ReportData();
+            ReportData.SetParameterValue(1, true);
             ReportData.SetDatabaseLogon("scott", "tiger");
+            reportViewer.ReportSource = ReportData;
+
             //get all available ids into cmb
             foreach (ParameterDiscreteValue value in ReportData.ParameterFields[0].DefaultValues)
-                       patientid_cmb.Items.Add(value.Value);
-          
+                patientid_cmb.Items.Add(value.Value);
+
         }
         private void Evaluate_btn_Click(object sender, System.EventArgs e)
         {
             if (patientid_cmb.SelectedItem != null)
             {
+                ReportData.SetParameterValue(1, false);
                 ReportData.SetParameterValue(0, patientid_cmb.Text);
                 reportViewer.ReportSource = ReportData;
             }
             else
                 MessageBox.Show("Please choose patient id.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+
         }
     }
 }

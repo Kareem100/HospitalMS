@@ -130,7 +130,7 @@ namespace HospitalMS.CrystalReports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_DoctorId {
+        public CrystalDecisions.Shared.IParameterField Parameter_override {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
