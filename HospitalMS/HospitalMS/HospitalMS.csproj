@@ -63,6 +63,12 @@
       <DependentUpon>BillReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Custom Controls\CustomMessageBox2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom Controls\CustomMessageBox2.Designer.cs">
+      <DependentUpon>CustomMessageBox2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Doctor\DisplayReportsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +169,9 @@
     <EmbeddedResource Include="CrystalReports\BillReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>BillReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom Controls\CustomMessageBox2.resx">
+      <DependentUpon>CustomMessageBox2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Doctor\DisplayReportsForm.resx">
       <DependentUpon>DisplayReportsForm.cs</DependentUpon>
