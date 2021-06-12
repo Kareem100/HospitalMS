@@ -51,7 +51,7 @@ namespace HospitalMS
         {
             string cmdString = "SELECT P.NationalID, P.FirstName, P.LastName, P.RoomNumber, " +
                                "D.FirstName || ' ' || D.LastName AS DOCTOR " +
-                               "FROM patient P, medical_stuff D WHERE d.nationalid = p.doctorid";
+                               "FROM patient P, medical_staff D WHERE d.nationalid = p.doctorid";
             dataAdapter = new OracleDataAdapter(cmdString, dbConnection);
             dataSet = new DataSet();
             dataAdapter.Fill(dataSet);
@@ -71,7 +71,7 @@ namespace HospitalMS
         private void filterPatients(string doctorFullName)
         {
             string cmdString = @"SELECT P.NationalID, P.FirstName, P.LastName, P.RoomNumber " +
-                                "FROM patient P, medical_stuff D " +
+                                "FROM patient P, medical_staff D " +
                                 "WHERE D.nationalid = P.doctorid " +
                                 "AND D.firstname || ' ' || D.lastname = :doctorFullName";
 

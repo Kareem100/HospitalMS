@@ -1,4 +1,4 @@
-create or replace PROCEDURE updateMedicalStuff
+create or replace PROCEDURE updateMedicalStaff
 (NID IN VARCHAR2,
 mFirstName IN VARCHAR2,
 mLastName IN VARCHAR2,
@@ -11,9 +11,9 @@ mYearOfEmployment IN NUMBER,
 mClinicName IN VARCHAR2)
 IS
 BEGIN
-update medical_stuff 
+update medical_staff 
 set firstname = mFirstName, lastname = mLastName, gender = mGender, age = mAge,
 shiftstart = mShiftStart, shiftend = mShiftEnd, specialization = mSpecialization,
 yearofemployment = mYearOfEmployment, clinicname = mClinicname
 where nationalid = NID;
-END updateMedicalStuff;
+END updateMedicalStaff;

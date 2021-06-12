@@ -85,45 +85,45 @@ namespace HospitalMS
             {
                 if (isNewMember())
                 {
-                    MedicalStuff medicalStuff = new MedicalStuff();
-                    medicalStuff.firstName = txtFirstName.Text.Trim();
-                    medicalStuff.lastName = txtLastName.Text.Trim();
-                    medicalStuff.age = DateTime.Now.Year - dateBirthdate.Value.Year;
-                    medicalStuff.employmentYear = dateEmploymentYear.Value.Year;
-                    medicalStuff.specialization = groupSpecialization.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
-                    medicalStuff.gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
-                    medicalStuff.phones = new List<string>(); medicalStuff.phones.Add(txtPhone.Text.Trim());
-                    medicalStuff.nationalID = txtNationalID.Text.Trim();
-                    medicalStuff.password = txtPassword.Text.Trim();
+                    MedicalStaff medicalStaff = new MedicalStaff();
+                    medicalStaff.firstName = txtFirstName.Text.Trim();
+                    medicalStaff.lastName = txtLastName.Text.Trim();
+                    medicalStaff.age = DateTime.Now.Year - dateBirthdate.Value.Year;
+                    medicalStaff.employmentYear = dateEmploymentYear.Value.Year;
+                    medicalStaff.specialization = groupSpecialization.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+                    medicalStaff.gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+                    medicalStaff.phones = new List<string>(); medicalStaff.phones.Add(txtPhone.Text.Trim());
+                    medicalStaff.nationalID = txtNationalID.Text.Trim();
+                    medicalStaff.password = txtPassword.Text.Trim();
                     if (radioDoctor.Checked)
-                        medicalStuff.clinic = comboClinics.Text.ToString();
+                        medicalStaff.clinic = comboClinics.Text.ToString();
                     else
-                        medicalStuff.clinic = null;
+                        medicalStaff.clinic = null;
 
-                    addMedicalStuff(medicalStuff);
+                    addMedicalStaff(medicalStaff);
                 }
                 else
                     MessageBox.Show("You are Registered Already !!", "REGISTRATION FAILED !", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void addMedicalStuff(MedicalStuff medicalStuff)
+        private void addMedicalStaff(MedicalStaff medicalStaff)
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "addMedicalStuff";
+            cmd.CommandText = "addMedicalStaff";
             cmd.CommandType = CommandType.StoredProcedure;
             // START PARAMETERS
-            cmd.Parameters.Add("NID", medicalStuff.nationalID);
-            cmd.Parameters.Add("FirstName", medicalStuff.firstName);
-            cmd.Parameters.Add("LastName", medicalStuff.lastName);
-            cmd.Parameters.Add("uPassword", medicalStuff.password);
-            cmd.Parameters.Add("Gender", medicalStuff.gender);
-            cmd.Parameters.Add("Age", medicalStuff.age);
-            cmd.Parameters.Add("Specialization", medicalStuff.specialization);
-            cmd.Parameters.Add("YearOfEmployment", medicalStuff.employmentYear);
-            cmd.Parameters.Add("ClinicName", medicalStuff.clinic);
-            cmd.Parameters.Add("Phone", medicalStuff.phones[0]);
+            cmd.Parameters.Add("NID", medicalStaff.nationalID);
+            cmd.Parameters.Add("FirstName", medicalStaff.firstName);
+            cmd.Parameters.Add("LastName", medicalStaff.lastName);
+            cmd.Parameters.Add("uPassword", medicalStaff.password);
+            cmd.Parameters.Add("Gender", medicalStaff.gender);
+            cmd.Parameters.Add("Age", medicalStaff.age);
+            cmd.Parameters.Add("Specialization", medicalStaff.specialization);
+            cmd.Parameters.Add("YearOfEmployment", medicalStaff.employmentYear);
+            cmd.Parameters.Add("ClinicName", medicalStaff.clinic);
+            cmd.Parameters.Add("Phone", medicalStaff.phones[0]);
             // END PARAMETERS
             cmd.ExecuteNonQuery();
             MessageBox.Show("You Have Been Registered Successfully !!", "Congratulations...", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -225,11 +225,11 @@ namespace HospitalMS
             string nationalID = txtNationalID.Text;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT COUNT (NationalID) FROM medical_stuff WHERE NationalID = :nationalID";
+            cmd.CommandText = "SELECT COUNT (NationalID) FROM medical_staff WHERE NationalID = :nationalID";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("nationalID", nationalID);
             int count = Convert.ToInt32(cmd.ExecuteScalar());
-            if (count != 0)     // MedicalStuff Already Registered Before
+            if (count != 0)     // MedicalStaff Already Registered Before
                 return false;
             return true;
         }

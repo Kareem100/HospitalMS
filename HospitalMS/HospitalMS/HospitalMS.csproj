@@ -121,7 +121,7 @@
     <Compile Include="Forms\General\LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelperClasses\MedicalStuff.cs" />
+    <Compile Include="HelperClasses\MedicalStaff.cs" />
     <Compile Include="Forms\General\MedicineForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,7 +12,8 @@ using System.Windows.Forms;
 namespace HospitalMS
 {
     public partial class AppointmentForm : Form
-    {// ========================== Rounding Edges ==========================//
+    {
+        // ========================== Rounding Edges ==========================//
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -72,7 +73,7 @@ namespace HospitalMS
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT NATIONALID FROM MEDICAL_STUFF";
+            cmd.CommandText = "SELECT NATIONALID FROM MEDICAL_STAFF";
             cmd.CommandType = CommandType.Text;
             OracleDataReader reader = cmd.ExecuteReader();
             while (reader.Read())

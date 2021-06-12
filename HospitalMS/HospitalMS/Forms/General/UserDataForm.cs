@@ -49,7 +49,7 @@ namespace HospitalMS.Forms
 
             cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT clinicname FROM medical_stuff WHERE NationalID=:NID";
+            cmd.CommandText = "SELECT clinicname FROM medical_staff WHERE NationalID=:NID";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("NID", GlobalData.userNID);
             comboClinics.SelectedValue = cmd.ExecuteScalar().ToString();
@@ -59,7 +59,7 @@ namespace HospitalMS.Forms
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT * FROM medical_stuff WHERE NationalID = :nationalID";
+            cmd.CommandText = "SELECT * FROM medical_staff WHERE NationalID = :nationalID";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("nationalID", GlobalData.userNID);
 
@@ -117,7 +117,7 @@ namespace HospitalMS.Forms
                     comboClinics.SelectedIndex = comboClinics.Items.IndexOf(clinic);
 
                 // --- CONTACT NUMBERS ---
-                cmd.CommandText = "SELECT ContactNumber FROM stuff_contacts WHERE employeeid = :nationalID";
+                cmd.CommandText = "SELECT ContactNumber FROM staff_contacts WHERE employeeid = :nationalID";
                 reader = cmd.ExecuteReader();
                 txtPhones.Text = "";
                 while (reader.Read())
@@ -134,22 +134,22 @@ namespace HospitalMS.Forms
         {
             if (isValidData())
             {
-                MedicalStuff medicalStuff = new MedicalStuff();
-                medicalStuff.firstName = txtFirstName.Text.Trim();
-                medicalStuff.lastName = txtLastName.Text.Trim();
-                medicalStuff.gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
-                medicalStuff.age = Convert.ToInt32(lblMyAge.Text);
-                medicalStuff.shiftStart = dateShiftStarting.Text;
-                medicalStuff.shiftEnd = dateShiftEnding.Text;
-                medicalStuff.specialization = GlobalData.userType;
-                medicalStuff.employmentYear = Convert.ToInt32(dateEmploymentYear.Text.Trim());
-                medicalStuff.clinic = comboClinics.Text.Trim();
-                medicalStuff.nationalID = GlobalData.userNID;
-                medicalStuff.phones = new List<string>();
+                MedicalStaff medicalStaff = new MedicalStaff();
+                medicalStaff.firstName = txtFirstName.Text.Trim();
+                medicalStaff.lastName = txtLastName.Text.Trim();
+                medicalStaff.gender = groupGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
+                medicalStaff.age = Convert.ToInt32(lblMyAge.Text);
+                medicalStaff.shiftStart = dateShiftStarting.Text;
+                medicalStaff.shiftEnd = dateShiftEnding.Text;
+                medicalStaff.specialization = GlobalData.userType;
+                medicalStaff.employmentYear = Convert.ToInt32(dateEmploymentYear.Text.Trim());
+                medicalStaff.clinic = comboClinics.Text.Trim();
+                medicalStaff.nationalID = GlobalData.userNID;
+                medicalStaff.phones = new List<string>();
                 for (int i = 0; i < txtPhones.Lines.Length-1; ++i)
-                    medicalStuff.phones.Add(txtPhones.Lines[i].Trim());
+                    medicalStaff.phones.Add(txtPhones.Lines[i].Trim());
 
-                updateMedicalStuff(medicalStuff);
+                updateMedicalStaff(medicalStaff);
             }
         }
 
@@ -196,28 +196,14 @@ namespace HospitalMS.Forms
                 MessageBox.Show("Please Enter Your Assigned Clinic...", "Incomplete Data !", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            // ------- BIRTHDATE AND AGE
-            int age = Convert.ToInt32(lblMyAge.Text);
-            if(age <= 0)
-            {
-                MessageBox.Show("Please Enter a Valid Birthdate");
-                return false;
-            }
-            // ------- YEAR OF EMPLOYMENT
-            int yearOfEmployment = Convert.ToInt32(dateEmploymentYear.Text.Trim());
-            if (yearOfEmployment > DateTime.Now.Year)
-            {
-                MessageBox.Show("Please Enter a Valid Year of Employment");
-                return false;
-            }
             // ------- PHONENUMBER
             string phone = txtPhones.Text.Trim();
-        
+
             for (int i = 0; i < phone.Length; i++)
             {
                 if (!char.IsNumber(phone[i]))
                 {
-                    MessageBox.Show("Phone Number Can't Contain Letters !");
+                    MessageBox.Show("Phone number can't contain letters !");
                     return false;
                 }
             }
@@ -247,46 +233,46 @@ namespace HospitalMS.Forms
             return true;
         }
 
-        private void updateMedicalStuff(MedicalStuff medicalStuff)
+        private void updateMedicalStaff(MedicalStaff medicalStaff)
         {
             try
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "updateMedicalStuff";
+                cmd.CommandText = "updateMedicalStaff";
                 cmd.CommandType = CommandType.StoredProcedure;
             
                 // START PARAMETERS
-                cmd.Parameters.Add("NID", medicalStuff.nationalID);
-                cmd.Parameters.Add("mFirstName", medicalStuff.firstName);
-                cmd.Parameters.Add("mLastName", medicalStuff.lastName);
-                cmd.Parameters.Add("mGender", medicalStuff.gender);
-                cmd.Parameters.Add("mAge", medicalStuff.age);
-                cmd.Parameters.Add("mShiftStart", medicalStuff.shiftStart);
-                cmd.Parameters.Add("mShiftEnd", medicalStuff.shiftEnd);
-                cmd.Parameters.Add("mSpecialization", medicalStuff.specialization);
-                cmd.Parameters.Add("mYearOfEmployment", medicalStuff.employmentYear);
-                cmd.Parameters.Add("mClinicName", medicalStuff.clinic);
+                cmd.Parameters.Add("NID", medicalStaff.nationalID);
+                cmd.Parameters.Add("mFirstName", medicalStaff.firstName);
+                cmd.Parameters.Add("mLastName", medicalStaff.lastName);
+                cmd.Parameters.Add("mGender", medicalStaff.gender);
+                cmd.Parameters.Add("mAge", medicalStaff.age);
+                cmd.Parameters.Add("mShiftStart", medicalStaff.shiftStart);
+                cmd.Parameters.Add("mShiftEnd", medicalStaff.shiftEnd);
+                cmd.Parameters.Add("mSpecialization", medicalStaff.specialization);
+                cmd.Parameters.Add("mYearOfEmployment", medicalStaff.employmentYear);
+                cmd.Parameters.Add("mClinicName", medicalStaff.clinic);
                 // END PARAMETERS
                 cmd.ExecuteNonQuery();
 
                 cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "DELETE FROM stuff_contacts WHERE EmployeeID = :EmployeeID";
+                cmd.CommandText = "DELETE FROM staff_contacts WHERE EmployeeID = :EmployeeID";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Clear();
-                cmd.Parameters.Add("EmployeeID", medicalStuff.nationalID);
+                cmd.Parameters.Add("EmployeeID", medicalStaff.nationalID);
                 cmd.ExecuteNonQuery();
             
                 cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO stuff_contacts VALUES(:NID, :phone)";
+                cmd.CommandText = "INSERT INTO staff_contacts VALUES(:NID, :phone)";
                 cmd.CommandType = CommandType.Text;
-                for (int i = 0; i < medicalStuff.phones.Count; ++i)
+                for (int i = 0; i < medicalStaff.phones.Count; ++i)
                 {
                     cmd.Parameters.Clear();
-                    cmd.Parameters.Add("NID", medicalStuff.nationalID);
-                    cmd.Parameters.Add("phone", medicalStuff.phones[i]);
+                    cmd.Parameters.Add("NID", medicalStaff.nationalID);
+                    cmd.Parameters.Add("phone", medicalStaff.phones[i]);
                     cmd.ExecuteNonQuery();
                 }
             
@@ -344,8 +330,6 @@ namespace HospitalMS.Forms
         {
             conn.Dispose();
         }
-
-
         // ===================================================================== //
     }
 }

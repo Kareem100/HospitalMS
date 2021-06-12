@@ -1,14 +1,14 @@
 -- CREATE DATABASE HospitalManagementSystemDatabase;
 
 Drop table CLINIC cascade constraints;
-Drop table MEDICAL_STUFF cascade constraints;
+Drop table MEDICAL_STAFF cascade constraints;
 Drop table ROOM cascade constraints;
 Drop table PATIENT cascade constraints;
 Drop table CASE_REPORT cascade constraints;
 Drop table CASE_BILL cascade constraints;
 Drop table MEDICINE cascade constraints;
 Drop table APPOINTMENT cascade constraints;
-Drop table STUFF_CONTACTS cascade constraints;
+Drop table STAFF_CONTACTS cascade constraints;
 Drop table REPORT_AND_MEDICINE cascade constraints;
 
 
@@ -34,7 +34,7 @@ Create Table Medicine (
     Quantity int
 );
 
-Create Table Medical_Stuff (
+Create Table Medical_Staff (
     NationalID varchar(20) not null primary key,
     FirstName varchar(20),
     LastName varchar(20), 
@@ -50,10 +50,10 @@ Create Table Medical_Stuff (
 );
 
 -- Intermediary table
-Create Table Stuff_Contacts (
+Create Table Staff_Contacts (
     EmployeeID varchar(20),
     ContactNumber varchar(20),
-    Foreign key (EmployeeID) References Medical_Stuff(NationalID) 
+    Foreign key (EmployeeID) References Medical_Staff(NationalID) 
 );
 
 Create Table Patient (
@@ -63,7 +63,7 @@ Create Table Patient (
     RoomNumber int not null, 
     DoctorID varchar(20),
     Foreign key (RoomNumber) References Room(RoomNumber),
-    Foreign key (DoctorID) References Medical_Stuff(NationalID)
+    Foreign key (DoctorID) References Medical_Staff(NationalID)
 );
 
 
@@ -73,7 +73,7 @@ Create Table Appointment (
     PatientID varchar(20), 
     ReceptionistID varchar(20),
     Foreign key (PatientID) References Patient(NationalID),
-    Foreign key (ReceptionistID) References Medical_Stuff(NationalID) 
+    Foreign key (ReceptionistID) References Medical_Staff(NationalID) 
 ); 
 
 Create Table Case_Report (
@@ -84,7 +84,7 @@ Create Table Case_Report (
     PatientID varchar(20), 
     DoctorID varchar(20),
     Foreign key (PatientID) References Patient(NationalID),
-    Foreign key (DoctorID) References Medical_Stuff(NationalID) 
+    Foreign key (DoctorID) References Medical_Staff(NationalID) 
 );
 
 
@@ -128,16 +128,16 @@ Insert into Medicine values(78065, 'Penicillin', 200.80, 1);
 Insert into Medicine values(78074, 'Methotrexate', 154.60, 3);
 Insert into Medicine values(78089, 'Doxil', 130.5, 4);
 
--- Inserting static data into Medical_Stuff table.
-Insert into medical_stuff values ('29891011407730', 'Sameh', 'Hussein', '1234', 'Male', 48, '12:08 PM', '06:10 PM', 'Doctor', 1999, 'Dentistry');
-Insert into medical_stuff values ('29831011407729', 'Adel', 'Emam', '1234', 'Male', 56, '02:00 PM', '10:00 PM', 'Doctor', 1993, 'Nutrition');
-Insert into medical_stuff values ('29991011407725', 'Sabry', 'Hamam', '1234', 'Male', 30, '08:00 AM', '06:00 PM', 'Receptionist', 2005, null);
+-- Inserting static data into Medical_Staff table.
+Insert into medical_staff values ('29891011407730', 'Sameh', 'Hussein', '1234', 'Male', 48, '12:08 PM', '06:10 PM', 'Doctor', 1999, 'Dentistry');
+Insert into medical_staff values ('29831011407729', 'Adel', 'Emam', '1234', 'Male', 56, '02:00 PM', '10:00 PM', 'Doctor', 1993, 'Nutrition');
+Insert into medical_staff values ('29991011407725', 'Sabry', 'Hamam', '1234', 'Male', 30, '08:00 AM', '06:00 PM', 'Receptionist', 2005, null);
 
--- Inserting static data into Stuff_Contacts table.
-Insert into stuff_contacts values ('29891011407730', '01034512875');
-Insert into stuff_contacts values ('29891011407730', '01230512870');
-Insert into stuff_contacts values ('29831011407729', '01144785954');
-Insert into stuff_contacts values ('29991011407725', '01531215648');
+-- Inserting static data into Staff_Contacts table.
+Insert into staff_contacts values ('29891011407730', '01034512875');
+Insert into staff_contacts values ('29891011407730', '01230512870');
+Insert into staff_contacts values ('29831011407729', '01144785954');
+Insert into staff_contacts values ('29991011407725', '01531215648');
 
 -- Inserting static data into Patient table.
 Insert into patient values('30001011407738', 'Ahmed', 'Shaker', 201, '29891011407730');

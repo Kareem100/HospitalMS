@@ -106,4 +106,3 @@ I:\faculty\Database\project\New folder\HospitalMS\HospitalMS\HospitalMS\obj\Debu
 I:\faculty\Database\project\New folder\HospitalMS\HospitalMS\HospitalMS\obj\Debug\HospitalMS.exe
 I:\faculty\Database\project\New folder\HospitalMS\HospitalMS\HospitalMS\obj\Debug\HospitalMS.pdb
 C:\Users\20114\Documents\Visual Studio 2019\Projects\HospitalMS\HospitalMS\obj\Debug\HospitalMS.CustomMessageBox2.resources
-I:\faculty\Database\project\New folder\HospitalMS\HospitalMS\HospitalMS\obj\Debug\HospitalMS.CustomMessageBox2.resources

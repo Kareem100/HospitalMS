@@ -78,7 +78,7 @@ namespace HospitalMS
             String oldPassword = txtOldPassword.Text;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT PASSWORD FROM MEDICAL_STUFF where NATIONALID =:NID";
+            cmd.CommandText = "SELECT PASSWORD FROM MEDICAL_STAFF where NATIONALID =:NID";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("NID", GlobalData.userNID);
             String password = cmd.ExecuteScalar().ToString();

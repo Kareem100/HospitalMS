@@ -3,7 +3,7 @@ create or replace PROCEDURE UPDATEPASSWORD
 , NewPassword IN VARCHAR2
 ) AS
 BEGIN
- update medical_stuff 
+ update medical_staff 
  set password = newpassword
  where nationalid = nid ;
  

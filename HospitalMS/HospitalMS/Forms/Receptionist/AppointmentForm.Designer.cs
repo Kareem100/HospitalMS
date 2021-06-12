@@ -99,7 +99,7 @@ namespace HospitalMS
             this.txtNationalID.Multiline = true;
             this.txtNationalID.Name = "txtNationalID";
             this.txtNationalID.Size = new System.Drawing.Size(182, 25);
-            this.txtNationalID.TabIndex = 36;
+            this.txtNationalID.TabIndex = 3;
             this.txtNationalID.Text = "National ID";
             this.txtNationalID.Enter += new System.EventHandler(this.txtNationalID_Enter);
             this.txtNationalID.Leave += new System.EventHandler(this.txtNationalID_Leave);
@@ -128,7 +128,7 @@ namespace HospitalMS
             this.txtLastname.Multiline = true;
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(182, 25);
-            this.txtLastname.TabIndex = 34;
+            this.txtLastname.TabIndex = 2;
             this.txtLastname.Text = "Last Name";
             this.txtLastname.Enter += new System.EventHandler(this.txtLastname_Enter);
             this.txtLastname.Leave += new System.EventHandler(this.txtLastname_Leave);
@@ -165,7 +165,7 @@ namespace HospitalMS
             this.comboRooms.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboRooms.Name = "comboRooms";
             this.comboRooms.Size = new System.Drawing.Size(179, 31);
-            this.comboRooms.TabIndex = 31;
+            this.comboRooms.TabIndex = 6;
             // 
             // lblDoctor
             // 
@@ -187,7 +187,7 @@ namespace HospitalMS
             this.comboDoctors.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboDoctors.Name = "comboDoctors";
             this.comboDoctors.Size = new System.Drawing.Size(179, 31);
-            this.comboDoctors.TabIndex = 29;
+            this.comboDoctors.TabIndex = 5;
             // 
             // btnAddAppointment
             // 
@@ -201,7 +201,7 @@ namespace HospitalMS
             this.btnAddAppointment.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAddAppointment.Name = "btnAddAppointment";
             this.btnAddAppointment.Size = new System.Drawing.Size(310, 40);
-            this.btnAddAppointment.TabIndex = 28;
+            this.btnAddAppointment.TabIndex = 7;
             this.btnAddAppointment.Text = "Add Appointment";
             this.btnAddAppointment.UseVisualStyleBackColor = false;
             this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
@@ -218,7 +218,7 @@ namespace HospitalMS
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '*';
             this.txtDescription.Size = new System.Drawing.Size(182, 32);
-            this.txtDescription.TabIndex = 20;
+            this.txtDescription.TabIndex = 4;
             this.txtDescription.Text = "Description";
             this.txtDescription.UseSystemPasswordChar = true;
             this.txtDescription.Enter += new System.EventHandler(this.txtDescription_Enter);
@@ -247,7 +247,7 @@ namespace HospitalMS
             this.txtFirstname.Multiline = true;
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(182, 25);
-            this.txtFirstname.TabIndex = 7;
+            this.txtFirstname.TabIndex = 1;
             this.txtFirstname.Text = "First Name";
             this.txtFirstname.Enter += new System.EventHandler(this.txtFirstname_Enter);
             this.txtFirstname.Leave += new System.EventHandler(this.txtFirstname_Leave);

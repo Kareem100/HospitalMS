@@ -152,7 +152,7 @@ namespace HospitalMS
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT FirstName, LastName, specialization FROM medical_stuff WHERE NationalID = :nationalID AND Password = :password";
+            cmd.CommandText = "SELECT FirstName, LastName, specialization FROM medical_staff WHERE NationalID = :nationalID AND Password = :password";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("nationalID", nationalID);
             cmd.Parameters.Add("password", password);

@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
-using Oracle.DataAccess.Types;
 using System.Configuration;
 using HospitalMS.HelperClasses;
 
@@ -130,7 +126,7 @@ namespace HospitalMS
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select count(clinicname) from medical_stuff where nationalid =:id";
+            cmd.CommandText = "select count(clinicname) from medical_staff where nationalid =:id";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", doctorNID);
             int count = Convert.ToInt32(cmd.ExecuteScalar());
@@ -144,7 +140,7 @@ namespace HospitalMS
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select clinicname from medical_stuff where nationalid =:id";
+            cmd.CommandText = "select clinicname from medical_staff where nationalid =:id";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", doctorNID);
             clinicName = cmd.ExecuteScalar().ToString();

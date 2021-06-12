@@ -1,5 +1,4 @@
 ﻿using System.Windows.Forms;
-using System.Threading.Tasks;
 using HospitalMS.CrystalReports;
 using CrystalDecisions.Shared;
 
@@ -7,7 +6,7 @@ namespace HospitalMS
 {
     public partial class DisplayReportsForm : Form
     {
-        ReportData ReportData;
+        private ReportData ReportData;
         public DisplayReportsForm()
         {
             InitializeComponent();
@@ -17,19 +16,17 @@ namespace HospitalMS
         {
             LoadReport();
         }
-        private async void LoadReport()
+
+        private void LoadReport()
         {
-            //await Task.Delay(500);
             ReportData = new ReportData();
             ReportData.SetParameterValue(1, true);
             ReportData.SetDatabaseLogon("scott", "tiger");
             reportViewer.ReportSource = ReportData;
-
-            //get all available ids into cmb
             foreach (ParameterDiscreteValue value in ReportData.ParameterFields[0].DefaultValues)
                 patientid_cmb.Items.Add(value.Value);
-
         }
+
         private void Evaluate_btn_Click(object sender, System.EventArgs e)
         {
             if (patientid_cmb.SelectedItem != null)

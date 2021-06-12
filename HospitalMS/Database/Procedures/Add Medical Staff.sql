@@ -1,4 +1,4 @@
-create or replace PROCEDURE addMedicalStuff
+create or replace PROCEDURE addMedicalStaff
 (NID IN VARCHAR2,
 FirstName IN VARCHAR2,
 LastName IN VARCHAR2,
@@ -11,8 +11,8 @@ ClinicName IN VARCHAR2,
 Phone IN VARCHAR2)
 IS
 BEGIN
-  INSERT INTO medical_stuff VALUES (NID, FirstName, LastName, uPassword, 
+  INSERT INTO medical_staff VALUES (NID, FirstName, LastName, uPassword, 
                                     Gender, Age, 'Not Stated', 'Not Stated', 
                                     Specialization, YearOfEmployment, ClinicName);
-  INSERT INTO stuff_contacts VALUES (NID, Phone);
-END addMedicalStuff;
+  INSERT INTO staff_contacts VALUES (NID, Phone);
+END addMedicalStaff;
