@@ -20,6 +20,8 @@ namespace HospitalMS
         {   
             await Task.Delay(500);
             BillReport billReport = new BillReport();
+            billReport.Refresh();
+            billReport.SetDatabaseLogon("scott", "tiger");
             reportViewerBill.ReportSource = billReport;
         }
     }
