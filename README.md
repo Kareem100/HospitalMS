@@ -153,4 +153,6 @@
 
 ***
 [Database SQL Script](HospitalMS/Database/HMS_Database.sql)
+
+[Database Procedures](HospitalMS/Database/Procedures)
 ***
