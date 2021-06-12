@@ -70,7 +70,7 @@ Create Table Patient (
 Create Table Appointment (
     AppointmentID int not null primary key, 
     Description varchar(500), 
-    PatientID varchar(20) unique, 
+    PatientID varchar(20), 
     ReceptionistID varchar(20),
     Foreign key (PatientID) References Patient(NationalID),
     Foreign key (ReceptionistID) References Medical_Stuff(NationalID) 
@@ -81,8 +81,8 @@ Create Table Case_Report (
     DateIn date,
     DateOut date,
     ConditionalIllness varchar(50),
-    PatientID varchar(20) unique, 
-    DoctorID varchar(20) unique,
+    PatientID varchar(20), 
+    DoctorID varchar(20),
     Foreign key (PatientID) References Patient(NationalID),
     Foreign key (DoctorID) References Medical_Stuff(NationalID) 
 );
