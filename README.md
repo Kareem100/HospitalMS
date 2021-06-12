@@ -30,11 +30,11 @@ Hospital Management System using C#, Windows Forms and Oracle Database.
  [Database SQL Script](HospitalMS/Database/HMS_Database.sql) <br>
  [Database Procedures](HospitalMS/Database/Procedures) 
  
-’Login’ Page where the Doctors & receptionists can login into their accounts. <br>
+’Login’ Page where the Doctors & Receptionists can login into their accounts. <br>
 
 ![Screenshot (180)](https://user-images.githubusercontent.com/48657780/121788826-d90bd700-cbd0-11eb-93b4-a2e3d6ed0778.png)
 
-’Register’ Page allows Doctors & Receptionists to register and make an account. All fields have validations checkers. <br>
+’Register’ Page allows Doctors & Receptionists to register and make an account. All fields have validation checkers. <br>
 
 ![Screenshot (182)](https://user-images.githubusercontent.com/48657780/121789016-8df2c380-cbd2-11eb-97e4-745eb7d551de.png)
 
@@ -50,7 +50,7 @@ Hospital Management System using C#, Windows Forms and Oracle Database.
 
 ![Screenshot (188)](https://user-images.githubusercontent.com/48657780/121789424-23438700-cbd6-11eb-9f0f-c4c05ea71976.png)
 
-’Add Report’ Page, where the doctor writes a report for the case "patient" with his illness, medecine and ...
+’Add Report’ Page, where the doctor writes a report for the case "patient" with his illness, medecine and so on.
 
 ![Screenshot (191)](https://user-images.githubusercontent.com/48657780/121789512-d613e500-cbd6-11eb-9700-968b191e27cb.png)
 
@@ -69,7 +69,65 @@ Hospital Management System using C#, Windows Forms and Oracle Database.
 
 ![Screenshot (199)](https://user-images.githubusercontent.com/48657780/121789882-1163e300-cbda-11eb-9185-9ba2fb19d788.png)
 
-’Show Rooms’ Page, to show all the rooms, floor number, number of all beds and taken beds.
+’Show Rooms’ Page, where the receptionist shows all the rooms, floor number, number of all beds and taken beds.
 
 ![Screenshot (203)](https://user-images.githubusercontent.com/48657780/121789922-7ae3f180-cbda-11eb-97f4-ea3b99f8db9d.png)
 
+
+# Other Screenshots 
+
+<details>
+  <summary>Reports</summary>
+<p>
+    
+![](Screenshots/3.%20Reports/ReportForm.png)
+![](Screenshots/3.%20Reports/DisplayReports.png)
+  
+</p>
+</details>
+
+<details>
+  <summary>Bills</summary>
+<p>
+
+![](Screenshots/6.%20Bills/DisplayBillsForm.png)
+
+</p>
+</details>
+
+  
+<details>
+  <summary>Pharmacy</summary>
+<p>
+    
+![](Screenshots/7.%20Pharmacy/PharmacyForm.png)
+
+</p>
+</details>
+
+<details>
+  <summary>Medical Stuff Data</summary>
+<p>
+  
+![](Screenshots/8.%20Stuff/UserDataForm.png)
+  
+</p>
+</details>
+  
+  <details>
+  <summary>Change Password</summary>
+<p>
+  
+  ![](Screenshots/9.%20Password/ChangePasswordForm.png)
+  
+</p>
+  </details>
+  
+  <details>
+  <summary>Show Patients</summary>
+<p>
+  
+  ![](Screenshots/10.%20Patients/PatientsForm.png)
+  
+</p>
+  </details>
