@@ -43,6 +43,7 @@ namespace HospitalMS
             DGV.Columns[1].HeaderText = "Medicine Name";
             DGV.Columns[2].HeaderText = "Price";
             DGV.Columns[3].HeaderText = "Quantity";
+            DGV.Columns[0].ReadOnly = true;
             Save_btn.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Save_btn.Width, Save_btn.Height, 30, 30));
         }
 

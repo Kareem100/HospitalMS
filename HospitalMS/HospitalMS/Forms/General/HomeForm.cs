@@ -153,7 +153,7 @@ namespace HospitalMS
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             //openForm(new ChangePasswordForm());
-            openForm(new ChangePasswordForm());
+            openForm(new ChangePasswordForm(this));
             resetContextMenus();
 
             if (!isRegion)

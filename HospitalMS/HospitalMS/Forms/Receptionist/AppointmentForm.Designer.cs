@@ -96,6 +96,7 @@ namespace HospitalMS
             this.txtNationalID.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.txtNationalID.Location = new System.Drawing.Point(126, 161);
             this.txtNationalID.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNationalID.MaxLength = 14;
             this.txtNationalID.Multiline = true;
             this.txtNationalID.Name = "txtNationalID";
             this.txtNationalID.Size = new System.Drawing.Size(182, 25);

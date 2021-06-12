@@ -26,7 +26,7 @@ namespace HospitalMS
         );
         // =====================================================================//
         private OracleConnection conn;
-        private List<double> DoctorsIDS = new List<Double>();
+        private List<double> DoctorsIDS = new List<double>();
 
         public AppointmentForm()
         {
@@ -83,7 +83,7 @@ namespace HospitalMS
             String FullName;
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "SELECT NATIONALID ,FIRSTNAME ,LASTNAME FROM MEDICAL_STAFF";
+            cmd.CommandText = "SELECT NATIONALID ,FIRSTNAME ,LASTNAME FROM MEDICAL_STAFF WHERE specialization = 'Doctor'";
             cmd.CommandType = CommandType.Text;
             OracleDataReader reader = cmd.ExecuteReader();
             while (reader.Read())

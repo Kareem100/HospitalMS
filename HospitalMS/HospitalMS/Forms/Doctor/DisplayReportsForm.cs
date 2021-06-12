@@ -19,9 +19,9 @@ namespace HospitalMS
 
         private void LoadReport()
         {
-            ReportData = new ReportData();                      
-            ReportData.SetDatabaseLogon("scott", "tiger");
+            ReportData = new ReportData();
             ReportData.Refresh();
+            ReportData.SetDatabaseLogon("scott", "tiger");
             reportViewer.ReportSource = ReportData;
             ReportData.SetParameterValue(1, true);
             ReportData.SetParameterValue(0, patientid_cmb.Text);

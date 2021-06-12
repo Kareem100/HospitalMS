@@ -26,10 +26,12 @@ namespace HospitalMS
         // =====================================================================//
         private Thread thread;
         private OracleConnection conn;
+        private HomeForm home;
 
-        public ChangePasswordForm()
+        public ChangePasswordForm(HomeForm homeForm)
         {
             InitializeComponent();
+            this.home = homeForm;
         }
 
         private void ChangePasswordForm_Load(object sender, EventArgs e)
@@ -57,6 +59,7 @@ namespace HospitalMS
                     thread = new Thread(openLoginForm);
                     thread.SetApartmentState(ApartmentState.STA);
                     thread.Start();
+                    home.Close();
                     Close();
                 }
             }

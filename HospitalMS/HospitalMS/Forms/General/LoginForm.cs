@@ -130,6 +130,8 @@ namespace HospitalMS
                 string password = txtPassword.Text;
                 vertifyUser(nationalID, password);
             }
+
+            resetFields();
         }
         private bool isValidData()
         {
@@ -177,6 +179,13 @@ namespace HospitalMS
             else
                 MessageBox.Show("No Such User Exist. !!\nMaybe You Need to Register.", "LOGIN", MessageBoxButtons.OK, MessageBoxIcon.Error);
             
+        }
+
+        private void resetFields()
+        {
+            txtNationalID.Text = "National ID";
+            txtPassword.Text = "Password";
+            txtPassword.UseSystemPasswordChar = true;
         }
         // =========================================================== //
 
