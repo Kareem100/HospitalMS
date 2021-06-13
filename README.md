@@ -1,5 +1,5 @@
-# Hospital Management System (HMS)
-Hospital Management System using C#, Windows Forms and Oracle Database. <br>
+# Horas Management System (HMS)
+Horas Management System is a Hospital Management System using C#, Windows Forms and Oracle Database. <br>
 
 # Description
 The HMS is organized into clinics. Each clinic has a name, working hours and floor number. We keep track of :
